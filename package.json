@@ -61,7 +61,10 @@
     "test:v": "node scripts/verify-v.mjs",
     "test:v:recovery": "node scripts/verify-v-recovery.mjs",
     "test:v:browser": "node scripts/verify-v-browser.mjs",
-    "ui:v": "node scripts/v-ui-serve.mjs"
+    "ui:v": "node scripts/v-ui-serve.mjs",
+    "test:outbound": "node scripts/verify-outbound.mjs",
+    "ui:outbound": "node scripts/outbound-ui-serve.mjs",
+    "test:outbound:browser": "node scripts/verify-outbound-browser.mjs"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

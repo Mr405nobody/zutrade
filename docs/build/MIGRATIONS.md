@@ -76,3 +76,9 @@ pg-boss 正式初始化新增 d1.research 队列，retryLimit=2、原任务重�
 - 备份在新zutrade_v_restore_库恢复，app45/auth4/simulation4/pgboss13边界不变；受限runtime可读原报价/PDF。备份与环境指针私有，不进Git。各次精确库名见evidence/v/integration.json、retained-test-databases.json、recovery.json及私有恢复指针。
 
 D1/D2真实联网延期不更改schema验收依据或阶段接受状态。完整证据和真实失败恢复见STAGE_V_REPORT.md。
+
+## 2026-11-01：0020 Outbound Intelligence
+
+新增 `0020_outbound_intelligence.sql`：扩展研究provider CHECK；增加 `outbound_companies` 及复合FK、workspace/factory/domain唯一、FORCE RLS、来源身份冻结/审核版本和成员保护、列级授权。无schema push，原42表基线与0000—0019不改。当前46 app表/676列/162FK（117复合）/208CHECK；auth/pg-boss不变。
+
+真实空库/重复迁移与ORM对照通过。日常备份后迁移，旧45表行数/内容摘要一致，新表0行；见 evidence/outbound/daily-upgrade.json。私有备份位置仅 `.local/outbound-upgrade-last.json`，无reset/seed/删卷。本次未恢复演练。

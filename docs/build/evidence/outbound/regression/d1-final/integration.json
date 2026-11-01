@@ -1,0 +1,101 @@
+{
+  "observedAt": "2026-11-01T03:25:20.712Z",
+  "database": "zutrade_d1_test_1e39372fc6e54f99acb59797bfee40c3",
+  "origin": "offline_fixture",
+  "successful": true,
+  "checks": [
+    {
+      "label": "research table retained alongside later additive tables, RLS and restricted roles",
+      "result": "passed"
+    },
+    {
+      "label": "business + outbox + real pg-boss rollback, three failure points",
+      "result": "passed"
+    },
+    {
+      "label": "request idempotency, strict input, factory and workspace authorization",
+      "result": "passed"
+    },
+    {
+      "label": "offline directory discovers links, follows entities and websites, bounded evidence",
+      "result": "passed"
+    },
+    {
+      "label": "tampered candidate, old result and review versions, excluded import reject",
+      "result": "passed"
+    },
+    {
+      "label": "concurrent repeated import returns one lead, no orphan buyer/contact",
+      "result": "passed"
+    },
+    {
+      "label": "cross-run duplicates are suggestions, explicit buyer link; old evidence retained",
+      "result": "passed"
+    },
+    {
+      "label": "terminal snapshot and imported historical evidence SQL freeze, audit and composite FK",
+      "result": "passed"
+    },
+    {
+      "label": "zero results, denied source, partial success, 429 and retries",
+      "result": "passed"
+    },
+    {
+      "label": "cancel before and during execution fences further request/result writes",
+      "result": "passed"
+    },
+    {
+      "label": "80 request budget atomically persists and never resets",
+      "result": "passed"
+    },
+    {
+      "label": "SIGKILL + real queue retry resumes checkpoint with original deadline and counter",
+      "result": "passed"
+    },
+    {
+      "label": "old active executor cannot overwrite a replacement execution",
+      "result": "passed"
+    },
+    {
+      "label": "actor revocation stops a queued research without escalating runtime privileges",
+      "result": "passed"
+    },
+    {
+      "label": "DB fixed deadline rejects expired checkpoint/results, no renewed budget",
+      "result": "passed"
+    },
+    {
+      "label": "database network gates enforce one/host and two/global across independent pools",
+      "result": "passed"
+    }
+  ],
+  "crashes": [
+    {
+      "before": {
+        "point": "checkpoint",
+        "pid": 40059,
+        "at": "2026-11-01T03:25:16.828Z",
+        "cursor": 1,
+        "candidates": 1
+      },
+      "exit": {
+        "code": null,
+        "signal": "SIGKILL"
+      },
+      "recovery": {
+        "point": "claimed",
+        "pid": 40067,
+        "at": "2026-11-01T03:25:17.915Z",
+        "token": "88e5652a-3f66-4185-bc08-7e9be0eda61b",
+        "deadline": "2026-11-01T03:28:16.768Z",
+        "requests": 4,
+        "executionVersion": 2
+      },
+      "deadline": "2026-11-01T03:28:16.768Z",
+      "originalRequests": 4,
+      "finalRequests": 10,
+      "checkpointCursor": 1,
+      "jobId": "daac1bf5-d741-4411-ad8e-3ac9131e46d3"
+    }
+  ]
+}

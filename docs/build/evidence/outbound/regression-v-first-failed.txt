@@ -1,0 +1,23 @@
+$ node scripts/verify-v.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+21 !== 20
+
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:311:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:101:3)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:304:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 21,
+  expected: 20,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

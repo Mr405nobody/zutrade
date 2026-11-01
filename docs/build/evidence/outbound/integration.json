@@ -1,0 +1,48 @@
+{
+  "at": "2026-11-01T03:25:41.855Z",
+  "name": "zutrade_outbound_test_4f9555104c9f48608c80febb662b7b7d",
+  "successful": true,
+  "origin": "offline_fixture (except explicitly recorded real network attempt)",
+  "checks": [
+    {
+      "label": "incremental migration repeat, RLS, restricted roles and catalog map",
+      "result": "passed"
+    },
+    {
+      "label": "manual task identity, permission, safe URL and factory authorization",
+      "result": "passed"
+    },
+    {
+      "label": "actual pg-boss + offline-injected HTTP: homepage/about/products/contact, domain dedup, evidence",
+      "result": "passed"
+    },
+    {
+      "label": "repeated run does not duplicate company or overwrite source/review; source snapshot immutable",
+      "result": "passed"
+    },
+    {
+      "label": "review CAS, actor/time, corrections separate from raw evidence, append-only audit, refresh persistence",
+      "result": "passed"
+    },
+    {
+      "label": "cross-workspace, hidden-factory and revoked membership cannot read/review",
+      "result": "passed"
+    },
+    {
+      "label": "robots refusal and HTTP failure stay source feedback; no invented companies/risks",
+      "result": "passed"
+    },
+    {
+      "label": "automatic unavailable is a persisted failed task with no requests",
+      "result": "passed"
+    },
+    {
+      "label": "real official URL network attempt preserves SSRF and truthful failure/success evidence",
+      "result": "passed"
+    },
+    {
+      "label": "legacy D1 request and idempotency digest remain compatible after additive fields",
+      "result": "passed"
+    }
+  ]
+}

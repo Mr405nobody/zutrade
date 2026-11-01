@@ -1,0 +1,11 @@
+$ node scripts/verify-outbound.mjs
+PASS incremental migration repeat, RLS, restricted roles and catalog map
+PASS manual task identity, permission, safe URL and factory authorization
+PASS actual pg-boss + offline-injected HTTP: homepage/about/products/contact, domain dedup, evidence
+PASS repeated run does not duplicate company or overwrite source/review; source snapshot immutable
+PASS review CAS, actor/time, corrections separate from raw evidence, append-only audit, refresh persistence
+PASS cross-workspace, hidden-factory and revoked membership cannot read/review
+PASS robots refusal and HTTP failure stay source feedback; no invented companies/risks
+PASS automatic unavailable is a persisted failed task with no requests
+PASS real official URL network attempt preserves SSRF and truthful failure/success evidence
+PASS legacy D1 request and idempotency digest remain compatible after additive fields

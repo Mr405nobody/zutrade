@@ -49,3 +49,11 @@ if (existsSync(vPath))
       vPath +
       ' (permissions 600), users.owner/users.sales. Backup and restore materials remain private under .local.',
   );
+
+const outboundPath = resolve('.local/outbound-test-last.json');
+if (existsSync(outboundPath))
+  console.log(
+    'Outbound isolated OFFLINE verification accounts: ' +
+      outboundPath +
+      ' (permissions 600), users.owner/users.sales. New tasks use real network; daily accounts remain unchanged.',
+  );

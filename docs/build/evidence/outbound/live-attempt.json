@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-01T03:25:41.802Z",
+  "state": "failed",
+  "origin": "live_network",
+  "requestCount": 1,
+  "candidates": 0,
+  "errors": [
+    {
+      "url": "https://www.fastenal.com/",
+      "code": "SSRF_DNS_REJECTED"
+    }
+  ]
+}

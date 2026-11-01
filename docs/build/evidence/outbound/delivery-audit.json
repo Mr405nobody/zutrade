@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-01T03:22:54.398Z",
+  "evidenceContainsKnownLocalSecrets": false,
+  "originalSqlSha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe",
+  "privatePointerMode": "600",
+  "schemaPush": false,
+  "reset": false,
+  "finalCheckedAt": "2026-11-01T03:26:33.754Z",
+  "finalKnownPrivateSecretsAbsent": true
+}

@@ -1,0 +1,82 @@
+$ node scripts/verify-outbound-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:34961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth (12.9s)
+(node:35402) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth (12.6s)
+
+
+  1) [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '可信供给与产品', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '可信供给与产品', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: '可信供给与产品', exact: true })
+
+
+      91 |   await expect(page.getByRole('heading', { name: '消息', exact: true })).toBeVisible();
+      92 |   await page.getByRole('button', { name: '产品', exact: true }).click();
+    > 93 |   await expect(page.getByRole('heading', { name: '产品与可信供给', exact: true })).toBeVisible();
+         |                                                                             ^
+      94 |   await page.getByRole('button', { name: '找客户', exact: true }).click();
+      95 |   await expect(
+      96 |     page.getByRole('heading', { name: '主动获客与企业背调', exact: true }),
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/outbound.spec.ts:93:77
+
+    Error Context: test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '可信供给与产品', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '可信供给与产品', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: '可信供给与产品', exact: true })
+
+
+      91 |   await expect(page.getByRole('heading', { name: '消息', exact: true })).toBeVisible();
+      92 |   await page.getByRole('button', { name: '产品', exact: true }).click();
+    > 93 |   await expect(page.getByRole('heading', { name: '产品与可信供给', exact: true })).toBeVisible();
+         |                                                                             ^
+      94 |   await page.getByRole('button', { name: '找客户', exact: true }).click();
+      95 |   await expect(
+      96 |     page.getByRole('heading', { name: '主动获客与企业背调', exact: true }),
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/outbound.spec.ts:93:77
+
+    Error Context: test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+    [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+[ELIFECYCLE] Command failed with exit code 1.

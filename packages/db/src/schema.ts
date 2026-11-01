@@ -1570,6 +1570,88 @@ export const opportunityThreadsInApp = app.table(
   ],
 );
 
+export const outboundCompaniesInApp = app.table(
+  'outbound_companies',
+  {
+    id: uuid('id').notNull().default(sql.raw('gen_random_uuid()')),
+    workspaceId: uuid('workspace_id').notNull(),
+    factoryId: uuid('factory_id').notNull(),
+    domain: text('domain').notNull(),
+    name: text('name').notNull(),
+    runId: uuid('run_id').notNull(),
+    candidateKey: text('candidate_key').notNull(),
+    reviewStatus: text('review_status').notNull().default(sql.raw("'pending'::text")),
+    corrections: jsonb('corrections').notNull().default(sql.raw("'{}'::jsonb")),
+    reviewNotes: text('review_notes').notNull().default(sql.raw("''::text")),
+    reviewedBy: uuid('reviewed_by'),
+    reviewedAt: timestamp('reviewed_at', { withTimezone: true, mode: 'string' }),
+    revision: bigint('revision', { mode: 'bigint' }).notNull().default(sql.raw('0')),
+    createdAt: timestamp('created_at', { withTimezone: true, mode: 'string' })
+      .notNull()
+      .default(sql.raw('now()')),
+  },
+  (table): PgTableExtraConfigValue[] => [
+    check(
+      'outbound_companies_candidate_key_check',
+      sql.raw("(candidate_key ~ '^[a-f0-9]{64}$'::text)"),
+    ),
+    check(
+      'outbound_companies_check',
+      sql.raw(
+        "(((review_status = 'pending'::text) AND (reviewed_by IS NULL) AND (reviewed_at IS NULL) AND (revision = 0)) OR ((review_status <> 'pending'::text) AND (reviewed_by IS NOT NULL) AND (reviewed_at IS NOT NULL) AND (revision > 0)))",
+      ),
+    ),
+    check(
+      'outbound_companies_corrections_check',
+      sql.raw(
+        "((jsonb_typeof(corrections) = 'object'::text) AND (octet_length((corrections)::text) <= 8192))",
+      ),
+    ),
+    check(
+      'outbound_companies_domain_check',
+      sql.raw('(((length(domain) >= 3) AND (length(domain) <= 253)) AND (domain = lower(domain)))'),
+    ),
+    check(
+      'outbound_companies_name_check',
+      sql.raw('((length(name) >= 1) AND (length(name) <= 240))'),
+    ),
+    primaryKey({ name: 'outbound_companies_pkey', columns: [table.id] }),
+    check('outbound_companies_review_notes_check', sql.raw('(length(review_notes) <= 1000)')),
+    check(
+      'outbound_companies_review_status_check',
+      sql.raw(
+        "(review_status = ANY (ARRAY['pending'::text, 'approved'::text, 'rejected'::text, 'needs_info'::text]))",
+      ),
+    ),
+    check('outbound_companies_revision_check', sql.raw('(revision >= 0)')),
+    unique('outbound_companies_workspace_id_factory_id_domain_key').on(
+      table.workspaceId,
+      table.factoryId,
+      table.domain,
+    ),
+    foreignKey({
+      name: 'outbound_companies_workspace_id_factory_id_run_id_fkey',
+      columns: [table.workspaceId, table.factoryId, table.runId],
+      foreignColumns: [
+        prospectingRunsInApp.workspaceId,
+        prospectingRunsInApp.factoryId,
+        prospectingRunsInApp.id,
+      ],
+    }),
+    foreignKey({
+      name: 'outbound_companies_workspace_id_fkey',
+      columns: [table.workspaceId],
+      foreignColumns: [workspacesInApp.id],
+    }),
+    unique('outbound_companies_workspace_id_id_key').on(table.workspaceId, table.id),
+    foreignKey({
+      name: 'outbound_companies_workspace_id_reviewed_by_fkey',
+      columns: [table.workspaceId, table.reviewedBy],
+      foreignColumns: [workspaceMembersInApp.workspaceId, workspaceMembersInApp.id],
+    }),
+  ],
+);
+
 export const outboundPayloadVersionsInApp = app.table(
   'outbound_payload_versions',
   {
@@ -2458,7 +2540,9 @@ export const prospectingRunsInApp = app.table(
     primaryKey({ name: 'prospecting_runs_pkey', columns: [table.id] }),
     check(
       'prospecting_runs_provider_check',
-      sql.raw("(provider = ANY (ARRAY['public_directory'::text, 'brave_search'::text]))"),
+      sql.raw(
+        "(provider = ANY (ARRAY['public_directory'::text, 'brave_search'::text, 'outbound_manual'::text, 'outbound_unavailable'::text]))",
+      ),
     ),
     check(
       'prospecting_runs_request_check',

@@ -59,7 +59,7 @@ export const evidenceSchema = z
       .regex(/^[a-f0-9]{64}$/)
       .nullable(),
     hashScope: z.enum(['decoded_response_body', 'normalized_text']).nullable(),
-    extractorVersion: z.literal('d1-static-v1'),
+    extractorVersion: z.enum(['d1-static-v1', 'outbound-static-v1']),
     discoveryChain: z.array(z.url()).max(8),
     error: z.string().max(240).nullable(),
     attribution: z.string().max(240),

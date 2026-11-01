@@ -1,3 +1,23 @@
+# 2026-11-01 登录与 Git 更新
+
+用户明确授权更新日常 Alex 工作区原 owner 登录，并上传当前代码。登录凭据已在本机私有 `.local/b-accounts.json` 及关联引用更新；HTTP和真实页面登录/原owner身份均验证通过，账号值不写入Git。取账号仍用 `./scripts/zu db:accounts`，不要重新seed。登录表单支持既有短密码，新密码默认策略未放宽。详见 LOGIN_UPDATE_2026-11-01.md。Outbound/D1/D2/V的联网受阻状态不变，未accepted；本次上传不代表部署。
+
+# 当前交接：Outbound Intelligence MVP
+
+2026-11-01（Asia/Shanghai）。本次用户授权的主动获客＋企业背调增量本地工作完成，**verification_blocked**：真实官网取得资料→真实公司报告→审核→刷新成功链仍未通过。自动搜索不可用；不能将离线样例或DNS拒绝测试视为真实获客成功。D1/D2/V门槛不变。
+
+- 日常入口 http://127.0.0.1:5173/outbound ，沿用原账号；已备份并迁移0020，旧45表全部行数/摘要一致。源码更新先 `./scripts/zu build`，再 `./scripts/zu start`；数据库停止时 `./scripts/zu infra:start`。不要seed/reset/删卷。
+- 隔离入口 http://127.0.0.1:5773/outbound ，停止后 `./scripts/zu ui:outbound`。账号只在 `.local/outbound-test-last.json` 的users.owner/users.sales，公司始终标离线测试数据；新任务使用真实网络。
+- `./scripts/zu test:outbound` 每次新建并保留隔离库、更新上述样例指针；`test:outbound:browser` 验证桌面/390px，同一隔离公司会新增审核历史。运行前停止ui:outbound，避免端口4201/4202/5773冲突。真实官网失败检查目前依赖本机DNS现状，网络恢复后应更新浏览器的成功预期。
+- 备份位置仅存 `.local/outbound-upgrade-last.json`，本次没有恢复演练。V回归的新私有指针另存 `.local/outbound-regression-v-last.json`，V原指针已恢复；未将回归中的模拟业务审批应用到日常Alex。
+- 下一步仅补本阶段真实网络成功链：在用户授权且公网可达的环境保持SSRF，提交有权读取的官网、核对来源、审核并刷新。全部关键门槛通过后先ready_for_user_review，用户验收前不得accepted。SearXNG/本地模型改进另按范围授权，不自动实施。
+
+完整架构/文件/功能/数据库/命令/失败/限制见 STAGE_OUTBOUND_REPORT.md；准确退出码见 evidence/outbound/verification-summary.json；人工路径见 ACCEPTANCE.md。未提交、推送、部署或启用真实触达。
+
+---
+
+以下保留前序 V 交接记录。
+
 # ZuTrade V 本地交付交接
 
 2026-10-30（Asia/Shanghai）。本次授权的V本地集成、升级/重启/独立恢复、界面、安全与文档工作已完成。**V保持verification_blocked**：真实联网研究及真实来源到批次/完整V链尚待补验，不能写ready_for_user_review或accepted。用户已明确验收E，核对实际交付/最终证据后记accepted；D1/D2继续verification_blocked。顺序调整见ADR0014，未部署/采购/调代理/关闭SSRF/启用真实模型或消息。

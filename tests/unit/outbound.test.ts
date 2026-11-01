@@ -122,3 +122,23 @@ describe('Outbound rules and explicit source boundaries', () => {
     expect(calls).toBe(1);
   });
 });
+
+test('script-only product claims do not become visible website product facts', () => {
+  const parsed = extractOutboundPage(
+    {
+      ...page,
+      body: '<html><head><script>industrial fasteners bolts nuts distributor</script></head><body>Unrelated publicly visible business description with no matching product or buyer type.</body></html>',
+    },
+    'Industrial Fasteners',
+  );
+  expect(parsed.profile.products).toBeUndefined();
+  expect(parsed.profile.buyerType).toBeUndefined();
+  expect(parsed.profile.country).toBeUndefined();
+});
+test('rules report retains explicit source country instead of target market', () => {
+  const c = candidate();
+  c.profile = { country: { value: 'GB', sourceUrl: page.finalUrl } };
+  const r = buildDueDiligence(c, { country: 'US', buyerType: 'Distributor' });
+  expect(r.marketMatch).toBe('官网自述国家与目标不一致');
+  expect(r.facts.find((f) => f.label.startsWith('国家'))?.value).toBe('GB');
+});

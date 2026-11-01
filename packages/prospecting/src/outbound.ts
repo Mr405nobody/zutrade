@@ -236,7 +236,7 @@ export class OutboundManualProvider implements ResearchProvider {
               },
               sha256: page.bodySha256 ?? sha(page.body),
               hashScope: 'decoded_response_body',
-              extractorVersion: 'd1-static-v1',
+              extractorVersion: 'outbound-static-v1',
               discoveryChain: [homepage, robots, url],
               error: null,
               attribution:

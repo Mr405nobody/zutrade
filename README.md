@@ -2,6 +2,12 @@
 
 Mac 本地代理销售工作台。0—C、E 已由用户接受；D1/D2 的真实联网及来源到批次链仍待补验。阶段 V 已授权提前执行本地集成、恢复、界面与交付；整体状态保持 **verification_blocked**，不以离线公司替代真实验收。消息为 simulation，AI 为可重放 mock/preset；不发送真实消息、不调用真实模型。
 
+## 主动获客与企业背调 MVP（2026-11-01）
+
+入口 [主动获客](http://127.0.0.1:5173/outbound)。新增手动官网任务、静态页面提取、规则背调、人工修正及三状态审核；任务/证据/审核保存在 PostgreSQL，原研究与模拟批次入口保留。自动搜索不可用，本机真实官网 DNS 仍被安全拒绝，整体 **verification_blocked**，不能宣称已跑通真实获客。没有新增付费搜索、真实模型或消息发送。
+
+日常库已备份并应用0020，旧45表行数及摘要一致；无需seed。隔离功能演示 `./scripts/zu ui:outbound`，入口 http://127.0.0.1:5773/outbound，账号仅在 `.local/outbound-test-last.json`。隔离公司明确是离线测试数据，新任务仍读取真实网络。验证命令：`test:outbound`、`test:outbound:browser`，均经 `./scripts/zu` 执行。完整实现、限制和五步操作见 [Outbound 报告](docs/build/STAGE_OUTBOUND_REPORT.md)。
+
 ## 日常启动
 
 ```sh

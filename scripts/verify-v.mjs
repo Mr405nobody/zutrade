@@ -1,3 +1,4 @@
+import { expectedBusinessMigrationCount } from './business-table-expectations.mjs';
 import assert from 'node:assert/strict';
 import { loadEnvFile } from 'node:process';
 import { randomUUID, randomBytes } from 'node:crypto';
@@ -301,26 +302,29 @@ try {
   };
   ({ p: product, sv: source } = await supply());
   const initialized = (await m.query('SELECT id,name FROM app.workspaces ORDER BY id')).rows;
-  await check('带数据的 D2 0018 升级至 E 0019；旧工作区、产品、来源与 OID 保留', async () => {
-    const oid = (await m.query("SELECT 'app.products'::regclass::oid oid")).rows[0].oid;
-    assert.equal(
-      (await m.query('SELECT count(*)::int n FROM infra.business_migrations')).rows[0].n,
-      19,
-    );
-    command('scripts/db-migrate.mjs');
-    assert.equal(
-      (await m.query('SELECT count(*)::int n FROM infra.business_migrations')).rows[0].n,
-      20,
-    );
-    assert.deepEqual(
-      (await m.query('SELECT id,name FROM app.workspaces ORDER BY id')).rows,
-      initialized,
-    );
-    assert.equal((await row('products', product.id)).sku, 'CT-01');
-    assert.equal((await row('source_versions', source.id)).content_sha256, source.content_sha256);
-    assert.equal((await m.query("SELECT 'app.products'::regclass::oid oid")).rows[0].oid, oid);
-    command('scripts/db-migrate.mjs');
-  });
+  await check(
+    '带数据的 D2 0018 升级至当前增量（含 E 0019）；旧工作区、产品、来源与 OID 保留',
+    async () => {
+      const oid = (await m.query("SELECT 'app.products'::regclass::oid oid")).rows[0].oid;
+      assert.equal(
+        (await m.query('SELECT count(*)::int n FROM infra.business_migrations')).rows[0].n,
+        19,
+      );
+      command('scripts/db-migrate.mjs');
+      assert.equal(
+        (await m.query('SELECT count(*)::int n FROM infra.business_migrations')).rows[0].n,
+        expectedBusinessMigrationCount,
+      );
+      assert.deepEqual(
+        (await m.query('SELECT id,name FROM app.workspaces ORDER BY id')).rows,
+        initialized,
+      );
+      assert.equal((await row('products', product.id)).sku, 'CT-01');
+      assert.equal((await row('source_versions', source.id)).content_sha256, source.content_sha256);
+      assert.equal((await m.query("SELECT 'app.products'::regclass::oid oid")).rows[0].oid, oid);
+      command('scripts/db-migrate.mjs');
+    },
+  );
   await fact(product, source);
   let research, contact, leadId;
   await check('离线来源审核→导入→模拟身份→同一商机；明确 fixture，不是真实公司', async () => {

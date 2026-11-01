@@ -129,7 +129,10 @@ export async function createResearch(
     directoryConfigs.find((d) => d.id === input.directoryId)?.country !== input.country
   )
     throw new BoundaryError(400, '目录覆盖地区与目标地区不一致');
-  const hash = digest({ memberId: c.member.id, input });
+  // Preserve the original D1 command digest across additive request fields.
+  const { websiteUrls: _urls, permissionAcknowledged: _permission, ...legacyInput } = input;
+  const storedInput = input.provider.startsWith('outbound_') ? input : legacyInput;
+  const hash = digest({ memberId: c.member.id, input: storedInput });
   const old = (
     await c.client.query<Run>(
       'SELECT * FROM app.prospecting_runs WHERE workspace_id=$1 AND idempotency_key=$2',
@@ -149,7 +152,7 @@ export async function createResearch(
         c.member.id,
         input.provider,
         input.commandId,
-        JSON.stringify(input),
+        JSON.stringify(storedInput),
         hash,
       ],
     )
@@ -210,7 +213,7 @@ function view(r: Run) {
   const { execution_token: _token, checkpoint: _checkpoint, ...visible } = r;
   return visible;
 }
-export async function listResearch(c: Context) {
+export async function listResearch(c: Context, outboundOnly = false) {
   // Also resolves an expired crashed run without granting a fresh deadline or enqueueing work.
   const expired = await c.client.query<{ id: string }>(
     `UPDATE app.prospecting_runs SET state=CASE WHEN candidate_count>0 THEN 'partial' ELSE 'failed' END,finished_at=clock_timestamp(),error='RUN_DEADLINE' WHERE workspace_id=$1 AND state='running' AND deadline<=clock_timestamp() RETURNING id`,
@@ -220,7 +223,7 @@ export async function listResearch(c: Context) {
     await audit(c, 'd1.research-deadline', row.id, { reason: 'RUN_DEADLINE' });
   return (
     await c.client.query<Run>(
-      'SELECT * FROM app.prospecting_runs WHERE workspace_id=$1 ORDER BY created_at DESC,id LIMIT 30',
+      `SELECT * FROM app.prospecting_runs WHERE workspace_id=$1 ${outboundOnly ? "AND provider IN ('outbound_manual','outbound_unavailable')" : ''} ORDER BY created_at DESC,id LIMIT 30`,
       [ws(c)],
     )
   ).rows.map(view);

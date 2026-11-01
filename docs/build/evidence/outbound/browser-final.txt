@@ -1,0 +1,12 @@
+$ node scripts/verify-outbound-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:40253) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth (8.5s)
+(node:40326) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth (8.2s)
+
+  2 passed (17.9s)

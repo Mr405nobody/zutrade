@@ -1,0 +1,24 @@
+$ node scripts/verify-a1.mjs
+PASS empty PostgreSQL migration with baseline plus incremental business tables and separate auth/queue tables
+PASS Drizzle maps all current columns and ordered foreign keys to live catalogs
+PASS repeated migrations preserve table OIDs and migration rows
+PASS mid-baseline error rolls back every business table and migration success entry
+PASS all business RLS, ordered composite FKs, freeze and append-only triggers retained
+PASS API/worker/auth roles do not own business tables, bypass RLS or possess schema CREATE
+PASS concurrent first identity mapping converges without a membership or owner promotion
+PASS subject bootstrap discloses only the verified subject; no workspace discovers only own active membership
+PASS sales RLS and service restrict reads and writes to factory A
+PASS cross-workspace selection, writes and composite foreign-key association are blocked
+PASS commit, rollback and interleaved workspace transactions leave pooled contexts empty
+PASS only active designated owner passes approver boundary
+PASS worker row-lock grants cannot mutate factories or members
+PASS real pg-boss failure injection after business/outbox/enqueue and actual enqueue error rolls all back
+PASS committed command and idempotent retry create one event and real job
+PASS business row, outbox and pg-boss job share one PostgreSQL transaction ID
+PASS worker validates persisted event identity and current authorization instead of job hints
+PASS real Better Auth HTTP login; anonymous APIs and public signup rejected
+PASS forged client subject, role and workspace do not elevate HTTP authorization
+PASS owner member management revokes sales immediately; assigned approver and cross-workspace grants protected
+PASS logout and expired session are rejected before identity bootstrap
+PASS committed tasks survive worker absence and are consumed by the independent restricted worker
+PASS worker pool contexts are empty after failed hints and concurrent workspace jobs

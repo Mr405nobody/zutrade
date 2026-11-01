@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-01T03:31:20.667Z",
+  "existingUserIdentityPreserved": true,
+  "existingOwnerMembershipPreserved": true,
+  "requestedLoginVerified": true,
+  "plaintextPasswordCommitted": false,
+  "defaultNewPasswordPolicyChanged": false,
+  "oldSessionsRevoked": true,
+  "browserLoginVerified": true,
+  "browserOwnerRoleVerified": true,
+  "buildExitCode": 0,
+  "lintExitCode": 0,
+  "unitTestExitCode": 0,
+  "unitTestsPassed": 102,
+  "browserTransientRestartRecovered": true
+}

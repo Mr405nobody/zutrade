@@ -102,13 +102,7 @@ export function IdentityPanel() {
           </label>
           <label>
             密码
-            <input
-              name="password"
-              type="password"
-              autoComplete="current-password"
-              required
-              minLength={16}
-            />
+            <input name="password" type="password" autoComplete="current-password" required />
           </label>
           <Button type="submit" disabled={pending}>
             {pending ? '正在登录…' : '登录'}

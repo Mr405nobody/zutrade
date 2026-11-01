@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-11-01T03:17:44.393Z",
+  "database": "zutrade_a1_test_a96c4b8799e44abe99c02532b0eb7b1f",
+  "disposable": true,
+  "removed": true,
+  "tableCounts": [
+    {
+      "schemaname": "app",
+      "count": 46
+    },
+    {
+      "schemaname": "auth",
+      "count": 4
+    },
+    {
+      "schemaname": "infra",
+      "count": 2
+    },
+    {
+      "schemaname": "pgboss",
+      "count": 13
+    }
+  ],
+  "checks": [
+    {
+      "label": "empty PostgreSQL migration with baseline plus incremental business tables and separate auth/queue tables",
+      "result": "passed"
+    },
+    {
+      "label": "Drizzle maps all current columns and ordered foreign keys to live catalogs",
+      "result": "passed"
+    },
+    {
+      "label": "repeated migrations preserve table OIDs and migration rows",
+      "result": "passed"
+    },
+    {
+      "label": "mid-baseline error rolls back every business table and migration success entry",
+      "result": "passed"
+    },
+    {
+      "label": "all business RLS, ordered composite FKs, freeze and append-only triggers retained",
+      "result": "passed"
+    },
+    {
+      "label": "API/worker/auth roles do not own business tables, bypass RLS or possess schema CREATE",
+      "result": "passed"
+    },
+    {
+      "label": "concurrent first identity mapping converges without a membership or owner promotion",
+      "result": "passed"
+    },
+    {
+      "label": "subject bootstrap discloses only the verified subject; no workspace discovers only own active membership",
+      "result": "passed"
+    },
+    {
+      "label": "sales RLS and service restrict reads and writes to factory A",
+      "result": "passed"
+    },
+    {
+      "label": "cross-workspace selection, writes and composite foreign-key association are blocked",
+      "result": "passed"
+    },
+    {
+      "label": "commit, rollback and interleaved workspace transactions leave pooled contexts empty",
+      "result": "passed"
+    },
+    {
+      "label": "only active designated owner passes approver boundary",
+      "result": "passed"
+    },
+    {
+      "label": "worker row-lock grants cannot mutate factories or members",
+      "result": "passed"
+    },
+    {
+      "label": "real pg-boss failure injection after business/outbox/enqueue and actual enqueue error rolls all back",
+      "result": "passed"
+    },
+    {
+      "label": "committed command and idempotent retry create one event and real job",
+      "result": "passed"
+    },
+    {
+      "label": "business row, outbox and pg-boss job share one PostgreSQL transaction ID",
+      "result": "passed"
+    },
+    {
+      "label": "worker validates persisted event identity and current authorization instead of job hints",
+      "result": "passed"
+    },
+    {
+      "label": "real Better Auth HTTP login; anonymous APIs and public signup rejected",
+      "result": "passed"
+    },
+    {
+      "label": "forged client subject, role and workspace do not elevate HTTP authorization",
+      "result": "passed"
+    },
+    {
+      "label": "owner member management revokes sales immediately; assigned approver and cross-workspace grants protected",
+      "result": "passed"
+    },
+    {
+      "label": "logout and expired session are rejected before identity bootstrap",
+      "result": "passed"
+    },
+    {
+      "label": "committed tasks survive worker absence and are consumed by the independent restricted worker",
+      "result": "passed"
+    },
+    {
+      "label": "worker pool contexts are empty after failed hints and concurrent workspace jobs",
+      "result": "passed"
+    }
+  ],
+  "childErrors": []
+}

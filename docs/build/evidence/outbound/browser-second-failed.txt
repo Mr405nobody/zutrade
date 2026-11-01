@@ -1,0 +1,68 @@
+$ node scripts/verify-outbound-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:35651) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth (8.0s)
+(node:35769) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth (7.8s)
+
+
+  1) [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 401
+    Received: 200
+
+       97 |   ).toBeVisible();
+       98 |   await page.request.post('/api/auth/sign-out', { data: {} });
+    >  99 |   expect((await page.request.get(apiBase)).status()).toBe(401);
+          |                                                      ^
+      100 |   await page.reload();
+      101 |   await expect(page.getByRole('heading', { name: '登录你的工作区', exact: true })).toBeVisible();
+      102 |   expect(pageErrors).toEqual([]);
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/outbound.spec.ts:99:54
+
+    Error Context: test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 401
+    Received: 200
+
+       97 |   ).toBeVisible();
+       98 |   await page.request.post('/api/auth/sign-out', { data: {} });
+    >  99 |   expect((await page.request.get(apiBase)).status()).toBe(401);
+          |                                                      ^
+      100 |   await page.reload();
+      101 |   await expect(page.getByRole('heading', { name: '登录你的工作区', exact: true })).toBeVisible();
+      102 |   expect(pageErrors).toEqual([]);
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/outbound.spec.ts:99:54
+
+    Error Context: test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/outbound-Outbound-routes-t-d3c59-ection-persistence-and-auth-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+    [mobile] › tests/e2e/outbound.spec.ts:7:1 › Outbound routes, truthful modes, rules/evidence, review/correction persistence and auth
+[ELIFECYCLE] Command failed with exit code 1.

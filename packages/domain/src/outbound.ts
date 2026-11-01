@@ -40,7 +40,7 @@ const companySelect = `SELECT o.*,u.display_name AS reviewer_name,c->>'country' 
  LEFT JOIN app.app_users u ON u.id=m.user_id
  WHERE o.workspace_id=$1 AND c->>'key'=o.candidate_key`;
 export async function outboundDashboard(c: Context) {
-  const runs = (await listResearch(c)).filter((r) => r.provider.startsWith('outbound_'));
+  const runs = await listResearch(c, true);
   const companies = (
     await c.client.query<OutboundCompany>(
       companySelect + ' ORDER BY o.created_at DESC,o.id LIMIT 100',

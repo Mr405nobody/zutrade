@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-01 Asia/Shanghai",
+  "phaseStatus": "verification_blocked",
+  "reason": "Real public website DNS resolved reserved198.18 addresses; successful live import-to-review not verified",
+  "commands": [
+    {
+      "command": "./scripts/zu doctor --services (before application start)",
+      "exitCode": 1,
+      "result": "API not running; other checks passed",
+      "evidence": "doctor-initial-not-running.json"
+    },
+    {
+      "command": "./scripts/zu build (final)",
+      "exitCode": 0,
+      "result": "All workspace projects built; existing bundle-size warning",
+      "evidence": "build-final.txt"
+    },
+    {
+      "command": "./scripts/zu typecheck",
+      "exitCode": 0,
+      "result": "All packages and tools",
+      "evidence": "typecheck-final.txt"
+    },
+    {
+      "command": "./scripts/zu lint",
+      "exitCode": 0,
+      "result": "ESLint, dependency boundaries, Prettier",
+      "evidence": "lint-final.txt"
+    },
+    {
+      "command": "./scripts/zu test:unit",
+      "exitCode": 0,
+      "result": "102 passed across 9 files",
+      "evidence": "unit-final.txt"
+    },
+    {
+      "command": "./scripts/zu test:outbound (initial)",
+      "exitCode": 0,
+      "result": "9 groups; successful HTML extraction explicitly offline-injected",
+      "evidence": "integration-first.txt"
+    },
+    {
+      "command": "./scripts/zu test:outbound (final)",
+      "exitCode": 0,
+      "result": "10 groups; separate real website attempt failed safely; original D1 request digest compatibility checked",
+      "evidence": "integration-final.txt"
+    },
+    {
+      "command": "./scripts/zu test:outbound:browser (first)",
+      "exitCode": 1,
+      "result": "Two tests reached old product page; wrong heading assertion",
+      "evidence": "browser-first-failed.txt"
+    },
+    {
+      "command": "./scripts/zu test:outbound:browser (second)",
+      "exitCode": 1,
+      "result": "Direct API sign-out lacked browser Origin; corrected to real product logout",
+      "evidence": "browser-second-failed.txt"
+    },
+    {
+      "command": "./scripts/zu test:outbound:browser (third)",
+      "exitCode": 0,
+      "result": "Desktop and 390px passed",
+      "evidence": "browser-third-passed.txt"
+    },
+    {
+      "command": "./scripts/zu test:outbound:browser (final)",
+      "exitCode": 0,
+      "result": "Desktop and 390px passed against final retained isolated sample",
+      "evidence": "browser-final.txt"
+    },
+    {
+      "command": "./scripts/zu test:integration",
+      "exitCode": 0,
+      "result": "23 A1 groups; catalog/auth/RLS/queue",
+      "evidence": "regression-a1.txt"
+    },
+    {
+      "command": "./scripts/zu test:d1",
+      "exitCode": 0,
+      "result": "16 D1 groups; budgets/SSRF/fencing/concurrency",
+      "evidence": "regression-d1.txt"
+    },
+    {
+      "command": "./scripts/zu test:v (first)",
+      "exitCode": 1,
+      "result": "Historical fixed migration count expected20, actual21",
+      "evidence": "regression-v-first-failed.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/outbound/regression/v ./scripts/zu test:v",
+      "exitCode": 0,
+      "result": "6 groups; upgrade/AI/quote/PDF/approval/simulation/followup",
+      "evidence": "regression-v-passed.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/outbound-daily-upgrade.mjs",
+      "exitCode": 0,
+      "result": "Private backup; 45 existing table digests/counts unchanged; new table empty",
+      "evidence": "daily-upgrade.txt"
+    },
+    {
+      "command": "./scripts/zu doctor --services (running)",
+      "exitCode": 0,
+      "result": "Daily API/worker/database ready",
+      "evidence": "doctor-final.txt"
+    },
+    {
+      "command": "curl --max-time 2 http://127.0.0.1:11434/api/tags (scan)",
+      "exitCode": 7,
+      "result": "No local Ollama listener; no model used",
+      "evidence": null
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/outbound/regression/d1-final ./scripts/zu test:d1",
+      "exitCode": 0,
+      "result": "16 groups passed after final backward-compatible request digest fix",
+      "evidence": "regression-d1-final.txt"
+    }
+  ],
+  "liveSuccess": false,
+  "automaticSearchAvailable": false,
+  "realModelUsed": false,
+  "commercialSearchApiUsed": false,
+  "historicalStageEvidence": "Regression copies saved here; prior tracked A1/D1/V evidence restored to preserve original handoff records",
+  "dailyData": "Private backup and full preexisting table digest equality verified"
+}

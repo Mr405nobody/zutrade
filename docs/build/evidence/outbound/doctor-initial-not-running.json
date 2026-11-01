@@ -1,0 +1,5 @@
+{
+  "exitCode": 1,
+  "reason": "API not reachable because daily app was stopped; database/toolchain/originalSQL/ignore checks passed",
+  "evidence": "Initial doctor --services tool output in this chat"
+}

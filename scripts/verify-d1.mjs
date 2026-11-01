@@ -1,3 +1,4 @@
+import { expectedBusinessTableCount } from './business-table-expectations.mjs';
 import assert from 'node:assert/strict';
 import { loadEnvFile } from 'node:process';
 import { randomUUID, randomBytes } from 'node:crypto';
@@ -236,24 +237,27 @@ try {
   wb = createQueue(env.WORKER_DATABASE_URL);
   await boss.start();
   await wb.start();
-  await check('44→45 app tables, RLS and restricted runtime roles', async () => {
-    assert.equal(
-      (await m.query("SELECT count(*)::int n FROM pg_tables WHERE schemaname='app'")).rows[0].n,
-      45,
-    );
-    const r = (
-      await m.query(
-        "SELECT relrowsecurity,relforcerowsecurity FROM pg_class WHERE oid='app.prospecting_runs'::regclass",
-      )
-    ).rows[0];
-    assert.deepEqual(r, { relrowsecurity: true, relforcerowsecurity: true });
-    for (const p of [api, worker]) {
+  await check(
+    'research table retained alongside later additive tables, RLS and restricted roles',
+    async () => {
+      assert.equal(
+        (await m.query("SELECT count(*)::int n FROM pg_tables WHERE schemaname='app'")).rows[0].n,
+        expectedBusinessTableCount,
+      );
       const r = (
-        await p.query('SELECT rolsuper,rolbypassrls FROM pg_roles WHERE rolname=current_user')
+        await m.query(
+          "SELECT relrowsecurity,relforcerowsecurity FROM pg_class WHERE oid='app.prospecting_runs'::regclass",
+        )
       ).rows[0];
-      assert.deepEqual(r, { rolsuper: false, rolbypassrls: false });
-    }
-  });
+      assert.deepEqual(r, { relrowsecurity: true, relforcerowsecurity: true });
+      for (const p of [api, worker]) {
+        const r = (
+          await p.query('SELECT rolsuper,rolbypassrls FROM pg_roles WHERE rolname=current_user')
+        ).rows[0];
+        assert.deepEqual(r, { rolsuper: false, rolbypassrls: false });
+      }
+    },
+  );
   await check('business + outbox + real pg-boss rollback, three failure points', async () => {
     for (const failure of ['business', 'outbox', 'enqueue']) {
       const before = await counts();
