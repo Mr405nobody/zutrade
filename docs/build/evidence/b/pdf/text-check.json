@@ -1,0 +1,14 @@
+{
+  "quote-500.pdf": {
+    "pages": 2,
+    "text_checks": "passed",
+    "cjk": "passed",
+    "geometry": "passed"
+  },
+  "quote-long.pdf": {
+    "pages": 6,
+    "text_checks": "passed",
+    "cjk": "passed",
+    "geometry": "passed"
+  }
+}

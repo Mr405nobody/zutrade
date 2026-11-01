@@ -1,0 +1,2 @@
+$ node scripts/db-seed.mjs
+Controlled demo seed completed; existing profiles, names, memberships and business rows retained. Accounts: .local/a1-accounts.json (600).

@@ -1,0 +1,88 @@
+$ node scripts/verify-e-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:11800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (29.2s)
+(node:11911) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (21.8s)
+
+
+  1) [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[data-thread-id="295afc6b-6758-4c4a-9b9d-6da86b649e99"]')
+
+
+      142 |   await page.getByLabel('密码', { exact: true }).fill(fixture.users.sales.password);
+      143 |   await page.getByRole('button', { name: '登录', exact: true }).click();
+    > 144 |   await page.locator(`[data-thread-id="${fixture.ui.threadId}"]`).click();
+          |                                                                   ^
+      145 |   await page.getByRole('button', { name: /内部工作区/ }).click();
+      146 |   await expect(panel.getByRole('button', { name: '审核并启用 FAQ 模板', exact: true })).toHaveCount(
+      147 |     0,
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:144:67
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="3367b4f5-2e03-4cc1-a0c0-85c88cd00056"]')
+    Timeout: 5000ms
+    - Expected substring  - 1
+    + Received string     + 5
+
+    - 需转人工
+    + material · ct01.v1 · 建议已生成10/29/2026, 10:45 PM · 0 ms · token/费用：不适用The confirmed material of CT-01 is 12oz.上下文或事实已变化，旧建议失效事实来源 · 模拟资料第1段Confirmed simulated CT-01 specifications and price tier.事实版本 07f8f55c-e64d-4ef8-994e-894c8dd151a4来源版本 0ea67c66-92b6-40f8-a352-a32e83a8133dSHA256 bc37c3e90485476dbe5faee5ff766c7a6955b0d92105032ae9f847c6af968a60输入引用与输出校验输入摘要 92e7e2bac8be9ab59fa8d0e5ac9234f1c710189c18a41a8bbd25069769307f8b消息 576c6eb5-ebfb-40c3-b6b5-87812ca5bf9d会话修订 5 · 需求修订 1What material is CT-01 made of?{
+    +   "valid": false,
+    +   "reason": "上下文或事实已变化，旧建议失效",
+    +   "outputValidation": "preset_recomputed"
+    + }采用建议修改为内部草稿拒绝建议
+
+    Call log:
+      - Expect "toContainText" getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="3367b4f5-2e03-4cc1-a0c0-85c88cd00056"]') with timeout 5000ms
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="3367b4f5-2e03-4cc1-a0c0-85c88cd00056"]')
+        14 × locator resolved to <article class="ai-run" data-ai-run="3367b4f5-2e03-4cc1-a0c0-85c88cd00056">…</article>
+           - unexpected value "material · ct01.v1 · 建议已生成10/29/2026, 10:45 PM · 0 ms · token/费用：不适用The confirmed material of CT-01 is 12oz.上下文或事实已变化，旧建议失效事实来源 · 模拟资料第1段Confirmed simulated CT-01 specifications and price tier.事实版本 07f8f55c-e64d-4ef8-994e-894c8dd151a4来源版本 0ea67c66-92b6-40f8-a352-a32e83a8133dSHA256 bc37c3e90485476dbe5faee5ff766c7a6955b0d92105032ae9f847c6af968a60输入引用与输出校验输入摘要 92e7e2bac8be9ab59fa8d0e5ac9234f1c710189c18a41a8bbd25069769307f8b消息 576c6eb5-ebfb-40c3-b6b5-87812ca5bf9d会话修订 5 · 需求修订 1What material is CT-01 made of?{
+      "valid": false,
+      "reason": "上下文或事实已变化，旧建议失效",
+      "outputValidation": "preset_recomputed"
+    }采用建议修改为内部草稿拒绝建议"
+
+
+      110 |     .toBe(false);
+      111 |   const arrival = await generate();
+    > 112 |   await expect(arrival).toContainText('需转人工');
+          |                         ^
+      113 |   await expect(arrival).toContainText('六周到货未获确认');
+      114 |   await page.screenshot({
+      115 |     path: `${evidence}/${info.project.name}-needs-human.png`,
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:112:25
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+    [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ──────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

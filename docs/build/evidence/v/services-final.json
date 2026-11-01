@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-30T05:50:15.845Z",
+  "services": [
+    {
+      "port": 5173,
+      "http": 200,
+      "status": "ready"
+    },
+    {
+      "port": 5673,
+      "http": 200,
+      "status": "ready"
+    }
+  ]
+}

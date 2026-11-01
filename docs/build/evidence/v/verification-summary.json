@@ -1,0 +1,89 @@
+{
+  "observedAt": "2026-10-30T05:49:43.052Z",
+  "scope": "V authorized local work only; E accepted by user; D1/D2 real chain deferred",
+  "status": "verification_blocked",
+  "localWorkComplete": true,
+  "checks": [
+    {
+      "command": "./scripts/zu typecheck",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "typecheck-final.txt"
+    },
+    {
+      "command": "./scripts/zu lint",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "lint-final.txt"
+    },
+    {
+      "command": "./scripts/zu doctor --services",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "doctor-final.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/v-security-audit.mjs",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "security-final.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/e-audit.mjs",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "daily-final.txt"
+    }
+  ],
+  "behavior": [
+    {
+      "command": "./scripts/zu build",
+      "exitCode": 0,
+      "evidence": "build-final.txt"
+    },
+    {
+      "command": "./scripts/zu test:unit",
+      "exitCode": 0,
+      "tests": 93,
+      "evidence": "unit.txt"
+    },
+    {
+      "command": "./scripts/zu test:v",
+      "exitCode": 0,
+      "groups": 6,
+      "evidence": "integration-fifth.txt; integration.json"
+    },
+    {
+      "command": "./scripts/zu test:v:recovery",
+      "exitCode": 0,
+      "groups": 3,
+      "evidence": "recovery-second.txt; recovery.json"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/v-restore-guard.mjs",
+      "exitCode": 0,
+      "evidence": "restore-guard-second.txt; restore-job-guard.json"
+    },
+    {
+      "command": "./scripts/zu test:v:browser",
+      "exitCode": 0,
+      "viewports": [
+        "1440x1000",
+        "390x844"
+      ],
+      "evidence": "browser-third.txt; browser/"
+    }
+  ],
+  "dailyAlexUnchanged": true,
+  "dailyBusinessCountsUnchanged": true,
+  "failuresRetained": [
+    "integration-first.txt",
+    "integration-second.txt",
+    "integration-third.txt",
+    "integration-fourth.txt",
+    "browser-first.txt",
+    "restore-guard-first.txt"
+  ],
+  "realDiscovery": "not performed; blocked/deferred, no offline substitution",
+  "reusedEvidence": "V_MATRIX.md"
+}

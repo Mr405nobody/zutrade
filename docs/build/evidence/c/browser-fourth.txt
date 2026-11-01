@@ -1,0 +1,2 @@
+$ node scripts/verify-c-browser.mjs
+C desktop/mobile verification passed in isolated database; daily Alex and services untouched.

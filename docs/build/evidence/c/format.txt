@@ -1,0 +1,38 @@
+apps/api/src/main.ts 36ms (unchanged)
+apps/api/src/approval-controller.ts 6ms
+apps/web/src/approvals.tsx 24ms
+apps/web/src/quote-workspace.tsx 26ms
+apps/web/src/inbox.tsx 31ms
+apps/web/src/main.tsx 9ms
+apps/web/src/supply.tsx 24ms (unchanged)
+apps/web/src/styles.css 65ms
+packages/channels/src/index.ts 9ms
+packages/channels/package.json 5ms (unchanged)
+packages/contracts/src/index.ts 6ms (unchanged)
+packages/contracts/src/approval.ts 2ms
+packages/config/src/index.ts 8ms (unchanged)
+packages/db/src/identity.ts 14ms (unchanged)
+packages/db/src/schema.ts 156ms
+packages/db/migrations/business/meta/_journal.json 2ms (unchanged)
+packages/domain/src/approval.ts 21ms
+packages/domain/src/dispatch.ts 14ms
+packages/domain/src/delivery-checks.ts 6ms
+packages/domain/src/outbound-canonical.ts 3ms
+packages/domain/src/delivery.ts 7ms
+packages/domain/src/inbound.ts 9ms
+packages/domain/src/inbox.ts 7ms
+packages/domain/src/index.ts 1ms (unchanged)
+scripts/a1-configure.mjs 5ms
+scripts/db-provision.mjs 3ms (unchanged)
+scripts/db-accounts.mjs 1ms
+scripts/verify-a2.mjs 22ms
+scripts/verify-b.mjs 16ms (unchanged)
+scripts/verify-a2-inbound.mjs 6ms (unchanged)
+scripts/verify-c.mjs 28ms
+scripts/verify-c-browser.mjs 6ms
+scripts/c-test-worker.mjs 2ms
+scripts/c-demo-prepare.mjs 2ms
+scripts/c-ui-serve.mjs 1ms
+tests/e2e/c.spec.ts 11ms
+tests/unit/outbound-canonical.test.ts 2ms
+package.json 0ms (unchanged)

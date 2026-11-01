@@ -1,0 +1,73 @@
+$ node scripts/verify-e-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:9452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (2.5m)
+(node:10163) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (58.9s)
+
+
+  1) [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ────────────────────
+
+    Test timeout of 150000ms exceeded.
+
+    Error: locator.fill: Test timeout of 150000ms exceeded.
+    Call log:
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run]').first().getByLabel('修改 AI 建议', { exact: true })
+
+
+      68 |   await second
+      69 |     .getByLabel('修改 AI 建议', { exact: true })
+    > 70 |     .fill('E browser internal draft ' + info.project.name);
+         |      ^
+      71 |   await second.getByRole('button', { name: '保存修改草稿', exact: true }).click();
+      72 |   await expect(second).toContainText('已处理：modify');
+      73 |   const third = await generate();
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:70:6
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+
+    Test was interrupted.
+
+    Error: locator.fill: Test ended.
+    Call log:
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run]').first().getByLabel('修改 AI 建议', { exact: true })
+
+
+      68 |   await second
+      69 |     .getByLabel('修改 AI 建议', { exact: true })
+    > 70 |     .fill('E browser internal draft ' + info.project.name);
+         |      ^
+      71 |   await second.getByRole('button', { name: '保存修改草稿', exact: true }).click();
+      72 |   await expect(second).toContainText('已处理：modify');
+      73 |   const third = await generate();
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:70:6
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+  1 interrupted
+    [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ──────────────────────
+[ELIFECYCLE] Command failed with exit code 130.

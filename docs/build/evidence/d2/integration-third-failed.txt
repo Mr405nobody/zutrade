@@ -1,0 +1,21 @@
+PASS D1 fixture -> review -> import remains explicitly offline; independent demo contact has no real permission
+PASS Only current designated active owner approves; workspace/factory access checked
+PASS Approval/business/outbox/enqueue rollback together; duplicate approve retains one event per item
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing expected rejection.
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:83:516
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:24:32)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:81:3 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: undefined,
+  operator: 'rejects',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

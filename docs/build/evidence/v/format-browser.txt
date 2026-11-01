@@ -1,0 +1,7 @@
+scripts/verify-v-browser.mjs 16ms (unchanged)
+scripts/verify-v-recovery.mjs 22ms
+scripts/verify-v.mjs 22ms
+scripts/v-migrate-pre-e.mjs 4ms (unchanged)
+scripts/v-ui-serve.mjs 2ms (unchanged)
+scripts/e-audit.mjs 4ms
+tests/e2e/v.spec.ts 29ms

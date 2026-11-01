@@ -1,0 +1,39 @@
+$ pnpm -r --sort build
+Scope: 11 of 12 workspace projects
+packages/ai build$ tsc -p tsconfig.json
+packages/channels build$ tsc -p tsconfig.json
+packages/config build$ tsc -p tsconfig.json
+packages/contracts build$ tsc -p tsconfig.json
+packages/ai build: Done
+packages/storage build$ tsc -p tsconfig.json
+packages/channels build: Done
+packages/ui build$ tsc -p tsconfig.json
+packages/config build: Done
+packages/contracts build: Done
+packages/db build$ tsc -p tsconfig.json
+packages/storage build: Done
+packages/ui build: Done
+apps/web build$ tsc -p tsconfig.json --noEmit && vite build
+packages/db build: Done
+packages/domain build$ tsc -p tsconfig.json
+apps/web build: vite v8.3.5 building client environment for production...
+apps/web build: transforming...
+apps/web build: ✓ 2102 modules transformed.
+apps/web build: rendering chunks...
+apps/web build: computing gzip size...
+apps/web build: dist/index.html                   0.46 kB │ gzip:   0.32 kB
+apps/web build: dist/assets/index-38L6tqir.css   35.36 kB │ gzip:   8.49 kB
+apps/web build: dist/assets/index-DFErRp70.js   415.24 kB │ gzip: 126.63 kB
+apps/web build: ✓ built in 185ms
+apps/web build: Done
+packages/domain build: src/delivery.ts(422,9): error TS2322: Type '{ kind: string; requestId: string; token: string; workspaceId?: never; request?: never; payload?: never; attemptId?: never; contact?: never; } | { kind: string; workspaceId: string; request: RequestRow; ... 4 more ...; requestId?: never; } | null' is not assignable to type 'Claim'.
+packages/domain build:   Type '{ kind: string; requestId: string; token: string; workspaceId?: never; request?: never; payload?: never; attemptId?: never; contact?: never; }' is not assignable to type 'Claim'.
+packages/domain build:     Type '{ kind: string; requestId: string; token: string; workspaceId?: never; request?: never; payload?: never; attemptId?: never; contact?: never; }' is not assignable to type '{ kind: "send"; workspaceId: string; request: RequestRow; payload: Payload; token: string; attemptId: string; contact: Contact; } | { kind: "recover"; requestId: string; token: string; }'.
+packages/domain build:       Type '{ kind: string; requestId: string; token: string; workspaceId?: never; request?: never; payload?: never; attemptId?: never; contact?: never; }' is not assignable to type '{ kind: "send"; workspaceId: string; request: RequestRow; payload: Payload; token: string; attemptId: string; contact: Contact; }'.
+packages/domain build:         Types of property 'kind' are incompatible.
+packages/domain build:           Type 'string' is not assignable to type '"send"'.
+packages/domain build: Failed
+/Users/warren/Desktop/ZuTrade/packages/domain:
+[ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @zutrade/domain@0.0.0-stage.0 build: `tsc -p tsconfig.json`
+Exit status 2
+[ELIFECYCLE] Command failed with exit code 2.

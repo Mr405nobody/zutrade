@@ -1,0 +1,5 @@
+PASS ./scripts/zu typecheck exit=0
+PASS ./scripts/zu lint exit=0
+PASS ./scripts/zu doctor --services exit=0
+PASS ./scripts/zu exec node scripts/v-security-audit.mjs exit=0
+PASS ./scripts/zu exec node scripts/e-audit.mjs exit=0

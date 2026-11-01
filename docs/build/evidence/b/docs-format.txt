@@ -1,0 +1,8 @@
+README.md 20ms (unchanged)
+docs/build/PROGRESS.md 8ms
+docs/build/HANDOFF.md 7ms (unchanged)
+docs/build/HANDOFF_A2.md 9ms (unchanged)
+docs/build/ACCEPTANCE.md 13ms (unchanged)
+docs/build/STAGE_A2_REPORT.md 11ms (unchanged)
+docs/build/STAGE_B_REPORT.md 10ms
+docs/build/adr/0007-quote-snapshot-and-current-eligibility.md 3ms (unchanged)

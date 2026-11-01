@@ -1,0 +1,20 @@
+$ playwright test
+
+Running 10 tests using 1 worker
+
+(node:66862) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.4s)
+  ✓   2 [desktop] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.3s)
+  ✓   3 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (10.8s)
+  ✓   4 [desktop] › tests/e2e/b.spec.ts:63:1 › B 真实供给、500/800 报价历史、PDF、缺项、冲突与失效 (4.7s)
+  ✓   5 [desktop] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+(node:67036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [mobile] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.4s)
+  ✓   7 [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.3s)
+  ✓   8 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (10.9s)
+  ✓   9 [mobile] › tests/e2e/b.spec.ts:63:1 › B 真实供给、500/800 报价历史、PDF、缺项、冲突与失效 (5.0s)
+  ✓  10 [mobile] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+
+  10 passed (1.2m)

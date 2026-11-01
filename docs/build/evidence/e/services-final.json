@@ -1,0 +1,147 @@
+{
+  "observedAt": "2026-10-29T14:53:08.107Z",
+  "samples": [
+    {
+      "name": "daily",
+      "probes": [
+        {
+          "port": 5173,
+          "path": "/",
+          "status": 200,
+          "body": {
+            "zutrade": true
+          }
+        },
+        {
+          "port": 3001,
+          "path": "/health/ready",
+          "status": 200,
+          "body": {
+            "service": "api",
+            "status": "ready",
+            "version": "0.0.0-stage.e",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T14:53:08.037Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T14:53:08.037Z",
+              "latencyMs": 12,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_api（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "worker": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T14:53:08.034Z",
+              "latencyMs": 9,
+              "detail": "独立进程 · 心跳 2026-10-29T14:53:08.004Z · 数据库检查通过",
+              "version": "0.0.0-stage.e"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        {
+          "port": 3002,
+          "path": "/health/ready",
+          "status": 200,
+          "body": {
+            "service": "worker",
+            "status": "ready",
+            "version": "0.0.0-stage.e",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T14:53:08.040Z",
+            "startedAt": "2026-10-29T14:52:47.999Z",
+            "instanceId": "387fe89b-15f8-4e7d-bbe0-d12da45cc772",
+            "heartbeatAt": "2026-10-29T14:53:08.004Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T14:53:08.004Z",
+              "latencyMs": 1,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "e",
+      "probes": [
+        {
+          "port": 5573,
+          "path": "/",
+          "status": 200,
+          "body": {
+            "zutrade": true
+          }
+        },
+        {
+          "port": 3901,
+          "path": "/health/ready",
+          "status": 200,
+          "body": {
+            "service": "api",
+            "status": "ready",
+            "version": "0.0.0-stage.e",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T14:53:08.104Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T14:53:08.104Z",
+              "latencyMs": 51,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_api（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "worker": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T14:53:08.094Z",
+              "latencyMs": 41,
+              "detail": "独立进程 · 心跳 2026-10-29T14:53:05.120Z · 数据库检查通过",
+              "version": "0.0.0-stage.e"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        {
+          "port": 3902,
+          "path": "/health/ready",
+          "status": 200,
+          "body": {
+            "service": "worker",
+            "status": "ready",
+            "version": "0.0.0-stage.e",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T14:53:08.106Z",
+            "startedAt": "2026-10-29T14:51:55.094Z",
+            "instanceId": "e623d7e9-3556-48af-81fa-085f3311477a",
+            "heartbeatAt": "2026-10-29T14:53:05.120Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T14:53:05.120Z",
+              "latencyMs": 3,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

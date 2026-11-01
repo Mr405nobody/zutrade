@@ -1,0 +1,50 @@
+Scope: all 12 workspace projects
+✓ Lockfile passes supply-chain policies (verified 381ms ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 32, reused 32, downloaded 0, added 0
+Progress: resolved 33, reused 32, downloaded 0, added 0
+Progress: resolved 36, reused 36, downloaded 0, added 0
+Progress: resolved 153, reused 153, downloaded 0, added 0
+Progress: resolved 154, reused 153, downloaded 0, added 0
+Progress: resolved 154, reused 154, downloaded 0, added 0
+Progress: resolved 367, reused 307, downloaded 0, added 0
+Progress: resolved 368, reused 308, downloaded 0, added 0
+Progress: resolved 369, reused 308, downloaded 0, added 0
+[WARN] 2 deprecated subdependencies found: @esbuild-kit/core-utils@3.3.2, @esbuild-kit/esm-loader@2.6.5
+Already up to date
+Progress: resolved 532, reused 416, downloaded 0, added 0, done
+
+Done in 11s using pnpm v11.25.0
+$ pnpm -r --sort build
+Scope: 11 of 12 workspace projects
+packages/ai build$ tsc -p tsconfig.json
+packages/channels build$ tsc -p tsconfig.json
+packages/config build$ tsc -p tsconfig.json
+packages/contracts build$ tsc -p tsconfig.json
+packages/channels build: Done
+packages/storage build$ tsc -p tsconfig.json
+packages/ai build: Done
+packages/ui build$ tsc -p tsconfig.json
+packages/config build: Done
+packages/contracts build: Done
+packages/db build$ tsc -p tsconfig.json
+packages/storage build: Done
+packages/ui build: Done
+apps/web build$ tsc -p tsconfig.json --noEmit && vite build
+packages/db build: Done
+packages/domain build$ tsc -p tsconfig.json
+apps/web build: vite v8.3.5 building client environment for production...
+apps/web build: transforming...
+apps/web build: ✓ 2102 modules transformed.
+apps/web build: rendering chunks...
+apps/web build: computing gzip size...
+apps/web build: dist/index.html                   0.46 kB │ gzip:   0.32 kB
+apps/web build: dist/assets/index-Dli7RVy2.css   34.92 kB │ gzip:   8.41 kB
+apps/web build: dist/assets/index-D5alLs0E.js   413.80 kB │ gzip: 126.16 kB
+apps/web build: ✓ built in 212ms
+apps/web build: Done
+packages/domain build: Done
+apps/api build$ tsc -p tsconfig.json
+apps/worker build$ tsc -p tsconfig.json
+apps/worker build: Done
+apps/api build: Done

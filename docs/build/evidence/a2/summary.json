@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-28T14:29:08.603Z",
+  "stage": "A2",
+  "status": "ready_for_user_review",
+  "previousStage": {
+    "stage": "A1",
+    "status": "accepted",
+    "basis": "User explicitly accepted A1 and authorized A2 on 2026-10-28"
+  },
+  "coreIntegrationGroups": 19,
+  "coreIntegrationPassed": true,
+  "successfulDisposableDatabaseRemoved": true,
+  "inboundScopeGroups": 11,
+  "inboundScopePassed": true,
+  "browserRegression": 8,
+  "browserExactObjectChecks": 2,
+  "desktopViewport": [
+    1440,
+    1000
+  ],
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "unitTests": 4,
+  "build": true,
+  "typecheck": true,
+  "lint": true,
+  "doctor": true,
+  "tables": [
+    {
+      "schemaname": "app",
+      "count": 42
+    },
+    {
+      "schemaname": "auth",
+      "count": 4
+    },
+    {
+      "schemaname": "infra",
+      "count": 2
+    },
+    {
+      "schemaname": "pgboss",
+      "count": 13
+    }
+  ],
+  "originalSql": {
+    "bytes": 75172,
+    "sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"
+  },
+  "secretMatches": [],
+  "reviewedScreenshots": [
+    "desktop-simulated-reply.png",
+    "mobile-simulated-reply.png"
+  ],
+  "boundaries": [
+    "No stage B work",
+    "No real channel/model/prospecting execution",
+    "No full crash timing proof; synthetic claimed recovery is conservative unknown",
+    "No independent mock receipt ledger until C",
+    "No attachment endpoint in A2",
+    "User has not accepted A2"
+  ],
+  "serviceUrls": {
+    "web": "http://127.0.0.1:5173",
+    "api": "http://127.0.0.1:3001",
+    "worker": "http://127.0.0.1:3002"
+  }
+}

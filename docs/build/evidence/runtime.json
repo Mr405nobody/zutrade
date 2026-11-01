@@ -1,0 +1,179 @@
+{
+  "checkedAt": "2026-10-28T12:39:04.375Z",
+  "exitCode": 0,
+  "results": [
+    {
+      "name": "stage_boundary",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:38:51.244Z",
+      "detail": {
+        "installedBusinessAuthQueueSchemas": 0
+      }
+    },
+    {
+      "name": "api_worker_database_ready",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:38:51.784Z",
+      "detail": {
+        "status": 200,
+        "body": {
+          "service": "api",
+          "status": "ready",
+          "version": "0.0.0-stage.0",
+          "nodeVersion": "v24.22.1",
+          "checkedAt": "2026-10-28T12:38:51.780Z",
+          "database": {
+            "status": "ok",
+            "checkedAt": "2026-10-28T12:38:51.780Z",
+            "latencyMs": 16,
+            "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_runtime（受限角色）",
+            "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+          },
+          "worker": {
+            "status": "ok",
+            "checkedAt": "2026-10-28T12:38:51.776Z",
+            "latencyMs": 11,
+            "detail": "独立进程 · 心跳 2026-10-28T12:38:51.544Z · 数据库检查通过",
+            "version": "0.0.0-stage.0"
+          },
+          "modes": {
+            "channel": "simulation",
+            "ai": "mock",
+            "prospecting": "live_public_directory"
+          }
+        }
+      }
+    },
+    {
+      "name": "worker_stopped_api_stays_alive",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:38:51.796Z",
+      "detail": {
+        "status": 503,
+        "body": {
+          "service": "api",
+          "status": "not_ready",
+          "version": "0.0.0-stage.0",
+          "nodeVersion": "v24.22.1",
+          "checkedAt": "2026-10-28T12:38:51.795Z",
+          "database": {
+            "status": "ok",
+            "checkedAt": "2026-10-28T12:38:51.795Z",
+            "latencyMs": 1,
+            "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_runtime（受限角色）",
+            "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+          },
+          "worker": {
+            "status": "error",
+            "checkedAt": "2026-10-28T12:38:51.794Z",
+            "latencyMs": 1,
+            "detail": "worker 探针不可达或响应无效，请检查独立进程与日志",
+            "version": null
+          },
+          "modes": {
+            "channel": "simulation",
+            "ai": "mock",
+            "prospecting": "live_public_directory"
+          }
+        }
+      }
+    },
+    {
+      "name": "worker_restarted",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:38:52.316Z",
+      "detail": {
+        "status": 200,
+        "newInstance": true
+      }
+    },
+    {
+      "name": "database_stopped_readiness_fails",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:38:57.495Z",
+      "detail": {
+        "api": {
+          "status": 503,
+          "body": {
+            "service": "api",
+            "status": "not_ready",
+            "version": "0.0.0-stage.0",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-28T12:38:52.468Z",
+            "database": {
+              "status": "error",
+              "checkedAt": "2026-10-28T12:38:52.468Z",
+              "latencyMs": 1,
+              "detail": "PostgreSQL 连接不可用（ECONNREFUSED）",
+              "version": null
+            },
+            "worker": {
+              "status": "ok",
+              "checkedAt": "2026-10-28T12:38:52.468Z",
+              "latencyMs": 1,
+              "detail": "独立进程 · 心跳 2026-10-28T12:38:52.026Z · 数据库检查通过",
+              "version": "0.0.0-stage.0"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        "worker": {
+          "status": 503,
+          "body": {
+            "service": "worker",
+            "status": "not_ready",
+            "version": "0.0.0-stage.0",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-28T12:38:57.491Z",
+            "startedAt": "2026-10-28T12:38:52.016Z",
+            "instanceId": "a149b25c-03a9-4f96-90e2-661f70aba778",
+            "heartbeatAt": "2026-10-28T12:38:57.022Z",
+            "database": {
+              "status": "error",
+              "checkedAt": "2026-10-28T12:38:57.022Z",
+              "latencyMs": 2,
+              "detail": "PostgreSQL 连接不可用（ECONNREFUSED）",
+              "version": null
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        "liveStatus": 200
+      }
+    },
+    {
+      "name": "database_restart_volume_preserved",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:39:03.200Z",
+      "detail": {
+        "systemIdentifierBefore": "7701697112392880170",
+        "systemIdentifierAfter": "7701697112392880170",
+        "readiness": 200
+      }
+    },
+    {
+      "name": "repeat_infra_up_is_safe",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:39:03.830Z",
+      "detail": {
+        "readiness": 200
+      }
+    },
+    {
+      "name": "application_process_restart",
+      "status": "passed",
+      "timestamp": "2026-10-28T12:39:04.375Z",
+      "detail": {
+        "readiness": 200
+      }
+    }
+  ]
+}

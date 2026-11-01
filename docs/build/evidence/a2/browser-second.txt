@@ -1,0 +1,70 @@
+$ playwright test a2.spec.ts
+
+Running 2 tests using 1 worker
+
+(node:46103) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (2.5m)
+(node:47507) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (1.5m)
+
+
+  1) [desktop] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ─────────────────────────────
+
+    Test timeout of 150000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 150000ms exceeded.
+    Call log:
+      - waiting for getByLabel('归属工厂', { exact: true })
+
+
+      69 |     }
+      70 |     await page.getByRole('button', { name: '注入模拟买家消息', exact: true }).click();
+    > 71 |     await page.getByLabel('归属工厂', { exact: true }).selectOption(accounts.factories[0]!);
+         |                                                    ^
+      72 |     const injected = await postWithUi(page, '/simulation', () =>
+      73 |       page.getByRole('button', { name: '注入 Alex 询盘', exact: true }).click(),
+      74 |     );
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:71:52
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+
+    Test was interrupted.
+
+    Error: browserContext.setOffline: Target page, context or browser has been closed
+
+      253 |     observed.result = 'passed';
+      254 |   } finally {
+    > 255 |     await page.context().setOffline(false);
+          |                          ^
+      256 |     await salesContext?.close();
+      257 |     observed.finishedAt = new Date().toISOString();
+      258 |     observed.pageErrors = errors;
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:255:26
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+  1 interrupted
+    [mobile] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ───────────────────────────────
+[ELIFECYCLE] Command failed with exit code 130.

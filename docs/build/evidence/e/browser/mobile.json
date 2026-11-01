@@ -1,0 +1,16 @@
+{
+  "viewport": "mobile",
+  "threadId": "1fce3fd5-38d1-436b-b161-59a5917150aa",
+  "firstRun": "ba81fe70-64f0-42a4-b4a1-80a73753c49b",
+  "faqRun": "74c48f08-0f22-4e69-82dd-419dde51d66f",
+  "replay": true,
+  "sources": true,
+  "modify": true,
+  "reject": true,
+  "faq": true,
+  "needsHuman": true,
+  "stale": true,
+  "relogin": true,
+  "externalNetwork": "blocked",
+  "errors": []
+}

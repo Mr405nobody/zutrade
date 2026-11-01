@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-28T13:18:36.554Z",
+  "systemBefore": "7701697112392880170",
+  "systemAfter": "7701697112392880170",
+  "volume": "zutrade_postgres_data",
+  "checks": [
+    {
+      "label": "repeat migration and seed preserve existing edited profile, membership and factory rows",
+      "result": "passed"
+    },
+    {
+      "label": "preserved-volume database restart retains accounts, memberships, edited profile and active session; both accounts log in again",
+      "result": "passed"
+    }
+  ]
+}

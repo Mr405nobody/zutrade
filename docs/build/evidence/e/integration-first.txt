@@ -1,0 +1,25 @@
+$ node scripts/verify-e.mjs
+file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/inbound.js:117
+    const hint = jobSchema.parse(data);
+                           ^
+
+ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "userId"
+    ],
+    "path": [],
+    "message": "Unrecognized key: \"userId\""
+  }
+]
+    at consumeInboundJob (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/inbound.js:117:28)
+    at inbound (file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:30:63)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async run (file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:36:68)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:61:11
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:22:31)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:60:2
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

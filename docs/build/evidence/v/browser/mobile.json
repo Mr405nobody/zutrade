@@ -1,0 +1,13 @@
+{
+  "viewport": "mobile",
+  "fourEntries": true,
+  "offlineLabel": true,
+  "quoteHistory": "1230.00",
+  "privatePdf": true,
+  "failureRecovery": true,
+  "permissionRevocation": true,
+  "sseRevocation": true,
+  "signoutInvalidatesSession": true,
+  "externalNetwork": "blocked",
+  "errors": []
+}

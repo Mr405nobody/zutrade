@@ -1,0 +1,12 @@
+$ node scripts/verify-a2-inbound.mjs
+PASS isolated PostgreSQL 18 incremental migration and queues
+PASS receipt/outbox/pg-boss transaction and repeated job/event deduplication
+PASS immutable event digest conflict
+PASS same names with distinct channel identities and system actor audits
+PASS unmatched identity remains an unresolved inbound barrier
+PASS enqueue failure rolls receipt and event back
+PASS trusted account system scope, no organization identity reads, PUBLIC/API task function denial, and full-account barrier
+PASS complete association authorization hides mixed factory messages and increments context on new link
+PASS simulation injection is owner-only
+PASS normalization exception retry/dead projection increments attempts and retains unresolved barrier
+PASS explicit failed-inbox official pg-boss retry preserves job and outbox identities

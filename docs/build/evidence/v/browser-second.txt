@@ -1,0 +1,12 @@
+$ node scripts/verify-v-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:55453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/v.spec.ts:8:1 › V 四入口、冻结历史、移动端、失败/加载反馈、下载/SSE/失效会话 (6.5s)
+(node:55501) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/v.spec.ts:8:1 › V 四入口、冻结历史、移动端、失败/加载反馈、下载/SSE/失效会话 (6.2s)
+
+  2 passed (14.7s)

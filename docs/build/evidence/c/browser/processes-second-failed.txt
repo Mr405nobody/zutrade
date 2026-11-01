@@ -1,0 +1,77 @@
+
+  VITE v8.3.5  ready in 130 ms
+
+  ➜  Local:   http://127.0.0.1:5273/
+{"timestamp":"2026-10-28T16:18:39.954Z","service":"worker","event":"listening","address":"http://127.0.0.1:3402","instanceId":"1e126bc7-58a8-4293-803a-2054e4c1f251","version":"0.0.0-stage.b"}
+{"timestamp":"2026-10-28T16:18:39.955Z","service":"worker","event":"heartbeat","instanceId":"1e126bc7-58a8-4293-803a-2054e4c1f251","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:18:40.140Z","service":"api","event":"listening","address":"http://127.0.0.1:3401","version":"0.0.0-stage.b","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}
+
+Running 2 tests using 1 worker
+
+(node:81671) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+12:18:42 AM [vite] (client) [console.error] Encountered two children with the same key, `66aa4ec1-1e58-41bf-aae3-4665bc7b773b`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+  ✘  1 [desktop] › tests/e2e/c.spec.ts:37:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 (2.9s)
+(node:81709) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"timestamp":"2026-10-28T16:18:44.953Z","service":"worker","event":"heartbeat","instanceId":"1e126bc7-58a8-4293-803a-2054e4c1f251","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+12:18:45 AM [vite] (client) [console.error] Encountered two children with the same key, `66aa4ec1-1e58-41bf-aae3-4665bc7b773b`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+  ✘  2 [mobile] › tests/e2e/c.spec.ts:37:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 (2.6s)
+
+
+  1) [desktop] › tests/e2e/c.spec.ts:37:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 ────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "836d638989b817b967cf13044c18d47be041f1b09ee2ac9fa7c1bcf004bbe1a0"
+    Received: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+      48 |  let preview=await tasks(page,f.main.identity);await expect(preview).toContainText('1950.00');await expect(preview).toContainText(f.main.identity);await expect(preview).toContainText('Production');
+      49 |  const pdfResponse=page.waitForResponse(res=>res.url().endsWith('/pdf')&&res.request().method()==='GET');
+    > 50 |  const popup=page.waitForEvent('popup');await preview.getByRole('button',{name:'查看已保存 PDF',exact:true}).click();const pdf=await pdfResponse;expect(pdf.status()).toBe(200);const bytes=await pdf.body();expect(createHash('sha256').update(bytes).digest('hex')).toBe(pdf.headers()['x-content-sha256']);const pdfPage=await popup;await pdfPage.close();
+         |                                                                                                                                                                                                                                                                  ^
+      51 |  await capture(page,'owner-preview',info.project.name);
+      52 |  const approveResponse=page.waitForResponse(res=>res.request().method()==='POST'&&res.url().endsWith('/decision'));
+      53 |  await preview.getByRole('button',{name:'批准并模拟执行',exact:true}).click();expect((await approveResponse).status()).toBe(201);
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/c.spec.ts:50:258
+
+    Error Context: test-results/c-C-桌面-手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与-unknown-核对-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/c-C-桌面-手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与-unknown-核对-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/c-C-桌面-手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与-unknown-核对-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/c.spec.ts:37:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 ─────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "a4ffe86edb68500b04bc2104b45030c7726910d71ee901339d6ddd025227f623"
+    Received: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+      48 |  let preview=await tasks(page,f.main.identity);await expect(preview).toContainText('1950.00');await expect(preview).toContainText(f.main.identity);await expect(preview).toContainText('Production');
+      49 |  const pdfResponse=page.waitForResponse(res=>res.url().endsWith('/pdf')&&res.request().method()==='GET');
+    > 50 |  const popup=page.waitForEvent('popup');await preview.getByRole('button',{name:'查看已保存 PDF',exact:true}).click();const pdf=await pdfResponse;expect(pdf.status()).toBe(200);const bytes=await pdf.body();expect(createHash('sha256').update(bytes).digest('hex')).toBe(pdf.headers()['x-content-sha256']);const pdfPage=await popup;await pdfPage.close();
+         |                                                                                                                                                                                                                                                                  ^
+      51 |  await capture(page,'owner-preview',info.project.name);
+      52 |  const approveResponse=page.waitForResponse(res=>res.request().method()==='POST'&&res.url().endsWith('/decision'));
+      53 |  await preview.getByRole('button',{name:'批准并模拟执行',exact:true}).click();expect((await approveResponse).status()).toBe(201);
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/c.spec.ts:50:258
+
+    Error Context: test-results/c-C-桌面-手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与-unknown-核对-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/c-C-桌面-手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与-unknown-核对-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/c-C-桌面-手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与-unknown-核对-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/c.spec.ts:37:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 ─────────────
+    [mobile] › tests/e2e/c.spec.ts:37:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 ──────────────
+{"timestamp":"2026-10-28T16:18:46.915Z","service":"worker","event":"stopped","instanceId":"1e126bc7-58a8-4293-803a-2054e4c1f251"}

@@ -1,0 +1,23 @@
+{
+  "failures": [
+    {
+      "command": "./scripts/zu exec node scripts/b-seed.mjs",
+      "reason": "Daily workspace contains no Alex contact relation; refused to guess a factory. No business mutation."
+    },
+    {
+      "command": "./scripts/zu exec node scripts/b-seed.mjs",
+      "reason": "Public @zutrade/storage import unavailable before root workspace dependency installed; no business mutation."
+    },
+    {
+      "command": "./scripts/zu exec node scripts/verify-b-supply.mjs",
+      "database": "zutrade_b_supply_cc3f5cc4b60d484dbf90a76fb1edb698",
+      "reason": "Test fixture reused parameter as UUID and text; 42P08. Database retained, domain checks not started."
+    },
+    {
+      "command": "./scripts/zu exec node scripts/verify-b-supply.mjs",
+      "database": "zutrade_b_supply_21cdadb530994204ac72d457fc0a15ca",
+      "reason": "Second fixture cast incomplete; 42P08. Database retained, domain checks not started."
+    }
+  ],
+  "recovery": "Explicit UUID/text casts in isolated factory fixture. Supply test passed all 7 groups; its own success database removed."
+}

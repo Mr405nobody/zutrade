@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-28T17:04:01.976Z",
+  "requestId": "6ad592b7-f703-4644-8b63-5f1b159706e8",
+  "payloadId": "3cd0d645-69c8-40a5-a643-bf56e04662ed",
+  "quoteVersionId": "950f5d3f-645e-4f12-9f67-4eb81bd50c32",
+  "quantity": "500",
+  "totalAmount": "1230.00",
+  "pdfSha256": "f2363a0394930ca647a8b9e568a94a7250a9bb22c0576d989843c06badd0032f",
+  "pdfHttpStatus": 200,
+  "ownerPreviewed": true,
+  "approved": false,
+  "approvalButtonClicked": false
+}

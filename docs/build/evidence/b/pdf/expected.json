@@ -1,0 +1,22 @@
+{
+  "expected": [
+    "1230.00",
+    "1200.00",
+    "30.00",
+    "CT-01",
+    "模拟棉布袋工厂",
+    "Arrival within six weeks",
+    "not committed"
+  ],
+  "forbidden": [
+    "INTERNAL_COST_DO_NOT_EXPORT",
+    "private_fact",
+    "private_price",
+    "private_source",
+    "private_locator"
+  ],
+  "hashes": {
+    "short": "9f5ea0b24e6dfe982f55b9f2b557221a0153d49c0ec0d1e5a0080e3b1d359194",
+    "long": "20e7c82b64f827331370573f6e1f554066adf600758fdd0c3296bc6c89cb42af"
+  }
+}

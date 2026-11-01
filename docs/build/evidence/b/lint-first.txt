@@ -1,0 +1,14 @@
+$ eslint . && node scripts/boundaries.mjs && prettier --check .
+
+/Users/warren/Desktop/ZuTrade/apps/api/src/supply-controller.ts
+  71:11  error  Unexpected control character(s) in regular expression: \x00, \x08, \x0b, \x0c, \x0e, \x1f  no-control-regex
+
+/Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs
+   5:36  error  'readFileSync' is defined but never used    @typescript-eslint/no-unused-vars
+  22:3   error  'withdrawSource' is defined but never used  @typescript-eslint/no-unused-vars
+  23:3   error  'withdrawFact' is defined but never used    @typescript-eslint/no-unused-vars
+  24:3   error  'productDetail' is defined but never used   @typescript-eslint/no-unused-vars
+
+✖ 5 problems (5 errors, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.

@@ -1,0 +1,13 @@
+{
+  "project": "desktop",
+  "startedAt": "2026-10-28T16:50:50.383Z",
+  "initialEmpty": false,
+  "receiptId": "3a4d6dca-14b9-4b9e-abac-b9ece86099b3",
+  "threadId": "7a481a30-908e-4f90-b966-589f31c55255",
+  "normalizedMessageId": "0e572c10-e422-4690-a6bf-8d222cf73ebf",
+  "outboundRequestId": "fccdd181-eed3-4c35-b627-0e8b964f8345",
+  "salesUnreadBeforeOpen": 1,
+  "result": "passed",
+  "finishedAt": "2026-10-28T16:51:03.364Z",
+  "pageErrors": []
+}

@@ -1,0 +1,37 @@
+PASS sales submits current 800 / 1950 quote, owner sees exact content and stored PDF; strict payload identity and full hash
+PASS sales/non-designated/disabled owner cannot approve; stale v1 page cannot approve v2; immutable request identity and frozen evidence
+PASS command idempotency and concurrent approve have one event and one durable business job
+PASS approval/business/outbox/real pg-boss enqueue failures atomically roll back; jobs unconsumable until commit
+/Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694
+          Error.captureStackTrace(err)
+                ^
+
+error: column reference "reason" is ambiguous
+    at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/dispatch.js:162:21
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async consumeDeliveryJob (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/dispatch.js:142:23)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:386:4
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:114:3)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:379:3 {
+  length: 336,
+  severity: 'ERROR',
+  code: '42702',
+  detail: 'It could refer to either a PL/pgSQL variable or a table column.',
+  hint: undefined,
+  position: undefined,
+  internalPosition: '54',
+  internalQuery: 'UPDATE app.approvals SET state=lifecycle,reason=left(reason,200) WHERE id=a.id',
+  where: 'PL/pgSQL function block_delivery_job(uuid,uuid,text) line 11 at SQL statement',
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'pl_comp.c',
+  line: '1041',
+  routine: 'plpgsql_post_column_ref'
+}
+
+Node.js v24.22.1

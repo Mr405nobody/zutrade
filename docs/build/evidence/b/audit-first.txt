@@ -1,0 +1,15 @@
+node:fs:2482
+    return binding.writeFileUtf8(
+                   ^
+
+Error: EISDIR: illegal operation on a directory, open 'docs/build/evidence/b'
+    at writeFileSync (node:fs:2482:20)
+    at file:///Users/warren/Desktop/ZuTrade/scripts/a1-audit.mjs:111:3
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  errno: -21,
+  code: 'EISDIR',
+  syscall: 'open',
+  path: 'docs/build/evidence/b'
+}
+
+Node.js v24.22.1

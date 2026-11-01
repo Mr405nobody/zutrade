@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-28T14:24:23.653Z",
+  "purpose": "Earlier failed isolated runs retained for diagnosis; final successful random databases removed by exact name.",
+  "databases": [
+    "zutrade_a2_test_3b6dc4d23f96444d836c232679868d34",
+    "zutrade_a2_test_45cd18869b324b308ad711e9ba064eff",
+    "zutrade_a2_test_606aab28a8464f2c8b81b214504244f9",
+    "zutrade_a2_test_a977281146644ce58baaa44a01a58226",
+    "zutrade_inbound_test_0b4d2f1a08274c44a12db64a41cee667"
+  ]
+}

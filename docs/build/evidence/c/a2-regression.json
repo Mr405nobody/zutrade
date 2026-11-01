@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-28T16:23:33.721Z",
+  "stage": "A2",
+  "passed": true,
+  "disposableDatabaseRemoved": true,
+  "checks": [
+    {
+      "label": "A1 runtime role, RLS, original SQL and incremental migration boundaries retained",
+      "result": "passed"
+    },
+    {
+      "label": "inbound receipt persists before worker; duplicate same event reused and changed content conflicts; injection owner-only",
+      "result": "passed"
+    },
+    {
+      "label": "real worker restart consumes committed inbound queue without reseed",
+      "result": "passed"
+    },
+    {
+      "label": "different event envelopes for same provider message do not duplicate message or advance context; same-name distinct identity stays distinct",
+      "result": "passed"
+    },
+    {
+      "label": "independent read cursors; late occurred_at remains unread; monotonic reads and cursor pagination",
+      "result": "passed"
+    },
+    {
+      "label": "thread lock is explicit synchronization point: concurrent inbound cannot be skipped by read or pagination",
+      "result": "passed"
+    },
+    {
+      "label": "notes and free-text internal drafts never create buyer messages, frozen snapshots or delivery jobs; notes/read do not invalidate context",
+      "result": "passed"
+    },
+    {
+      "label": "gateway command idempotency, fixed templates, atomic request/payload/outbox/queue and worker simulated completion",
+      "result": "passed"
+    },
+    {
+      "label": "business/outbox/enqueue all roll back on enqueue failure; no partial command survives",
+      "result": "passed"
+    },
+    {
+      "label": "two-window CAS conflict, takeover invalidates old action, latest human reply allowed and release explicit",
+      "result": "passed"
+    },
+    {
+      "label": "claim revalidates paused channel, contact eligibility, member and factory revocation; records explicit blocking",
+      "result": "passed"
+    },
+    {
+      "label": "expired synthetic claim becomes unknown without an unprotected second send (C preserves active claims; this is not crash proof)",
+      "result": "passed"
+    },
+    {
+      "label": "persisted receipt and failed/dead receipt retain account barrier; new inbound invalidates old reply",
+      "result": "passed"
+    },
+    {
+      "label": "complete factory-set authorization: A-only sales cannot read B, A/B mixed, or unassigned via list/detail/messages/notes/read/SSE snapshot",
+      "result": "passed"
+    },
+    {
+      "label": "system worker cannot forge job or operate outside scoped simulation receipt",
+      "result": "passed"
+    },
+    {
+      "label": "HTTP strict authorization and templates; A1 login, factory boundary and transaction helper regressions",
+      "result": "passed"
+    },
+    {
+      "label": "SSE rechecks authorization after ACL revocation and newly invisible factory link; no hidden content, ids or counts leak",
+      "result": "passed"
+    },
+    {
+      "label": "SSE session expiry invalidates established connection and future queries",
+      "result": "passed"
+    },
+    {
+      "label": "application restart preserves messages notes reads and committed queued tasks; SSE reconnect/database cursor catch-up",
+      "result": "passed"
+    }
+  ]
+}

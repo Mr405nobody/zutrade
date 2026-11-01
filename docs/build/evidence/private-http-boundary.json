@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-28T12:46:30.783Z",
+  "exitCode": 0,
+  "results": [
+    {
+      "path": ".env",
+      "status": 403,
+      "denied": true
+    },
+    {
+      "path": ".local/logs/worker.log",
+      "status": 403,
+      "denied": true
+    },
+    {
+      "path": "data/private/.stage0-http-boundary-probe.txt",
+      "status": 403,
+      "denied": true
+    },
+    {
+      "path": ".git/HEAD",
+      "status": 403,
+      "denied": true
+    }
+  ]
+}

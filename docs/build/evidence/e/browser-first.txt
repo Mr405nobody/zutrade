@@ -1,0 +1,84 @@
+$ node scripts/verify-e-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:8749) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/e.spec.ts:6:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (1.3s)
+(node:8809) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/e.spec.ts:6:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (1.1s)
+
+
+  1) [desktop] › tests/e2e/e.spec.ts:6:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true }) resolved to 2 elements:
+        1) <code>What material is CT-01 made of?</code> aka getByRole('code').filter({ hasText: 'What material is CT-01 made' })
+        2) <textarea>What material is CT-01 made of?</textarea> aka getByLabel('模拟买家消息内容What material is CT-')
+
+    Call log:
+      - Expect "toBeVisible" getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true }) with timeout 5000ms
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true })
+
+
+      11 |   const errors: string[] = [];
+      12 |   page.on('pageerror', (e) => errors.push(e.message));
+    > 13 |   // All non-loopback browser network is disabled for this verification.
+         |                                                                         ^
+      14 |   await page.route('**/*', (route) => {
+      15 |     const host = new URL(route.request().url()).hostname;
+      16 |     return ['127.0.0.1', 'localhost'].includes(host)
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:13:235
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/e.spec.ts:6:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true })
+    Expected: visible
+    Error: strict mode violation: getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true }) resolved to 2 elements:
+        1) <code>What material is CT-01 made of?</code> aka getByRole('code').filter({ hasText: 'What material is CT-01 made' })
+        2) <textarea>What material is CT-01 made of?</textarea> aka getByLabel('模拟买家消息内容What material is CT-')
+
+    Call log:
+      - Expect "toBeVisible" getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true }) with timeout 5000ms
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).getByText('What material is CT-01 made of?', { exact: true })
+
+
+      11 |   const errors: string[] = [];
+      12 |   page.on('pageerror', (e) => errors.push(e.message));
+    > 13 |   // All non-loopback browser network is disabled for this verification.
+         |                                                                         ^
+      14 |   await page.route('**/*', (route) => {
+      15 |     const host = new URL(route.request().url()).hostname;
+      16 |     return ['127.0.0.1', 'localhost'].includes(host)
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:13:235
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/e.spec.ts:6:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+    [mobile] › tests/e2e/e.spec.ts:6:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ──────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

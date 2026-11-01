@@ -1,0 +1,153 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1793188800000,
+      "tag": "0000_baseline",
+      "breakpoints": false
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793188800001,
+      "tag": "0001_identity_boundary",
+      "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793188800002,
+      "tag": "0002_worker_rowlocks",
+      "breakpoints": false
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1793188800003,
+      "tag": "0003_inbox",
+      "breakpoints": false
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1793188800004,
+      "tag": "0004_inbox_scope_hardening",
+      "breakpoints": false
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1793188800005,
+      "tag": "0005_supply_quoting",
+      "breakpoints": false
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1793188800006,
+      "tag": "0006_approval_dispatch",
+      "breakpoints": false
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1793188800007,
+      "tag": "0007_dispatch_fencing",
+      "breakpoints": false
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1793188800008,
+      "tag": "0008_worker_quote_lock",
+      "breakpoints": false
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1793188800009,
+      "tag": "0009_dispatch_lifecycle",
+      "breakpoints": false
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1793188800010,
+      "tag": "0010_block_reason_binding",
+      "breakpoints": false
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1793188800011,
+      "tag": "0011_simulation_invocation_ledger",
+      "breakpoints": false
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1793188800012,
+      "tag": "0012_delivery_retry_identity",
+      "breakpoints": false
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1793188800013,
+      "tag": "0013_prospecting",
+      "breakpoints": false
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1793188800014,
+      "tag": "0014_prospecting_revocation",
+      "breakpoints": false
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1793188800015,
+      "tag": "0015_outreach_followup",
+      "breakpoints": false
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1793188800016,
+      "tag": "0016_demo_thread_initialization",
+      "breakpoints": false
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1793188800017,
+      "tag": "0017_pacing_result_cutoff",
+      "breakpoints": false
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1793188800018,
+      "tag": "0018_followup_execution_history",
+      "breakpoints": false
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1793188800019,
+      "tag": "0019_mock_ai",
+      "breakpoints": false
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1793188800020,
+      "tag": "0020_outbound_intelligence",
+      "breakpoints": false
+    }
+  ]
+}

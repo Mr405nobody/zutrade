@@ -1,0 +1,10 @@
+[error] scripts/d1-fixture.mjs: SyntaxError: Unexpected token, expected "," (17:367)
+[error]   15 |         const n=Number(url.pathname.match(/Q9000(\d)/)?.[1]);
+[error]   16 |         if(mode==='partial'&&n===2)return out('',403);
+[error] > 17 |         return out({entities:{['Q'+(90000+n)]:{labels:{en:{value:`D1 Offline Events ${n} (fictional test)`}},descriptions:{en:{value:'Fictional event management and promotional merchandise company for offline tests'}},claims:{P17:[{mainsnak:{datavalue:{value:{id:'Q334'}}}}],P856:[{mainsnak:{datavalue:{value:`https://d1-${n}.example.org/branch?company=${n}`}}}]}}}}});
+[error]      |                                                                                                                                                                                                                                                                                                                                                                               ^
+[error]   18 |       }
+[error]   19 |       if(url.pathname==='/robots.txt')return out('User-agent: *\nAllow: /',200,'text/plain');
+[error]   20 |       return out('<html><title>Fictional D1 Events</title><body>Fictional event management and promotional cotton bag products. No real company or contact. <a href="mailto:public@fictional.example">Public mailbox</a><script>fetch("http://127.0.0.1/")</script></body></html>',200,'text/html');
+scripts/d1-test-worker.mjs 9ms
+scripts/verify-d1.mjs 23ms

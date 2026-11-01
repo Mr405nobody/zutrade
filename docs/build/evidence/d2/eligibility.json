@@ -1,0 +1,11 @@
+{
+  "observedAt": "2026-10-29T10:26:06.011Z",
+  "database": "zutrade_d2_test_01ae06a811344e33b8f896e1f669d9cc",
+  "origin": "offline_test_fixture",
+  "checks": [
+    "Simulation grant/revoke/regrant preserves existing real-email unknown and denied/do_not_contact rows byte-for-byte as JSON",
+    "Sales cannot restore simulation qualification; current designated owner can",
+    "Public-format email remains unverified"
+  ],
+  "passed": true
+}

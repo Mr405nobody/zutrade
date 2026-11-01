@@ -1,0 +1,23 @@
+$ node scripts/verify-c.mjs
+PASS sales submits current 800 / 1950 quote, owner sees exact content and stored PDF; strict payload identity and full hash
+PASS sales/non-designated/disabled owner cannot approve; stale v1 page cannot approve v2; immutable request identity and frozen evidence
+PASS command idempotency and concurrent approve have one event and one durable business job
+PASS approval/business/outbox/real pg-boss enqueue failures atomically roll back; jobs unconsumable until commit
+PASS unclaimed queued v1 job never sends revised v2, and current recipient address never redirects approved content
+PASS expired approvals remain historical and cannot extend expires_at; reapplication creates a new target and lifecycle
+PASS member and factory revocation serialize before claim; current human mode still permits new explicitly approved manual actions
+PASS human mode owner-prepared current quote remains pending until explicit approval and then executes
+PASS PDF missing/corrupt/replaced bytes block submission and claim; actual adapter uses the same verified bytes despite file replacement after preflight
+PASS cancellation cutoff before claim blocks; after claim records cancellation and unknown without pretending recall; after last check accepted fact persists
+PASS takeover race at exact barriers prevents old preclaim action and respects the post-last-check window
+PASS persistent independent Mock is capability-accurate: explicit rejection, delay, lost response, stable idempotency and non-idempotent side effects
+PASS two dedicated worker processes contend for the same persisted job; only one business claim and provider call
+PASS actual SIGKILL at claim-before-call and acceptance-before-projection; durable restart covers idempotent and non-idempotent modes
+PASS old worker token is fenced before new call; accepted late response is retained and reconciled after permission loss
+PASS provider idempotency guarantee expiry forbids recovery calls, and stopping unresolved outcome preserves unknown
+PASS real HTTP authentication, strict mode/extra-recipient refusal, owner decision conflict and private saved PDF preview
+PASS raw pending/retry/dead receipt blocks old typed automatic actions; explicit processing keeps account lock and protected recovery
+PASS workspace lock serializes actual revocation and claim, and receipt ingestion cannot pass an active claim transaction
+PASS C reuses B current requirements and factory/source eligibility; old quote and removed evidence cannot dispatch
+PASS restricted runtime cannot read or modify simulation ledger; simulation cannot become real delivered/read; complete process restart retains approvals/attempts/files/ledger
+PASS permission loss after committed claim but before last token check stops a new call without losing unknown history

@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-28T17:08:53.716Z",
+  "stage": "C",
+  "status": "ready_for_user_review",
+  "nextStage": "D1 not_started",
+  "verified": {
+    "corePgGroups": 23,
+    "actualSigkillCases": 4,
+    "unitTests": 25,
+    "bGroups": 14,
+    "a1Groups": 23,
+    "a2Groups": 19,
+    "inboundGroups": 11,
+    "cBrowserProjects": 2,
+    "regressionBrowserProjects": 8
+  },
+  "runtime": [
+    {
+      "url": "http://127.0.0.1:3001/health/ready",
+      "status": 200,
+      "appStatus": "ready",
+      "version": "0.0.0-stage.c"
+    },
+    {
+      "url": "http://127.0.0.1:3401/health/ready",
+      "status": 200,
+      "appStatus": "ready",
+      "version": "0.0.0-stage.c"
+    }
+  ],
+  "secretAudit": {
+    "textFilesChecked": 102,
+    "findings": 0
+  },
+  "businessApproval": "Alex remains pending; see final-audit.json and alex-browser-review.json",
+  "noGitPush": true
+}

@@ -1,0 +1,13 @@
+README.md 24ms
+docs/PRODUCT_MANUAL.md 7ms (unchanged)
+docs/ARCHITECTURE_ACTUAL.md 8ms
+docs/build/PROGRESS.md 3ms
+docs/build/HANDOFF.md 6ms (unchanged)
+docs/build/HANDOFF_E.md 6ms (unchanged)
+docs/build/ACCEPTANCE.md 27ms (unchanged)
+docs/build/STAGE_E_REPORT.md 8ms
+docs/build/STAGE_V_REPORT.md 7ms
+docs/build/V_MATRIX.md 3ms
+docs/build/FUTURE_INTEGRATIONS.md 3ms (unchanged)
+docs/build/MIGRATIONS.md 8ms (unchanged)
+docs/build/adr/0014-v-local-verification-and-recovery.md 2ms (unchanged)

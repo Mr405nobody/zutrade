@@ -1,0 +1,68 @@
+$ playwright test a2.spec.ts
+
+Running 2 tests using 1 worker
+
+(node:49104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (1.8s)
+(node:49132) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (1.7s)
+
+
+  1) [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ─────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "7a481a30-908e-4f90-b966-589f31c55255"
+
+      104 |     const threadId = list.items.find((t) => t.contact_name === 'Alex Morgan')!.id;
+      105 |     observed.threadId = threadId;
+    > 106 |     expect(threadId).toBe(normalizedThreadId);
+          |                      ^
+      107 |     expect(normalizedMessageId).toBeTruthy();
+      108 |     observed.normalizedMessageId = normalizedMessageId;
+      109 |     await page.locator('.thread-item').filter({ hasText: 'Alex Morgan' }).first().click();
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:106:22
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "7a481a30-908e-4f90-b966-589f31c55255"
+
+      104 |     const threadId = list.items.find((t) => t.contact_name === 'Alex Morgan')!.id;
+      105 |     observed.threadId = threadId;
+    > 106 |     expect(threadId).toBe(normalizedThreadId);
+          |                      ^
+      107 |     expect(normalizedMessageId).toBeTruthy();
+      108 |     observed.normalizedMessageId = normalizedMessageId;
+      109 |     await page.locator('.thread-item').filter({ hasText: 'Alex Morgan' }).first().click();
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:106:22
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+    [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ───────────────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

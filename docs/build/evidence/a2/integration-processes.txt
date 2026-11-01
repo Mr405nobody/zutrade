@@ -1,0 +1,15 @@
+process 0
+{"timestamp":"2026-10-28T16:23:22.788Z","service":"worker","event":"listening","address":"http://127.0.0.1:3202","instanceId":"da586d8c-6f5c-44f0-8ae2-d267cc825f91","version":"0.0.0-stage.c"}
+{"timestamp":"2026-10-28T16:23:22.789Z","service":"worker","event":"heartbeat","instanceId":"da586d8c-6f5c-44f0-8ae2-d267cc825f91","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:23:22.852Z","service":"worker","event":"stopped","instanceId":"da586d8c-6f5c-44f0-8ae2-d267cc825f91"}
+
+process 1
+{"timestamp":"2026-10-28T16:23:23.464Z","service":"worker","event":"listening","address":"http://127.0.0.1:3202","instanceId":"0267b633-346f-40fa-960d-d465d657656d","version":"0.0.0-stage.c"}
+{"timestamp":"2026-10-28T16:23:23.464Z","service":"worker","event":"heartbeat","instanceId":"0267b633-346f-40fa-960d-d465d657656d","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:23:23.572Z","service":"worker","event":"stopped","instanceId":"0267b633-346f-40fa-960d-d465d657656d"}
+
+process 2
+{"timestamp":"2026-10-28T16:23:24.572Z","service":"api","event":"listening","address":"http://127.0.0.1:3201","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}
+
+process 3
+{"timestamp":"2026-10-28T16:23:33.509Z","service":"api","event":"listening","address":"http://127.0.0.1:3201","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}

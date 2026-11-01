@@ -1,0 +1,201 @@
+{
+  "checkedAt": "2026-10-29T09:03:13.545Z",
+  "stageStatus": "verification_blocked",
+  "networkGate": {
+    "command": "./scripts/zu prospecting:live",
+    "exitCode": 2,
+    "reason": "SSRF_DNS_REJECTED",
+    "source": "live-third.txt",
+    "realCandidates": 0,
+    "spotChecks": 0,
+    "realImportVerified": false
+  },
+  "checks": [
+    {
+      "name": "build",
+      "command": "./scripts/zu build",
+      "startedAt": "2026-10-29T09:02:39.698Z",
+      "finishedAt": "2026-10-29T09:02:44.334Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-build.txt"
+    },
+    {
+      "name": "typecheck",
+      "command": "./scripts/zu typecheck",
+      "startedAt": "2026-10-29T09:02:44.335Z",
+      "finishedAt": "2026-10-29T09:02:49.175Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-typecheck.txt"
+    },
+    {
+      "name": "lint",
+      "command": "./scripts/zu lint",
+      "startedAt": "2026-10-29T09:02:49.176Z",
+      "finishedAt": "2026-10-29T09:02:51.726Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-lint.txt"
+    },
+    {
+      "name": "unit",
+      "command": "./scripts/zu test:unit",
+      "startedAt": "2026-10-29T09:02:51.726Z",
+      "finishedAt": "2026-10-29T09:02:52.795Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-unit.txt"
+    },
+    {
+      "name": "integration",
+      "command": "./scripts/zu test:d1",
+      "startedAt": "2026-10-29T09:02:52.795Z",
+      "finishedAt": "2026-10-29T09:03:01.279Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-integration.txt"
+    },
+    {
+      "name": "browser",
+      "command": "./scripts/zu test:d1:browser",
+      "startedAt": "2026-10-29T09:03:01.279Z",
+      "finishedAt": "2026-10-29T09:03:12.368Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-browser.txt"
+    },
+    {
+      "name": "migrate-repeat",
+      "command": "./scripts/zu db:migrate",
+      "startedAt": "2026-10-29T09:01:20.556Z",
+      "finishedAt": "2026-10-29T09:01:21.211Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "doctor",
+      "command": "./scripts/zu doctor --services",
+      "startedAt": "2026-10-29T09:03:12.368Z",
+      "finishedAt": "2026-10-29T09:03:12.804Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-doctor.txt"
+    },
+    {
+      "name": "audit",
+      "command": "./scripts/zu exec node scripts/d1-audit.mjs",
+      "startedAt": "2026-10-29T09:03:12.804Z",
+      "finishedAt": "2026-10-29T09:03:13.545Z",
+      "exitCode": 0,
+      "signal": null,
+      "log": "docs/build/evidence/d1/verified-audit.txt"
+    }
+  ],
+  "initialChecks": [
+    {
+      "name": "build",
+      "command": "./scripts/zu build",
+      "startedAt": "2026-10-29T09:00:48.649Z",
+      "finishedAt": "2026-10-29T09:00:53.263Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "typecheck",
+      "command": "./scripts/zu typecheck",
+      "startedAt": "2026-10-29T09:00:53.264Z",
+      "finishedAt": "2026-10-29T09:00:58.093Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "lint",
+      "command": "./scripts/zu lint",
+      "startedAt": "2026-10-29T09:00:58.093Z",
+      "finishedAt": "2026-10-29T09:00:59.415Z",
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "name": "unit",
+      "command": "./scripts/zu test:unit",
+      "startedAt": "2026-10-29T09:00:59.416Z",
+      "finishedAt": "2026-10-29T09:01:00.474Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "integration",
+      "command": "./scripts/zu test:d1",
+      "startedAt": "2026-10-29T09:01:00.474Z",
+      "finishedAt": "2026-10-29T09:01:08.981Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "browser",
+      "command": "./scripts/zu test:d1:browser",
+      "startedAt": "2026-10-29T09:01:08.981Z",
+      "finishedAt": "2026-10-29T09:01:20.555Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "migrate-repeat",
+      "command": "./scripts/zu db:migrate",
+      "startedAt": "2026-10-29T09:01:20.556Z",
+      "finishedAt": "2026-10-29T09:01:21.211Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "doctor",
+      "command": "./scripts/zu doctor --services",
+      "startedAt": "2026-10-29T09:01:21.211Z",
+      "finishedAt": "2026-10-29T09:01:21.642Z",
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "audit",
+      "command": "./scripts/zu exec node scripts/d1-audit.mjs",
+      "startedAt": "2026-10-29T09:01:21.642Z",
+      "finishedAt": "2026-10-29T09:01:22.358Z",
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "regressions": [
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d1/regression/c C_API_PORT=3601 C_WORKER_PORT=3602 ./scripts/zu test:c",
+      "exitCode": 0,
+      "checks": 23,
+      "log": "regression/c.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d1/regression/b ./scripts/zu test:b",
+      "exitCode": 0,
+      "checks": 14,
+      "log": "regression/b.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d1/regression/a2 ./scripts/zu test:a2",
+      "exitCode": 0,
+      "checks": 19,
+      "log": "regression/a2.txt"
+    },
+    {
+      "command": "EVIDENCE_PATH=docs/build/evidence/d1/regression/a1.json ./scripts/zu test:integration",
+      "exitCode": 0,
+      "checks": 23,
+      "log": "regression/a1.txt"
+    },
+    {
+      "command": "./scripts/zu test:a2:inbound",
+      "exitCode": 0,
+      "checks": 11,
+      "log": "regression/inbound.txt"
+    }
+  ]
+}

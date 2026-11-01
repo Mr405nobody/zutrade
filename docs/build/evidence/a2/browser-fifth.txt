@@ -1,0 +1,12 @@
+$ playwright test a2.spec.ts
+
+Running 2 tests using 1 worker
+
+(node:48756) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (10.7s)
+(node:48826) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (10.6s)
+
+  2 passed (22.2s)

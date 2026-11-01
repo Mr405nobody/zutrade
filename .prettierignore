@@ -1,0 +1,7 @@
+zutrade-build-kit/
+pnpm-lock.yaml
+node_modules/
+dist/
+.local/
+data/
+docs/build/evidence/

@@ -1,0 +1,31 @@
+$ pnpm -r --sort build
+Scope: 11 of 12 workspace projects
+packages/ai build$ tsc -p tsconfig.json
+packages/channels build$ tsc -p tsconfig.json
+packages/config build$ tsc -p tsconfig.json
+packages/contracts build$ tsc -p tsconfig.json
+packages/ai build: Done
+packages/storage build$ tsc -p tsconfig.json
+packages/channels build: Done
+packages/ui build$ tsc -p tsconfig.json
+packages/config build: Done
+packages/contracts build: Done
+packages/db build$ tsc -p tsconfig.json
+packages/storage build: Done
+packages/ui build: Done
+apps/web build$ tsc -p tsconfig.json --noEmit && vite build
+packages/db build: Done
+packages/domain build$ tsc -p tsconfig.json
+apps/web build: src/supply.tsx(712,32): error TS2375: Type '{ value: SupplyValue | undefined; factoryName: string | undefined; }' is not assignable to type '{ value?: SupplyValue; factoryName?: string; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+apps/web build:   Types of property 'value' are incompatible.
+apps/web build:     Type 'SupplyValue | undefined' is not assignable to type 'SupplyValue'.
+apps/web build:       Type 'undefined' is not assignable to type 'SupplyValue'.
+apps/web build: src/supply.tsx(794,32): error TS2375: Type '{ value: SupplyValue | undefined; factoryName: string | undefined; }' is not assignable to type '{ value?: SupplyValue; factoryName?: string; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+apps/web build:   Types of property 'value' are incompatible.
+apps/web build:     Type 'SupplyValue | undefined' is not assignable to type 'SupplyValue'.
+apps/web build:       Type 'undefined' is not assignable to type 'SupplyValue'.
+apps/web build: Failed
+/Users/warren/Desktop/ZuTrade/apps/web:
+[ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @zutrade/web@0.0.0-stage.0 build: `tsc -p tsconfig.json --noEmit && vite build`
+Exit status 2
+[ELIFECYCLE] Command failed with exit code 2.

@@ -1,0 +1,43 @@
+$ node scripts/verify-a1.mjs
+2026-10-28T13:12:04.218Z ERROR [Better Auth]: Could not validate the database schema. Check your database connection.
+PASS empty PostgreSQL migration with 42 business tables and separate auth/queue tables
+PASS repeated migrations preserve table OIDs and migration rows
+PASS mid-baseline error rolls back every business table and migration success entry
+PASS all business RLS, ordered composite FKs, freeze and append-only triggers retained
+PASS API/worker/auth roles do not own business tables, bypass RLS or possess schema CREATE
+PASS concurrent first identity mapping converges without a membership or owner promotion
+PASS subject bootstrap discloses only the verified subject; no workspace discovers only own active membership
+PASS sales RLS and service restrict reads and writes to factory A
+PASS cross-workspace selection, writes and composite foreign-key association are blocked
+PASS commit, rollback and interleaved workspace transactions leave pooled contexts empty
+PASS only active designated owner passes approver boundary
+PASS real pg-boss failure injection after business/outbox/enqueue and actual enqueue error rolls all back
+error: deadlock detected
+    at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async renameFactoryAndEnqueue (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/queue.js:22:5)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async Promise.all (index 0)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-a1.mjs:140:42
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-a1.mjs:13:33)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-a1.mjs:139:3 {
+  length: 356,
+  severity: 'ERROR',
+  code: '40P01',
+  detail: 'Process 5109 waits for ShareLock on transaction 890; blocked by process 5122.\n' +
+    'Process 5122 waits for ExclusiveLock on advisory lock [19028,2827538323,1274805642,1]; blocked by process 5109.',
+  hint: 'See server log for query details.',
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: 'while locking tuple (0,1) in relation "factories"',
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'deadlock.c',
+  line: '1133',
+  routine: 'DeadLockReport'
+}
+[ELIFECYCLE] Command failed with exit code 1.

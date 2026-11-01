@@ -1,0 +1,1472 @@
+Reading config file '/Users/warren/Desktop/ZuTrade/scripts/drizzle-pull-config.mjs'
+Pulling from ['app'] list of schemas
+
+Using 'pg' driver for database querying
+[⣷] 0 tables fetching
+[⣷] 0 columns fetching
+[⣷] 0 enums fetching
+[⣷] 0 indexes fetching
+[⣷] 0 foreign keys fetching
+[⣷] 0 policies fetching
+[⣷] 0 check constraints fetching
+[⣷] 0 views fetching
+[2K[1G[⣷] 0 tables fetching
+[⣷] 0 columns fetching
+[✓] 0 enums fetched
+[⣷] 0 indexes fetching
+[⣷] 0 foreign keys fetching
+[⣷] 0 policies fetching
+[⣷] 0 check constraints fetching
+[⣷] 0 views fetching
+[2K[1G[⣷] 0  tables fetching
+[⣷] 0  columns fetching
+[✓] 0  enums fetched
+[⣷] 0  indexes fetching
+[⣷] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⣷] 0  check constraints fetching
+[⣷] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⣷] 0  columns fetching
+[✓] 0  enums fetched
+[⣷] 0  indexes fetching
+[⣷] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⣷] 0  check constraints fetching
+[⣷] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⣯] 0  columns fetching
+[✓] 0  enums fetched
+[⣯] 0  indexes fetching
+[⣯] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⣯] 0  check constraints fetching
+[⣯] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⣟] 0  columns fetching
+[✓] 0  enums fetched
+[⣟] 0  indexes fetching
+[⣟] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⣟] 0  check constraints fetching
+[⣟] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 0  columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 11 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 22 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 36 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 51 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 66 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 81 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42 tables fetched
+[⡿] 94 columns fetching
+[✓] 0  enums fetched
+[⡿] 0  indexes fetching
+[⡿] 0  foreign keys fetching
+[✓] 89 policies fetched
+[⡿] 0  check constraints fetching
+[⡿] 0  views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 109 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 114 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 125 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 135 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 153 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 163 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 182 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 190 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 209 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 220 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 254 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 269 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 276 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 303 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 326 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 333 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 350 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 359 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 376 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 392 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 402 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 417 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⡿] 430 columns fetching
+[✓] 0   enums fetched
+[⡿] 0   indexes fetching
+[⡿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⡿] 0   check constraints fetching
+[⡿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 430 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 447 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 456 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 479 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 499 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 508 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 515 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 524 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 534 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 546 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 551 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 564 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 0   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 1   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 0   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 1   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 2   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 6   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 2   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 6   foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 3   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 15  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 3   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 15  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 5   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 24  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 5   check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 24  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 10  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 41  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 10  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 41  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 13  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 74  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 13  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 74  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 18  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 75  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 18  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 75  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 23  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 88  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 23  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 88  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 26  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 97  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 26  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 97  foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 26  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 102 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 26  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 102 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 28  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 116 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 28  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 116 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 30  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 130 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 30  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 130 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 35  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 153 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 35  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 153 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 35  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 167 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 35  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 167 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 44  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 186 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 44  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 186 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 44  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 205 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 44  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 205 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 53  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 235 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 53  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 235 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 53  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 249 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 53  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 249 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 70  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 284 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 70  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 284 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 78  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 303 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 78  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 303 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 78  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 374 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 78  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 374 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 88  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 404 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 88  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 404 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 99  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 423 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 99  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 423 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 99  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 458 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 99  check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 458 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 108 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 476 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 108 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 476 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 108 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 481 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 108 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 481 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 112 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 491 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 112 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 491 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 115 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 509 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 115 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 509 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 116 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 519 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 116 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 519 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 123 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 558 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 123 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 558 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 126 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 596 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 126 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 596 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 132 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 605 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 132 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 605 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 135 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 662 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 135 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 662 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 141 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 688 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 141 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 688 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 146 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 701 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 146 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 701 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 147 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 701 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 147 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 701 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 148 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 703 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 148 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 703 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 151 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 707 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 151 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 707 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 154 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 708 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 154 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 708 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 157 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 717 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 157 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 717 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 157 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 718 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 157 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 718 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 159 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 159 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 0   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 1   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 2   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 2   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 2   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 3   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 5   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 5   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 7   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 8   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 8   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 8   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 8   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 8   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 8   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 9   indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 10  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 10  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 10  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 10  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 11  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 13  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 13  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 14  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 18  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 18  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 20  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 21  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 21  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 21  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 22  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⢿] 574 columns fetching
+[✓] 0   enums fetched
+[⢿] 25  indexes fetching
+[⢿] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⢿] 162 check constraints fetching
+[⢿] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 25  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 25  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 27  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 28  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 29  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 29  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 29  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 29  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 29  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 29  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 30  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[⣻] 574 columns fetching
+[✓] 0   enums fetched
+[⣻] 31  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[✓] 574 columns fetched
+[✓] 0   enums fetched
+[⣻] 31  indexes fetching
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[✓] 574 columns fetched
+[✓] 0   enums fetched
+[✓] 31  indexes fetched
+[⣻] 723 foreign keys fetching
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[✓] 574 columns fetched
+[✓] 0   enums fetched
+[✓] 31  indexes fetched
+[✓] 723 foreign keys fetched
+[✓] 89  policies fetched
+[⣻] 162 check constraints fetching
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[✓] 574 columns fetched
+[✓] 0   enums fetched
+[✓] 31  indexes fetched
+[✓] 723 foreign keys fetched
+[✓] 89  policies fetched
+[✓] 162 check constraints fetched
+[⣻] 0   views fetching
+[2K[1G[✓] 42  tables fetched
+[✓] 574 columns fetched
+[✓] 0   enums fetched
+[✓] 31  indexes fetched
+[✓] 723 foreign keys fetched
+[✓] 89  policies fetched
+[✓] 162 check constraints fetched
+[✓] 0   views fetched
+[2K[1G[✓] 42  tables fetched
+[✓] 574 columns fetched
+[✓] 0   enums fetched
+[✓] 31  indexes fetched
+[✓] 723 foreign keys fetched
+[✓] 89  policies fetched
+[✓] 162 check constraints fetched
+[✓] 0   views fetched
+
+[✓] Your SQL migration file ➜ .local/drizzle-introspection/0000_good_sphinx.sql 🚀
+[✓] Your schema file is ready ➜ .local/drizzle-introspection/schema.ts 🚀
+[✓] Your relations file is ready ➜ .local/drizzle-introspection/relations.ts 🚀

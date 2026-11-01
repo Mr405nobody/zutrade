@@ -1,0 +1,29 @@
+$ node scripts/verify-e.mjs
+PASS 无来源转人工；采用资料请求复用正常跟进任务，不写事实
+PASS 重复规范化输入与场景/时钟：业务输出、上下文和证据完全一致；不编 token/费用
+PASS 工作区/工厂/混合会话隔离、直接 RLS 与严格输入；命令去重
+PASS 未审核 FAQ 只记录阻挡；仅当前指定 owner 可审核模板
+PASS 有效可披露事实 + 审核模板 FAQ 经统一网关真实队列/模拟适配器完成
+file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/approval.js:118
+    const i = prepareOutboundInput.parse(input);
+                                   ^
+
+ZodError: [
+  {
+    "expected": "object",
+    "code": "invalid_type",
+    "path": [],
+    "message": "Invalid input: expected object, received string"
+  }
+]
+    at prepareOutbound (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/approval.js:118:36)
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:80:347
+    at file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:73:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:80:324
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:22:31)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-e.mjs:78:2
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

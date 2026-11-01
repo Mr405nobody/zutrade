@@ -1,0 +1,13 @@
+{
+  "project": "mobile",
+  "startedAt": "2026-10-28T16:51:24.141Z",
+  "initialEmpty": false,
+  "receiptId": "c3c1812a-f6c5-4fb7-8e5c-e0b991aaeeb5",
+  "threadId": "7a481a30-908e-4f90-b966-589f31c55255",
+  "normalizedMessageId": "1014ae63-b37a-4589-b1b8-646dd81405a3",
+  "outboundRequestId": "5d0f03d1-4ba6-4c62-b315-8e174be5a2fa",
+  "salesUnreadBeforeOpen": 1,
+  "result": "passed",
+  "finishedAt": "2026-10-28T16:51:34.589Z",
+  "pageErrors": []
+}

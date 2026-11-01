@@ -1,0 +1,24 @@
+$ pnpm -r --sort typecheck && tsc -p tsconfig.tools.json --noEmit
+Scope: 11 of 12 workspace projects
+packages/ai typecheck$ tsc -p tsconfig.json --noEmit
+packages/config typecheck$ tsc -p tsconfig.json --noEmit
+packages/contracts typecheck$ tsc -p tsconfig.json --noEmit
+packages/channels typecheck$ tsc -p tsconfig.json --noEmit
+packages/ai typecheck: Done
+packages/storage typecheck$ tsc -p tsconfig.json --noEmit
+packages/channels typecheck: Done
+packages/ui typecheck$ tsc -p tsconfig.json --noEmit
+packages/contracts typecheck: Done
+packages/db typecheck$ tsc -p tsconfig.json --noEmit
+packages/config typecheck: Done
+packages/storage typecheck: Done
+packages/ui typecheck: Done
+apps/web typecheck$ tsc -p tsconfig.json --noEmit
+packages/db typecheck: Done
+packages/domain typecheck$ tsc -p tsconfig.json --noEmit
+apps/web typecheck: Done
+packages/domain typecheck: Done
+apps/worker typecheck$ tsc -p tsconfig.json --noEmit
+apps/api typecheck$ tsc -p tsconfig.json --noEmit
+apps/worker typecheck: Done
+apps/api typecheck: Done

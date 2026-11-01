@@ -1,0 +1,28 @@
+$ node scripts/verify-v.mjs
+PASS 带数据的 D2 0018 升级至 E 0019；旧工作区、产品、来源与 OID 保留
+PASS 离线来源审核→导入→模拟身份→同一商机；明确 fixture，不是真实公司
+PASS 模拟询盘→模拟 AI→sales 确认需求/工厂→USD1230→PDF/冻结→owner 审批→网关模拟执行
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'cancelled'
+- 'stopped'
+
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:543:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:101:3)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:514:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'cancelled',
+  expected: 'stopped',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

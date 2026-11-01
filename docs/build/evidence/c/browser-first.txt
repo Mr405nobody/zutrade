@@ -1,0 +1,11 @@
+$ node scripts/verify-c-browser.mjs
+file:///Users/warren/Desktop/ZuTrade/scripts/verify-c-browser.mjs:64
+ const runner=launch(['node_modules/@playwright/test/cli.js','test','c.spec.ts']);const code=await new Promise(resolve=>runner.once('exit',resolve));if(code!==0)throw new Error('C UI verification failed; see browser evidence');
+                                                                                                                                                                       ^
+
+Error: C UI verification failed; see browser evidence
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-c-browser.mjs:64:168
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

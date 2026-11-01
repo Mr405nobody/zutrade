@@ -1,0 +1,527 @@
+{
+  "observedAt": "2026-10-29T09:20:19.334Z",
+  "scope": "D2 prerequisite inspection only; no business writes",
+  "database": {
+    "name": "zutrade",
+    "observed_at": "2026-10-29T09:20:19.332Z",
+    "read_only": "on"
+  },
+  "tables": [
+    {
+      "schemaname": "app",
+      "count": 45
+    },
+    {
+      "schemaname": "auth",
+      "count": 4
+    },
+    {
+      "schemaname": "pgboss",
+      "count": 13
+    },
+    {
+      "schemaname": "simulation",
+      "count": 4
+    }
+  ],
+  "migrations": [
+    {
+      "hash": "210777c190f4ac7ec1e76a1549b0be40594f455894647750f95a0d381ce3060b",
+      "created_at": "1793188800000",
+      "tag": "0000_baseline",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "aa6804cfe4a68fb5c7e6ce0c92d6a1d747741cf9f3d8b4cb92cce44a7d58344e",
+      "created_at": "1793188800001",
+      "tag": "0001_identity_boundary",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "87692c2cda2aa249f181f7035b213f75b16ecac96fd0fb43b43bb4b04f0b7c6a",
+      "created_at": "1793188800002",
+      "tag": "0002_worker_rowlocks",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "11852f10ca85437550c89e4e84d735b6469b933172f7a52bad2af83fa5e7964b",
+      "created_at": "1793188800003",
+      "tag": "0003_inbox",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "88a92dee72cebc5bf388e41236d9e8c706c6158a7d35f1c66f06671cb101acab",
+      "created_at": "1793188800004",
+      "tag": "0004_inbox_scope_hardening",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "927d0332678ba4a94e78c977b156a3ff497efc95885a1f2a9fedaf7b7da62246",
+      "created_at": "1793188800005",
+      "tag": "0005_supply_quoting",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "f25800fa138c0d0ca8f7e361a0cc0c06c9f9ccda7d1ce1640d2c897a6f9fac19",
+      "created_at": "1793188800006",
+      "tag": "0006_approval_dispatch",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "13767ddb0cdc103e86d6896ca32565f784e07ce3fb104f84c567371c46a39c66",
+      "created_at": "1793188800007",
+      "tag": "0007_dispatch_fencing",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "68dc46d146e25626616c59d7f875009cd1c85618c2178f762fdcf1ad4c14b4c7",
+      "created_at": "1793188800008",
+      "tag": "0008_worker_quote_lock",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "e0d53f6ba873daac2f089509df2d46fba42ff036cdd0126a9448b2a91a9f5a67",
+      "created_at": "1793188800009",
+      "tag": "0009_dispatch_lifecycle",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "de00009269cfbc66486df36205ec0e90b26248f512a48b9fc459725be9abfb2b",
+      "created_at": "1793188800010",
+      "tag": "0010_block_reason_binding",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "218a10c8cfcf70ab97ec7ee21112e5afad3ae69a022d37bb618d15d4a98b8eb6",
+      "created_at": "1793188800011",
+      "tag": "0011_simulation_invocation_ledger",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "c18ec0cfcdab0e3e4e75c5d22849012bd3246fa1df38df24710d34552ed5c40d",
+      "created_at": "1793188800012",
+      "tag": "0012_delivery_retry_identity",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "8541bec45515f83dd6e6a8055449b804c47440f352d90eda4aad2c3fba22eb3a",
+      "created_at": "1793188800013",
+      "tag": "0013_prospecting",
+      "fileHashMatches": true
+    },
+    {
+      "hash": "fafb7bf4997fc5f1069cc2417a3fc0ddbd3c5f4fbe59d4dd585a20e8b1d4a232",
+      "created_at": "1793188800014",
+      "tag": "0014_prospecting_revocation",
+      "fileHashMatches": true
+    }
+  ],
+  "researchRuns": [
+    {
+      "id": "2377cd8c-ad55-4ac0-befd-fd4bf1cd04e4",
+      "workspace_id": "66274c80-327e-48de-a946-fd8e77537497",
+      "provider": "public_directory",
+      "data_origin": "live_network",
+      "state": "failed",
+      "country": "SG",
+      "candidate_count": 0,
+      "request_count": 1,
+      "review_revision": "0",
+      "review_decisions": {},
+      "first_started_at": "2026-10-29T08:40:25.749Z",
+      "finished_at": "2026-10-29T08:40:25.775Z",
+      "error": "SSRF_DNS_REJECTED"
+    },
+    {
+      "id": "3d7cbba8-c874-48b2-b106-a947fb1e9780",
+      "workspace_id": "66274c80-327e-48de-a946-fd8e77537497",
+      "provider": "public_directory",
+      "data_origin": "live_network",
+      "state": "failed",
+      "country": "GB",
+      "candidate_count": 0,
+      "request_count": 1,
+      "review_revision": "0",
+      "review_decisions": {},
+      "first_started_at": "2026-10-29T08:40:26.709Z",
+      "finished_at": "2026-10-29T08:40:26.734Z",
+      "error": "SSRF_DNS_REJECTED"
+    },
+    {
+      "id": "5955d129-a452-40d4-9335-c62c399112ba",
+      "workspace_id": "66274c80-327e-48de-a946-fd8e77537497",
+      "provider": "public_directory",
+      "data_origin": "live_network",
+      "state": "failed",
+      "country": "AU",
+      "candidate_count": 0,
+      "request_count": 1,
+      "review_revision": "0",
+      "review_decisions": {},
+      "first_started_at": "2026-10-29T08:40:27.721Z",
+      "finished_at": "2026-10-29T08:40:27.755Z",
+      "error": "SSRF_DNS_REJECTED"
+    }
+  ],
+  "liveImportedLeads": 0,
+  "runtimeRoles": [
+    {
+      "rolname": "zutrade_api",
+      "rolsuper": false,
+      "rolbypassrls": false
+    },
+    {
+      "rolname": "zutrade_worker",
+      "rolsuper": false,
+      "rolbypassrls": false
+    }
+  ],
+  "d2ExistingRows": {
+    "outreach_batches": 0,
+    "outreach_batch_items": 0,
+    "followups": 0
+  },
+  "alex": {
+    "quote": {
+      "id": "950f5d3f-645e-4f12-9f67-4eb81bd50c32",
+      "version_no": 17,
+      "total_amount": "1230.000000",
+      "currency_code": "USD",
+      "state": "validated"
+    },
+    "productQuantities": [
+      "500.000"
+    ],
+    "approval": {
+      "id": "ea8a346c-a766-431a-9b7e-964e58252edd",
+      "state": "pending",
+      "payload_version_id": "3cd0d645-69c8-40a5-a643-bf56e04662ed"
+    },
+    "request": {
+      "id": "6ad592b7-f703-4644-8b63-5f1b159706e8",
+      "state": "awaiting_approval",
+      "current_payload_version_id": "3cd0d645-69c8-40a5-a643-bf56e04662ed"
+    },
+    "payload": {
+      "id": "3cd0d645-69c8-40a5-a643-bf56e04662ed",
+      "snapshot_sha256": "b616bf0b0fddc360ae101c2ce3b3b3b580c0eac9c7121b74118054f4ecf50875"
+    },
+    "pdf": {
+      "state": "ready",
+      "sha256": "f2363a0394930ca647a8b9e568a94a7250a9bb22c0576d989843c06badd0032f",
+      "byteLength": 69753,
+      "matchesOriginalBytes": true
+    },
+    "preserved": true
+  },
+  "dns": [
+    {
+      "host": "en.wikipedia.org",
+      "families": [
+        {
+          "family": 4,
+          "addresses": [
+            "198.18.0.10"
+          ]
+        },
+        {
+          "family": 6,
+          "code": "ENODATA"
+        }
+      ],
+      "safeTransportGate": "SSRF_DNS_REJECTED"
+    },
+    {
+      "host": "www.wikidata.org",
+      "families": [
+        {
+          "family": 4,
+          "addresses": [
+            "198.18.0.11"
+          ]
+        },
+        {
+          "family": 6,
+          "code": "ENODATA"
+        }
+      ],
+      "safeTransportGate": "SSRF_DNS_REJECTED"
+    }
+  ],
+  "services": [
+    {
+      "name": "main",
+      "probes": [
+        {
+          "port": 5173,
+          "path": "/",
+          "status": 200,
+          "zutrade": true
+        },
+        {
+          "port": 3001,
+          "path": "/health/ready",
+          "status": 200,
+          "health": {
+            "service": "api",
+            "status": "ready",
+            "version": "0.0.0-stage.d1",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T09:20:19.383Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:19.383Z",
+              "latencyMs": 17,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_api（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "worker": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:19.369Z",
+              "latencyMs": 4,
+              "detail": "独立进程 · 心跳 2026-10-29T09:20:14.948Z · 数据库检查通过",
+              "version": "0.0.0-stage.d1"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        {
+          "port": 3002,
+          "path": "/health/live",
+          "status": 200,
+          "health": {
+            "service": "worker",
+            "status": "ready",
+            "version": "0.0.0-stage.d1",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T09:20:19.365Z",
+            "startedAt": "2026-10-29T09:02:44.706Z",
+            "instanceId": "278cd924-b2c3-489a-9b6e-64dad3421a31",
+            "heartbeatAt": "2026-10-29T09:20:14.948Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:14.948Z",
+              "latencyMs": 2,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "c",
+      "probes": [
+        {
+          "port": 5273,
+          "path": "/",
+          "status": 200,
+          "zutrade": true
+        },
+        {
+          "port": 3401,
+          "path": "/health/ready",
+          "status": 200,
+          "health": {
+            "service": "api",
+            "status": "ready",
+            "version": "0.0.0-stage.c",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T09:20:19.382Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:19.382Z",
+              "latencyMs": 16,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_api（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "worker": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:19.369Z",
+              "latencyMs": 3,
+              "detail": "独立进程 · 心跳 2026-10-29T09:20:16.143Z · 数据库检查通过",
+              "version": "0.0.0-stage.c"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        {
+          "port": 3402,
+          "path": "/health/live",
+          "status": 200,
+          "health": {
+            "service": "worker",
+            "status": "ready",
+            "version": "0.0.0-stage.c",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T09:20:19.366Z",
+            "startedAt": "2026-10-28T17:08:52.909Z",
+            "instanceId": "fb3c6314-5d97-4415-9f6e-7641bbddfa30",
+            "heartbeatAt": "2026-10-29T09:20:16.143Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:16.143Z",
+              "latencyMs": 2,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "d1",
+      "probes": [
+        {
+          "port": 5373,
+          "path": "/",
+          "status": 200,
+          "zutrade": true
+        },
+        {
+          "port": 3501,
+          "path": "/health/ready",
+          "status": 200,
+          "health": {
+            "service": "api",
+            "status": "ready",
+            "version": "0.0.0-stage.d1",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T09:20:19.382Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:19.382Z",
+              "latencyMs": 15,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_api（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "worker": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:19.371Z",
+              "latencyMs": 3,
+              "detail": "独立进程 · 心跳 2026-10-29T09:20:15.898Z · 数据库检查通过",
+              "version": "0.0.0-stage.d1"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        },
+        {
+          "port": 3502,
+          "path": "/health/live",
+          "status": 200,
+          "health": {
+            "service": "worker",
+            "status": "ready",
+            "version": "0.0.0-stage.d1",
+            "nodeVersion": "v24.22.1",
+            "checkedAt": "2026-10-29T09:20:19.367Z",
+            "startedAt": "2026-10-29T09:04:25.671Z",
+            "instanceId": "57f32d93-c69f-4d2e-a35c-c1cd9e91264f",
+            "heartbeatAt": "2026-10-29T09:20:15.898Z",
+            "database": {
+              "status": "ok",
+              "checkedAt": "2026-10-29T09:20:15.898Z",
+              "latencyMs": 2,
+              "detail": "PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）",
+              "version": "18.6 (Debian 18.6-1.pgdg12+2)"
+            },
+            "modes": {
+              "channel": "simulation",
+              "ai": "mock",
+              "prospecting": "live_public_directory"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "originalSql": {
+    "bytes": 75172,
+    "sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"
+  },
+  "git": {
+    "branch": "stage-0-bootstrap",
+    "status": [
+      "?? .env.example",
+      "?? .gitattributes",
+      "?? .gitignore",
+      "?? .node-version",
+      "?? .nvmrc",
+      "?? .prettierignore",
+      "?? .prettierrc.json",
+      "?? AGENTS.md",
+      "?? README.md",
+      "?? THIRD_PARTY_NOTICES.md",
+      "?? apps/",
+      "?? docs/",
+      "?? eslint.config.mjs",
+      "?? infra/",
+      "?? licenses/",
+      "?? package.json",
+      "?? packages/",
+      "?? playwright.config.ts",
+      "?? pnpm-lock.yaml",
+      "?? pnpm-workspace.yaml",
+      "?? scripts/",
+      "?? tests/",
+      "?? tsconfig.base.json",
+      "?? tsconfig.tools.json",
+      "?? vitest.config.ts",
+      "?? zutrade-build-kit/"
+    ],
+    "commitCount": "0"
+  },
+  "migrationFiles": [
+    "0000_baseline.sql",
+    "0001_identity_boundary.sql",
+    "0002_worker_rowlocks.sql",
+    "0003_inbox.sql",
+    "0004_inbox_scope_hardening.sql",
+    "0005_supply_quoting.sql",
+    "0006_approval_dispatch.sql",
+    "0007_dispatch_fencing.sql",
+    "0008_worker_quote_lock.sql",
+    "0009_dispatch_lifecycle.sql",
+    "0010_block_reason_binding.sql",
+    "0011_simulation_invocation_ledger.sql",
+    "0012_delivery_retry_identity.sql",
+    "0013_prospecting.sql",
+    "0014_prospecting_revocation.sql"
+  ],
+  "modes": {
+    "CHANNEL_MODE": "simulation",
+    "AI_MODE": "mock",
+    "PROSPECTING_MODE": "live_public_directory"
+  },
+  "decision": {
+    "d1": "verification_blocked",
+    "d2": "not_started",
+    "reason": "Predecessor real-source acceptance gate remains unmet",
+    "realResearchRerun": false,
+    "networkChanged": false,
+    "ssrfChanged": false,
+    "businessWrites": false
+  }
+}

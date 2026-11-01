@@ -1,0 +1,2 @@
+{"timestamp":"2026-10-28T16:35:51.550Z","service":"api","event":"listening","address":"http://127.0.0.1:3301","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}
+{"timestamp":"2026-10-28T16:35:52.832Z","service":"api","event":"listening","address":"http://127.0.0.1:3301","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}

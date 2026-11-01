@@ -1,0 +1,108 @@
+$ node scripts/verify-e-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:12095) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (9.2s)
+(node:12139) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (9.1s)
+
+
+  1) [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="0e35833d-aa2c-45f0-90c8-a853d8da3b4d"]')
+    Timeout: 5000ms
+    - Expected substring  - 1
+    + Received string     + 5
+
+    - The confirmed material of CT-01 is 12oz.
+    + arrival · ct01.v1 · 需转人工10/29/2026, 10:45 PM · 3 ms · token/费用：不适用六周到货未获确认，需 owner/工厂确认并审批商业承诺须工厂确认及指定 owner 正常审批。六周到货未获确认，需 owner/工厂确认并审批输入引用与输出校验输入摘要 10ecca2bd2da79b61667b508929702cff43ace8394f17844fd6eb09e61642183消息 a9c3ef41-69c1-4129-b7f1-4261dd1e8aad会话修订 6 · 需求修订 1Can you guarantee arrival within six weeks?{
+    +   "valid": true,
+    +   "reason": "六周到货未获确认，需 owner/工厂确认并审批",
+    +   "outputValidation": "preset_recomputed"
+    + }采用建议修改为内部草稿拒绝建议
+
+    Call log:
+      - Expect "toContainText" getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="0e35833d-aa2c-45f0-90c8-a853d8da3b4d"]') with timeout 5000ms
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="0e35833d-aa2c-45f0-90c8-a853d8da3b4d"]')
+        14 × locator resolved to <article class="ai-run" data-ai-run="0e35833d-aa2c-45f0-90c8-a853d8da3b4d">…</article>
+           - unexpected value "arrival · ct01.v1 · 需转人工10/29/2026, 10:45 PM · 3 ms · token/费用：不适用六周到货未获确认，需 owner/工厂确认并审批商业承诺须工厂确认及指定 owner 正常审批。六周到货未获确认，需 owner/工厂确认并审批输入引用与输出校验输入摘要 10ecca2bd2da79b61667b508929702cff43ace8394f17844fd6eb09e61642183消息 a9c3ef41-69c1-4129-b7f1-4261dd1e8aad会话修订 6 · 需求修订 1Can you guarantee arrival within six weeks?{
+      "valid": true,
+      "reason": "六周到货未获确认，需 owner/工厂确认并审批",
+      "outputValidation": "preset_recomputed"
+    }采用建议修改为内部草稿拒绝建议"
+
+
+      58 |   await first.getByText('输入引用与输出校验', { exact: true }).click();
+      59 |   const firstId = await first.getAttribute('data-ai-run');
+    > 60 |   await expect(first).toContainText('The confirmed material of CT-01 is 12oz.');
+         |                       ^
+      61 |   await first
+      62 |     .getByText(/事实来源 ·/)
+      63 |     .first()
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:60:23
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="cedfc650-8200-4d91-bcda-99e73f918cfd"]')
+    Timeout: 5000ms
+    - Expected substring  - 1
+    + Received string     + 5
+
+    - The confirmed material of CT-01 is 12oz.
+    + arrival · ct01.v1 · 需转人工10/29/2026, 10:46 PM · 0 ms · token/费用：不适用六周到货未获确认，需 owner/工厂确认并审批商业承诺须工厂确认及指定 owner 正常审批。六周到货未获确认，需 owner/工厂确认并审批输入引用与输出校验输入摘要 10ecca2bd2da79b61667b508929702cff43ace8394f17844fd6eb09e61642183消息 a9c3ef41-69c1-4129-b7f1-4261dd1e8aad会话修订 6 · 需求修订 1Can you guarantee arrival within six weeks?{
+    +   "valid": true,
+    +   "reason": "六周到货未获确认，需 owner/工厂确认并审批",
+    +   "outputValidation": "preset_recomputed"
+    + }采用建议修改为内部草稿拒绝建议
+
+    Call log:
+      - Expect "toContainText" getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="cedfc650-8200-4d91-bcda-99e73f918cfd"]') with timeout 5000ms
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).locator('[data-ai-run="cedfc650-8200-4d91-bcda-99e73f918cfd"]')
+        14 × locator resolved to <article class="ai-run" data-ai-run="cedfc650-8200-4d91-bcda-99e73f918cfd">…</article>
+           - unexpected value "arrival · ct01.v1 · 需转人工10/29/2026, 10:46 PM · 0 ms · token/费用：不适用六周到货未获确认，需 owner/工厂确认并审批商业承诺须工厂确认及指定 owner 正常审批。六周到货未获确认，需 owner/工厂确认并审批输入引用与输出校验输入摘要 10ecca2bd2da79b61667b508929702cff43ace8394f17844fd6eb09e61642183消息 a9c3ef41-69c1-4129-b7f1-4261dd1e8aad会话修订 6 · 需求修订 1Can you guarantee arrival within six weeks?{
+      "valid": true,
+      "reason": "六周到货未获确认，需 owner/工厂确认并审批",
+      "outputValidation": "preset_recomputed"
+    }采用建议修改为内部草稿拒绝建议"
+
+
+      58 |   await first.getByText('输入引用与输出校验', { exact: true }).click();
+      59 |   const firstId = await first.getAttribute('data-ai-run');
+    > 60 |   await expect(first).toContainText('The confirmed material of CT-01 is 12oz.');
+         |                       ^
+      61 |   await first
+      62 |     .getByText(/事实来源 ·/)
+      63 |     .first()
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:60:23
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+    [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ──────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

@@ -1,0 +1,21 @@
+{
+  "name": "@zutrade/prospecting",
+  "version": "0.0.0-stage.d1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@zutrade/contracts": "workspace:*",
+    "cheerio": "1.2.0",
+    "ipaddr.js": "2.2.0"
+  }
+}

@@ -1,0 +1,82 @@
+$ playwright test a2.spec.ts
+
+Running 2 tests using 1 worker
+
+(node:47941) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (23.7s)
+(node:48033) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (23.6s)
+
+
+  1) [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true })
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true }) with timeout 15000ms
+      - waiting for getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true })
+
+
+      237 |     await expect(
+      238 |       page.getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true }),
+    > 239 |     ).toBeVisible({ timeout: 15000 });
+          |       ^
+      240 |     await page.screenshot({ path: `${evidence}/${project}-offline.png`, fullPage: true });
+      241 |     await page.context().setOffline(false);
+      242 |     await expect(
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:239:7
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true })
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true }) with timeout 15000ms
+      - waiting for getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true })
+
+
+      237 |     await expect(
+      238 |       page.getByText('实时连接已断开，正在重连；恢复后将重新查询数据库。', { exact: true }),
+    > 239 |     ).toBeVisible({ timeout: 15000 });
+          |       ^
+      240 |     await page.screenshot({ path: `${evidence}/${project}-offline.png`, fullPage: true });
+      241 |     await page.context().setOffline(false);
+      242 |     await expect(
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:239:7
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+    [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ───────────────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

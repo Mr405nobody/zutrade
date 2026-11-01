@@ -1,0 +1,50 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+
+Caught error:
+
+error: FOREACH expression must not be null
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async rejectSql (file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:30:41)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:55:112
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:25:32)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:49:2 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: error: FOREACH expression must not be null
+      at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+      at async waitForActual (node:assert:646:5)
+      at async strict.rejects (node:assert:769:25)
+      at async rejectSql (file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:30:41)
+      at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:55:112
+      at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:25:32)
+      at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs:49:2 {
+    length: 177,
+    severity: 'ERROR',
+    code: '22004',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: 'PL/pgSQL function app.guard_frozen_content() line 13 at FOREACH over array',
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'pl_exec.c',
+    line: '3028',
+    routine: 'exec_stmt_foreach_a'
+  },
+  expected: [Function (anonymous)],
+  operator: 'rejects',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ZUTRADE_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ZUTRADE_NODE="$ZUTRADE_ROOT/.local/toolchain/node-v$(cat "$ZUTRADE_ROOT/.node-version")-$(uname -s | tr '[:upper:]' '[:lower:]')-$(uname -m | sed 's/aarch64/arm64/;s/x86_64/x64/')/bin/node"
+exec "$ZUTRADE_NODE" "$ZUTRADE_ROOT/.local/toolchain/pnpm/node_modules/pnpm/bin/pnpm.mjs" "$@"

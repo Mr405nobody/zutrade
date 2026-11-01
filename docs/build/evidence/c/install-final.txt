@@ -1,0 +1,4 @@
+Scope: all 12 workspace projects
+? Verifying lockfile against supply-chain policies (552 entries)...
+✗ Lockfile failed supply-chain policy check (552 entries in 478ms)
+[ERR_PNPM_NO_OFFLINE_META] Failed to resolve @typescript-eslint/project-service in package mirror /Users/warren/Library/Caches/pnpm/v11/metadata-full/registry.npmjs.org/@typescript-eslint/project-service.jsonl

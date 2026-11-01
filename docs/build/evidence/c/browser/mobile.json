@@ -1,0 +1,48 @@
+{
+  "project": "mobile",
+  "startedAt": "2026-10-28T16:51:07.453Z",
+  "isolatedDatabase": true,
+  "quoteRequest": {
+    "requestId": "9216e725-97db-4845-991e-567ee1b95741",
+    "payloadId": "9a453db8-639f-4d42-bdf1-64d382cddc4d",
+    "approvalId": "97b9bd48-62a6-4a65-af00-a44ee3ac9de3",
+    "state": "awaiting_approval"
+  },
+  "completed": {
+    "id": "9216e725-97db-4845-991e-567ee1b95741",
+    "workspace_id": "cad34b36-844e-4a8b-a0be-e0acad4970d9",
+    "factory_id": "63c9286c-15ba-4f85-875c-021332fa80f7",
+    "opportunity_id": "dc68a49c-4952-4e26-918d-d7fa901419e9",
+    "thread_id": "513f979a-571d-4d59-a3bb-205e6ef98bd8",
+    "channel_account_id": "5192b38c-b2df-4822-a5a7-be277bdc4f9b",
+    "transport_mode": "simulation",
+    "contact_point_id": "d1747915-9bc5-44de-8feb-31cc06e948f5",
+    "intent": "quote",
+    "authorization_mode": "human_approval",
+    "current_payload_version_id": "9a453db8-639f-4d42-bdf1-64d382cddc4d",
+    "dispatch_payload_version_id": "9a453db8-639f-4d42-bdf1-64d382cddc4d",
+    "state": "simulated",
+    "idempotency_key": "c19584d2-21ab-4ce6-9432-b0144c246bf3",
+    "command_sha256": "62f53bf37f4f03b4aecc42baf26b7cb2fec366951567cbcab39ecd0dc8a710dc",
+    "provider_idempotency_key": "9216e725-97db-4845-991e-567ee1b95741",
+    "scheduled_at": null,
+    "schedule_time_zone": null,
+    "dispatch_claimed_at": "2026-10-28T16:51:10.926Z",
+    "dispatch_started_at": "2026-10-28T16:51:10.947Z",
+    "dispatch_token": "108654a8-2c3e-4ba5-af09-05d986446360",
+    "cancel_requested_at": null,
+    "stop_reason": null,
+    "created_by_member_id": "6f8f8ca1-6557-4fcc-bfd3-139d106b5325",
+    "created_at": "2026-10-28T16:51:08.331Z",
+    "updated_at": "2026-10-28T16:51:10.959Z",
+    "row_version": "6",
+    "provider_capabilities": {
+      "scenario": "normal",
+      "idempotent": true,
+      "guaranteeSeconds": 86400
+    },
+    "provider_guarantee_until": "2026-10-29T16:51:10.926Z"
+  },
+  "browserErrors": [],
+  "completedAt": "2026-10-28T16:51:25.313Z"
+}

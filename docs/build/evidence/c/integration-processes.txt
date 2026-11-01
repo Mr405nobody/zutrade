@@ -1,0 +1,3 @@
+{"timestamp":"2026-10-28T17:06:19.129Z","service":"api","event":"listening","address":"http://127.0.0.1:3401","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}
+{"timestamp":"2026-10-28T17:06:19.989Z","service":"api","event":"listening","address":"http://127.0.0.1:3401","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}
+{"timestamp":"2026-10-28T17:06:21.577Z","service":"api","event":"listening","address":"http://127.0.0.1:3401","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}

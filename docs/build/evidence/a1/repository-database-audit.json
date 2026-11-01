@@ -1,0 +1,124 @@
+{
+  "checkedAt": "2026-10-28T13:31:40.727Z",
+  "tables": [
+    {
+      "schemaname": "app",
+      "count": 42
+    },
+    {
+      "schemaname": "auth",
+      "count": 4
+    },
+    {
+      "schemaname": "infra",
+      "count": 2
+    },
+    {
+      "schemaname": "pgboss",
+      "count": 13
+    }
+  ],
+  "roles": [
+    {
+      "rolname": "zutrade_api",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "zutrade_auth",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "zutrade_migrator",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "zutrade_worker",
+      "rolsuper": false,
+      "rolbypassrls": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    }
+  ],
+  "owners": [
+    {
+      "schema": "app",
+      "owner": "zutrade_migrator",
+      "count": 42
+    },
+    {
+      "schema": "auth",
+      "owner": "zutrade_migrator",
+      "count": 4
+    },
+    {
+      "schema": "pgboss",
+      "owner": "zutrade_migrator",
+      "count": 13
+    }
+  ],
+  "migrations": {
+    "business": [
+      {
+        "hash": "210777c190f4ac7ec1e76a1549b0be40594f455894647750f95a0d381ce3060b",
+        "created_at": "1793188800000"
+      },
+      {
+        "hash": "aa6804cfe4a68fb5c7e6ce0c92d6a1d747741cf9f3d8b4cb92cce44a7d58344e",
+        "created_at": "1793188800001"
+      },
+      {
+        "hash": "87692c2cda2aa249f181f7035b213f75b16ecac96fd0fb43b43bb4b04f0b7c6a",
+        "created_at": "1793188800002"
+      }
+    ],
+    "auth": [
+      {
+        "hash": "9cf3b19247d5b4ae84dbfdad16bb56ebd0cd16c6d9679f98392b850d67c569dc",
+        "created_at": "1793188800100"
+      },
+      {
+        "hash": "b529a5b95ba4fc604f046d95514c93ae872cf084b39e40eedfc85be8978abce0",
+        "created_at": "1793188800101"
+      }
+    ],
+    "pgboss": [
+      {
+        "version": 46
+      }
+    ]
+  },
+  "queues": [
+    {
+      "name": "a1.identity-probe",
+      "state": "completed",
+      "count": 19
+    }
+  ],
+  "originalSql": {
+    "bytes": 75172,
+    "sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"
+  },
+  "ignored": {
+    ".env": true,
+    ".local": true,
+    "data": true
+  },
+  "privatePermissions": {
+    ".env": "600",
+    ".local/a1-accounts.json": "600",
+    "data/private": "700"
+  },
+  "secretScan": {
+    "files": 244,
+    "matches": []
+  }
+}

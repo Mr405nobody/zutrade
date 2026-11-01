@@ -1,0 +1,12 @@
+packages/contracts/src/quote.ts 16ms
+packages/contracts/src/index.ts 13ms (unchanged)
+packages/domain/src/quoting.ts 32ms
+packages/domain/src/quote-calculator.ts 5ms
+apps/api/src/supply-controller.ts 14ms
+apps/api/src/main.ts 6ms
+scripts/verify-b.mjs 30ms
+scripts/verify-b-persistence.mjs 3ms
+tests/unit/quote-calculator.test.ts 2ms
+docs/build/adr/0007-quote-snapshot-and-current-eligibility.md 14ms (unchanged)
+THIRD_PARTY_NOTICES.md 9ms
+package.json 1ms (unchanged)

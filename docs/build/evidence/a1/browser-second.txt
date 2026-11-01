@@ -1,0 +1,13 @@
+
+Running 4 tests using 1 worker
+
+(node:30170) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 (3.3s)
+  ✓  2 [desktop] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 (3.3s)
+(node:30223) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [mobile] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 (1.2s)
+  ✓  4 [mobile] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 (951ms)
+
+  4 passed (9.6s)

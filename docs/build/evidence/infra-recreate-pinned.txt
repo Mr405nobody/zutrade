@@ -1,0 +1,7 @@
+$ node scripts/infra.mjs up
+ Container zutrade-postgres-1 Recreate 
+ Container zutrade-postgres-1 Recreated 
+ Container zutrade-postgres-1 Starting 
+ Container zutrade-postgres-1 Started 
+ Container zutrade-postgres-1 Waiting 
+ Container zutrade-postgres-1 Healthy 

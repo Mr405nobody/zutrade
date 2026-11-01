@@ -1,0 +1,13 @@
+packages/prospecting/package.json 8ms
+packages/prospecting/src/index.ts 11ms (unchanged)
+packages/prospecting/src/network.ts 35ms
+packages/prospecting/src/providers.ts 35ms
+packages/prospecting/tsconfig.json 1ms (unchanged)
+packages/contracts/src/prospecting.ts 7ms
+packages/domain/src/prospecting.ts 16ms
+apps/web/src/prospecting.tsx 24ms
+apps/api/src/prospecting-controller.ts 3ms
+apps/api/src/main.ts 5ms (unchanged)
+apps/worker/src/main.ts 4ms
+packages/config/src/index.ts 4ms
+packages/db/src/schema.ts 77ms

@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-10-28T16:58:48.021Z",
+  "activeEvidenceDatabase": "zutrade_c_test_2ae8bd03ec0643a39a7332c0f99b598b",
+  "uiDatabase": "zutrade_c_test_dd2294e9e50e4cba94e3cf8dd0763e40",
+  "retained": [
+    {
+      "database": "zutrade_c_test_0755af96666e48808a60fb5ad76bc8c9",
+      "workspaceCreatedAt": "2026-10-28T16:10:50.364Z",
+      "migrations": 10
+    },
+    {
+      "database": "zutrade_c_test_0d215db3a56742188bed9eba5d097ae7",
+      "workspaceCreatedAt": "2026-10-28T16:14:28.093Z",
+      "migrations": 11
+    },
+    {
+      "database": "zutrade_c_test_12da3f961a40436d8858f2d45413f0c9",
+      "workspaceCreatedAt": "2026-10-28T16:42:39.698Z",
+      "migrations": 13
+    },
+    {
+      "database": "zutrade_c_test_14a6547d8b474232941c0abc43e3f00a",
+      "workspaceCreatedAt": "2026-10-28T16:12:35.111Z",
+      "migrations": 11
+    },
+    {
+      "database": "zutrade_c_test_1e56b7ee5a7e477497086f7cf52664f8",
+      "workspaceCreatedAt": "2026-10-28T16:45:34.963Z",
+      "migrations": 13
+    },
+    {
+      "database": "zutrade_c_test_2154c37fb0d443898da4839e59ef7a9f",
+      "workspaceCreatedAt": "2026-10-28T16:05:02.291Z",
+      "migrations": 8
+    },
+    {
+      "database": "zutrade_c_test_2c77231ce03949fd965612cc540683a1",
+      "workspaceCreatedAt": "2026-10-28T16:28:44.647Z",
+      "migrations": 11
+    },
+    {
+      "database": "zutrade_c_test_2dcdb9b3f6174798a0537df951256940",
+      "workspaceCreatedAt": "2026-10-28T16:39:45.968Z",
+      "migrations": 12
+    },
+    {
+      "database": "zutrade_c_test_4d19fa6226064db0958adf8d240727d0",
+      "workspaceCreatedAt": "2026-10-28T16:04:48.025Z",
+      "migrations": 8
+    },
+    {
+      "database": "zutrade_c_test_5169179e8bf5438a8a959979e352a8c8",
+      "workspaceCreatedAt": "2026-10-28T16:06:05.944Z",
+      "migrations": 9
+    },
+    {
+      "database": "zutrade_c_test_5ce48f98aedd4aaaa6d5cd1594c47b3f",
+      "workspaceCreatedAt": "2026-10-28T16:08:32.219Z",
+      "migrations": 9
+    },
+    {
+      "database": "zutrade_c_test_722ed2f416cd4714b924b9679e1cc83c",
+      "workspaceCreatedAt": "2026-10-28T16:05:54.301Z",
+      "migrations": 8
+    },
+    {
+      "database": "zutrade_c_test_7b3ece01c0c14dbd8ffa696cd116e4cb",
+      "workspaceCreatedAt": "2026-10-28T16:11:04.938Z",
+      "migrations": 11
+    },
+    {
+      "database": "zutrade_c_test_8bf84d9fe6cb4b6981def61960770576",
+      "workspaceCreatedAt": "2026-10-28T16:35:49.109Z",
+      "migrations": 12
+    },
+    {
+      "database": "zutrade_c_test_dd2294e9e50e4cba94e3cf8dd0763e40",
+      "workspaceCreatedAt": "2026-10-28T16:48:07.581Z",
+      "migrations": 13
+    },
+    {
+      "database": "zutrade_c_test_edfcf0e5ce064923a2861fec477b0d73",
+      "workspaceCreatedAt": "2026-10-28T16:05:40.899Z",
+      "migrations": 8
+    },
+    {
+      "database": "zutrade_c_test_fcc5888809794b259ad17dfcb71df9c9",
+      "workspaceCreatedAt": "2026-10-28T16:08:59.724Z",
+      "migrations": 9
+    },
+    {
+      "database": "zutrade_c_test_2ae8bd03ec0643a39a7332c0f99b598b",
+      "migrations": 13,
+      "runResult": "passed; details in integration.json"
+    }
+  ],
+  "noDatabasesDropped": true,
+  "notes": "Includes failed and earlier successful C runs. Per-run outcome is recorded in C logs; no retained database is silently marked passed."
+}

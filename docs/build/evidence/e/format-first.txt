@@ -1,0 +1,25 @@
+packages/contracts/src/ai.ts 35ms
+packages/contracts/src/index.ts 9ms (unchanged)
+packages/ai/package.json 5ms (unchanged)
+packages/ai/src/index.ts 13ms
+packages/ai/tsconfig.json 1ms (unchanged)
+packages/domain/src/ai.ts 34ms
+packages/domain/src/index.ts 2ms (unchanged)
+packages/domain/src/delivery-checks.ts 16ms
+apps/api/src/ai-controller.ts 4ms
+apps/api/src/main.ts 12ms (unchanged)
+apps/worker/src/main.ts 7ms
+apps/web/src/ai-workspace.tsx 24ms
+apps/web/src/inbox.tsx 67ms
+apps/web/src/styles.css 120ms
+scripts/e-audit.mjs 9ms
+scripts/verify-e.mjs 22ms
+scripts/verify-e-offline.mjs 2ms
+scripts/e-ui-serve.mjs 1ms (unchanged)
+scripts/verify-e-browser.mjs 1ms (unchanged)
+scripts/db-migrate.mjs 2ms (unchanged)
+packages/db/migrations/business/meta/_journal.json 2ms (unchanged)
+package.json 1ms (unchanged)
+tests/unit/mock-ai.test.ts 4ms
+tests/e2e/e.spec.ts 7ms
+docs/build/PROGRESS.md 16ms

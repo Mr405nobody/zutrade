@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-28T15:31:21.783Z",
+  "passed": true,
+  "method": "Actual Colima zutrade PostgreSQL container stop/start, existing volume retained; no seed or migration between snapshots.",
+  "tables": {
+    "products": {
+      "rows": 13,
+      "sha256": "16a13523352e2925c25d949194cf87561410663492eaecc76e82556c007e5eda"
+    },
+    "source_documents": {
+      "rows": 12,
+      "sha256": "65cc20a668e1c2e7fcb6628a96f562425a28176558bc9d87f688c9c48fc02983"
+    },
+    "source_versions": {
+      "rows": 20,
+      "sha256": "e75e6602c207c38396baf2f2ca312041ccada673cc9d6e6a715da94e7e757d84"
+    },
+    "facts": {
+      "rows": 10,
+      "sha256": "68387cdfe7bba2861f23ae0c305ec7b90b39eb115cd007f08fdabd43c03600df"
+    },
+    "fact_versions": {
+      "rows": 10,
+      "sha256": "46873abe110b697dfadaa23385c710374edf7d3da3e374405757a4d871fedda3"
+    },
+    "fact_evidence": {
+      "rows": 10,
+      "sha256": "2f512cc404be62b7535f233b35a41fa195ce7b3cb18892d0086a8bea23a983d0"
+    },
+    "price_rules": {
+      "rows": 10,
+      "sha256": "b5c366ffcfce9dd19fa272dead53f4304c20e1e004f4c0f05ff5cbeba83245ff"
+    },
+    "opportunities": {
+      "rows": 1,
+      "sha256": "e81ad93f0997422abe029a3302ec5a7da55f8fde0f89a587c44130e99dcf5f82"
+    },
+    "opportunity_threads": {
+      "rows": 1,
+      "sha256": "06ac0871916670f8e6925753b0fa23762866025f1c35d0fde81386d45a0300f0"
+    },
+    "quotes": {
+      "rows": 1,
+      "sha256": "167c4dd306fbc0dbeb7dc37599de7edb80b7c087d1f36badbc86a3234da9c924"
+    },
+    "quote_versions": {
+      "rows": 17,
+      "sha256": "e70cb47de4f8578490acc6528d68a92441429ef274d78411b5edf247088e7c4e"
+    },
+    "quote_lines": {
+      "rows": 34,
+      "sha256": "6b3b87f83ab1539e54f0e9e9f415c7dda59b5c914920d077e1b92387614a4702"
+    },
+    "quote_evidence": {
+      "rows": 17,
+      "sha256": "757732fd22fdd39cd69e7a0eb61c881dc5fad429457d29610d6e102a520d52f9"
+    },
+    "quote_pdf_artifacts": {
+      "rows": 17,
+      "sha256": "fb2d10b51fdd4df943791676c660e0549a509b8a6f4777b75f474277389cdf83"
+    },
+    "buyers": {
+      "rows": 1,
+      "sha256": "5390a09be576605e304f8c5a7aa330118b8a01b42ed16c8843fdd771db8d5d5a"
+    },
+    "contacts": {
+      "rows": 1,
+      "sha256": "5062a97f706000666d0da3462ed1ed0c6679edcb1b342abce0514c2233996875"
+    },
+    "threads": {
+      "rows": 1,
+      "sha256": "c600850fc5a19d37a9b05a5c55bf06461bd0923fa763f2b6942233281063b358"
+    },
+    "messages": {
+      "rows": 30,
+      "sha256": "38be499524e4b975b71ea2c7e04fb092a7a1d3b04e1eee7d459c9a5e621034ad"
+    },
+    "team_notes": {
+      "rows": 30,
+      "sha256": "6064fe7791b3a998e3bdad207cb40fd8d487d2cb6dba25c6303eed67ef5eb884"
+    },
+    "workspace_members": {
+      "rows": 2,
+      "sha256": "9b57cca5d663197cba9f5ebfebedd637473fe5b375ddafaa7e4ef21a711e2395"
+    }
+  },
+  "pdfObjects": 17
+}

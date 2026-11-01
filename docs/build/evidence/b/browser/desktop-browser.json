@@ -1,0 +1,17 @@
+{
+  "project": "desktop",
+  "run": "desktop-7da0b970",
+  "startedAt": "2026-10-28T15:26:09.771Z",
+  "productId": "b05b9d16-b159-4856-88bd-0fc94327ca92",
+  "sourceVersionId": "0ca48975-64e2-4470-aa55-e9e3f35737a7",
+  "sourceV1": "5fe2cd96-a9ae-40ac-b631-b3923ba11b95",
+  "threadId": "7a481a30-908e-4f90-b966-589f31c55255",
+  "v1": "c44ba214-a4ab-4400-a5ba-151c312375b3",
+  "pdfV1Sha256": "74850f47020cc4ae1cde9b7fb6a6e4070fd95cf7f032a7165eda8b6cb1ab707a",
+  "v2": "175ccab1-767e-4a57-b7bb-5627be5244b2",
+  "pdfFailureFixture": "persisted failed processing state on independent test version; no simulated IO claim",
+  "result": "passed",
+  "restoredOriginalRequirements": true,
+  "finishedAt": "2026-10-28T15:26:14.348Z",
+  "pageErrors": []
+}

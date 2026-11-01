@@ -1,0 +1,12 @@
+
+/Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs
+    6:10  error  'rm' is defined but never used                  @typescript-eslint/no-unused-vars
+   20:3   error  'createFactDraft' is defined but never used     @typescript-eslint/no-unused-vars
+   21:3   error  'publishFact' is defined but never used         @typescript-eslint/no-unused-vars
+   24:3   error  'quoteVersionDetail' is defined but never used  @typescript-eslint/no-unused-vars
+   27:3   error  'quotePdfStatus' is defined but never used      @typescript-eslint/no-unused-vars
+   86:7   error  'fixed' is assigned a value but never used      @typescript-eslint/no-unused-vars
+  284:3   error  'price' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+✖ 7 problems (7 errors, 0 warnings)
+

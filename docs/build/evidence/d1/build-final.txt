@@ -1,0 +1,35 @@
+$ pnpm -r --sort build
+Scope: 12 of 13 workspace projects
+packages/ai build$ tsc -p tsconfig.json
+packages/channels build$ tsc -p tsconfig.json
+packages/config build$ tsc -p tsconfig.json
+packages/contracts build$ tsc -p tsconfig.json
+packages/ai build: Done
+packages/storage build$ tsc -p tsconfig.json
+packages/channels build: Done
+packages/ui build$ tsc -p tsconfig.json
+packages/config build: Done
+packages/contracts build: Done
+packages/prospecting build$ tsc -p tsconfig.json
+packages/db build$ tsc -p tsconfig.json
+packages/storage build: Done
+packages/ui build: Done
+apps/web build$ tsc -p tsconfig.json --noEmit && vite build
+packages/prospecting build: Done
+packages/db build: Done
+packages/domain build$ tsc -p tsconfig.json
+apps/web build: vite v8.3.5 building client environment for production...
+apps/web build: transforming...
+apps/web build: ✓ 2109 modules transformed.
+apps/web build: rendering chunks...
+apps/web build: computing gzip size...
+apps/web build: dist/index.html                   0.46 kB │ gzip:   0.32 kB
+apps/web build: dist/assets/index-DtEAgtCV.css   49.58 kB │ gzip:  11.24 kB
+apps/web build: dist/assets/index-Ciz1d9Xy.js   488.54 kB │ gzip: 148.23 kB
+apps/web build: ✓ built in 179ms
+apps/web build: Done
+packages/domain build: Done
+apps/api build$ tsc -p tsconfig.json
+apps/worker build$ tsc -p tsconfig.json
+apps/worker build: Done
+apps/api build: Done

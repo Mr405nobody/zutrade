@@ -1,0 +1,7 @@
+{
+  "tables": 43,
+  "columns": 598,
+  "foreignKeys": 148,
+  "compositeForeignKeys": 106,
+  "checks": 171
+}

@@ -1,0 +1,21 @@
+$ node scripts/doctor.mjs --services
+{"check":"project_root","status":"ok","detail":"/Users/warren/Desktop/ZuTrade"}
+{"check":"architecture","status":"ok","detail":"darwin/arm64"}
+{"check":"node","status":"ok","detail":"v24.22.1"}
+{"check":"pnpm","status":"ok","detail":"pnpm/11.25.0"}
+{"check":"environment","status":"ok","detail":"Local .env found (contents withheld)"}
+{"check":"environment_values","status":"ok","detail":"Required values present (contents withheld)"}
+{"check":"dependencies","status":"ok","detail":"pnpm workspace install"}
+{"check":"git","status":"ok","detail":"Local repository"}
+{"check":"original_sql","status":"ok","detail":"b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"}
+{"check":"docker_daemon","status":"ok","detail":"29.2.1/aarch64"}
+{"check":"compose","status":"ok","detail":"Docker Compose plugin or standalone CLI"}
+{"check":"port_web","status":"ok","detail":"5173: ZuTrade listener"}
+{"check":"port_api","status":"ok","detail":"3001: ZuTrade listener"}
+{"check":"port_worker","status":"ok","detail":"3002: ZuTrade listener"}
+{"check":"port_postgres","status":"ok","detail":"55432: ZuTrade listener"}
+{"check":"git_ignore_.env","status":"ok","detail":"Must stay untracked"}
+{"check":"git_ignore_.local/logs/probe.log","status":"ok","detail":"Must stay untracked"}
+{"check":"git_ignore_data/private/probe.bin","status":"ok","detail":"Must stay untracked"}
+{"check":"env_example","status":"ok","detail":"No generated local secrets"}
+{"check":"runtime_readiness","status":"ok","detail":"ready"}

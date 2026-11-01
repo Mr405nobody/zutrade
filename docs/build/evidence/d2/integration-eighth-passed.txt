@@ -1,0 +1,19 @@
+$ node scripts/verify-d2.mjs
+PASS D1 fixture -> review -> import remains explicitly offline; independent demo contact has no real permission
+PASS Only current designated active owner approves; workspace/factory access checked
+PASS Approval/business/outbox/enqueue rollback together; duplicate approve retains one event per item
+PASS Frozen batch/payload/items cannot change names, content, account, attachments or membership
+PASS Mixed batch actual results are success/failure/delayed; queue is not completion
+PASS New batch version cannot inherit prior approval
+PASS Multi-worker/duplicate jobs obey persistent account pacing and keep request/provider identity
+PASS DST gaps rejected, overlaps explicit and timezone conversion correct
+PASS Default followup only reminder/internal draft; reschedule preserves history and rejects old jobs
+PASS New reply/takeover/pause/closed/requirements/optout stop old automatic plans with explicit reasons
+PASS Current member/factory authorization rechecked by gateway; stale followup cannot regain authority
+PASS Real worker stop -> due -> restart retains reminder and blocks changed plan
+PASS Cancel failure/old job replay cannot restore stopped followup
+PASS Claim cutoff and accepted-lost-response reuse C unknown/reconciliation
+PASS Live transport refused; all message and qualification records remain simulation
+PASS Actual raw inbound barrier and reply block old automatic actions; retry keeps original receipt identity
+PASS Quote/PDF binding, changing quote and withdrawing facts block approved followups; internal notes never copied
+PASS Human mode blocks automation but allows newly approved current manual reply; paused blocks new manual sending

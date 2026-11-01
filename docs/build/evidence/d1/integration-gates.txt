@@ -1,0 +1,15 @@
+PASS 44→45 app tables, RLS and restricted runtime roles
+PASS business + outbox + real pg-boss rollback, three failure points
+PASS request idempotency, strict input, factory and workspace authorization
+PASS offline directory discovers links, follows entities and websites, bounded evidence
+PASS tampered candidate, old result and review versions, excluded import reject
+PASS concurrent repeated import returns one lead, no orphan buyer/contact
+PASS cross-run duplicates are suggestions, explicit buyer link; old evidence retained
+PASS terminal snapshot and imported historical evidence SQL freeze, audit and composite FK
+PASS zero results, denied source, partial success, 429 and retries
+PASS cancel before and during execution fences further request/result writes
+PASS 80 request budget atomically persists and never resets
+PASS SIGKILL + real queue retry resumes checkpoint with original deadline and counter
+PASS old active executor cannot overwrite a replacement execution
+PASS actor revocation stops a queued research without escalating runtime privileges
+PASS DB fixed deadline rejects expired checkpoint/results, no renewed budget

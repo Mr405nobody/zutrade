@@ -1,0 +1,17 @@
+{
+  "project": "mobile",
+  "run": "mobile-f89ed217",
+  "startedAt": "2026-10-28T15:26:46.254Z",
+  "productId": "cce66e3c-27ac-4e38-a603-ef77e64aad29",
+  "sourceVersionId": "f4e3c9c1-d74d-4121-8bbe-00281b3974e7",
+  "sourceV1": "28e172a9-de45-49bb-a986-f7fd25a87258",
+  "threadId": "7a481a30-908e-4f90-b966-589f31c55255",
+  "v1": "a9ae9c17-1e56-4835-9db8-7625b4ffd3da",
+  "pdfV1Sha256": "23f689494c9727eee32c011f5ccca006c41c37549d8078efbb93297ccd66545e",
+  "v2": "339325ec-552c-4230-b691-46401f2781b9",
+  "pdfFailureFixture": "persisted failed processing state on independent test version; no simulated IO claim",
+  "result": "passed",
+  "restoredOriginalRequirements": true,
+  "finishedAt": "2026-10-28T15:26:51.195Z",
+  "pageErrors": []
+}

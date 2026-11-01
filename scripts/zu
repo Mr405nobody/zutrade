@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ZUTRADE_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ZUTRADE_ROOT"
+if [ "${1:-}" = setup ]; then
+  exec bash scripts/setup.sh
+fi
+ZUTRADE_NODE="$ZUTRADE_ROOT/.local/toolchain/node-v$(cat .node-version)-$(uname -s | tr '[:upper:]' '[:lower:]')-$(uname -m | sed 's/aarch64/arm64/;s/x86_64/x64/')/bin"
+export PATH="$ZUTRADE_ROOT/scripts:$ZUTRADE_NODE:$PATH"
+if [ "$(node --version 2>/dev/null || true)" != "v$(cat .node-version)" ]; then
+  echo 'Node version mismatch. Run ./scripts/zu setup.' >&2
+  exit 1
+fi
+ZUTRADE_PNPM="$ZUTRADE_ROOT/.local/toolchain/pnpm/node_modules/pnpm/bin/pnpm.mjs"
+if [ ! -f "$ZUTRADE_PNPM" ]; then
+  echo 'Project pnpm missing. Run ./scripts/zu setup.' >&2
+  exit 1
+fi
+if [ "$#" -gt 0 ] && node --input-type=module -e 'import fs from "node:fs"; process.exit(Object.hasOwn(JSON.parse(fs.readFileSync("package.json")).scripts, process.argv[1]) ? 0 : 1)' -- "$1"; then
+  exec node "$ZUTRADE_PNPM" run "$@"
+fi
+exec node "$ZUTRADE_PNPM" "$@"

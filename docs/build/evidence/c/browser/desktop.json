@@ -1,0 +1,48 @@
+{
+  "project": "desktop",
+  "startedAt": "2026-10-28T16:50:47.306Z",
+  "isolatedDatabase": true,
+  "quoteRequest": {
+    "requestId": "040905f3-9695-405c-98a7-fcaff383968c",
+    "payloadId": "89760796-db57-423f-9685-f452a617013c",
+    "approvalId": "23aa6514-e847-494c-a75e-438569cd362d",
+    "state": "awaiting_approval"
+  },
+  "completed": {
+    "id": "040905f3-9695-405c-98a7-fcaff383968c",
+    "workspace_id": "cad34b36-844e-4a8b-a0be-e0acad4970d9",
+    "factory_id": "63c9286c-15ba-4f85-875c-021332fa80f7",
+    "opportunity_id": "e02fb5cf-ea8c-4d31-b1ce-a33856c7ffca",
+    "thread_id": "72000658-405e-402b-b2df-070e0b99b339",
+    "channel_account_id": "5192b38c-b2df-4822-a5a7-be277bdc4f9b",
+    "transport_mode": "simulation",
+    "contact_point_id": "9860879e-e188-4116-8243-6fb9a205c2f9",
+    "intent": "quote",
+    "authorization_mode": "human_approval",
+    "current_payload_version_id": "89760796-db57-423f-9685-f452a617013c",
+    "dispatch_payload_version_id": "89760796-db57-423f-9685-f452a617013c",
+    "state": "simulated",
+    "idempotency_key": "856dfe3b-cd5d-4c57-8a72-9849d91d5f66",
+    "command_sha256": "71dcc54f7525f7a5a67e1dfff7ca2684894f28d59b5283ed77880cef4f3572bb",
+    "provider_idempotency_key": "040905f3-9695-405c-98a7-fcaff383968c",
+    "scheduled_at": null,
+    "schedule_time_zone": null,
+    "dispatch_claimed_at": "2026-10-28T16:50:51.996Z",
+    "dispatch_started_at": "2026-10-28T16:50:52.039Z",
+    "dispatch_token": "59405f65-6790-4843-944f-42745d05b51a",
+    "cancel_requested_at": null,
+    "stop_reason": null,
+    "created_by_member_id": "6f8f8ca1-6557-4fcc-bfd3-139d106b5325",
+    "created_at": "2026-10-28T16:50:48.258Z",
+    "updated_at": "2026-10-28T16:50:52.066Z",
+    "row_version": "6",
+    "provider_capabilities": {
+      "scenario": "normal",
+      "idempotent": true,
+      "guaranteeSeconds": 86400
+    },
+    "provider_guarantee_until": "2026-10-29T16:50:51.996Z"
+  },
+  "browserErrors": [],
+  "completedAt": "2026-10-28T16:51:06.793Z"
+}

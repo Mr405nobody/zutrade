@@ -1,0 +1,77 @@
+$ node scripts/verify-e-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:10857) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (21.3s)
+(node:11249) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 (18.1s)
+
+
+  1) [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByRole('region', { name: '模拟 AI', exact: true }).getByLabel('预设入站场景', { exact: true })
+
+
+       98 |   await panel
+       99 |     .getByLabel('预设入站场景', { exact: true })
+    > 100 |     .selectOption('Can you guarantee arrival within six weeks?');
+          |      ^
+      101 |   await panel.getByRole('button', { name: '注入所选场景买家消息', exact: true }).click();
+      102 |   await expect
+      103 |     .poll(async () => {
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:100:6
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  getByText('The confirmed material of CT-01 is 12oz.', { exact: true }).first()
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" getByText('The confirmed material of CT-01 is 12oz.', { exact: true }).first() with timeout 5000ms
+      - waiting for getByText('The confirmed material of CT-01 is 12oz.', { exact: true }).first()
+        14 × locator resolved to <span class="thread-preview">The confirmed material of CT-01 is 12oz.</span>
+           - unexpected value "hidden"
+
+
+      81 |   await expect(
+      82 |     page.getByText('The confirmed material of CT-01 is 12oz.', { exact: true }).first(),
+    > 83 |   ).toBeVisible();
+         |     ^
+      84 |   await expect
+      85 |     .poll(async () => {
+      86 |       const r = await page.request.get(
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/e.spec.ts:83:5
+
+    Error Context: test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/e-E-模拟-AI：重放、来源、修改-拒绝、FAQ、转人工、新回复失效及重登-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ─────────────────────
+    [mobile] › tests/e2e/e.spec.ts:7:1 › E 模拟 AI：重放、来源、修改/拒绝、FAQ、转人工、新回复失效及重登 ──────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

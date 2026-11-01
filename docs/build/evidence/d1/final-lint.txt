@@ -1,0 +1,8 @@
+
+/Users/warren/Desktop/ZuTrade/scripts/d1-audit.mjs
+  85:11  error  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+✖ 1 problem (1 error, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.
+$ eslint . && node scripts/boundaries.mjs && prettier --check .

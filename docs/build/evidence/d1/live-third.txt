@@ -1,0 +1,3 @@
+{"runId":"2377cd8c-ad55-4ac0-befd-fd4bf1cd04e4","country":"SG","state":"failed","error":"SSRF_DNS_REJECTED","candidates":0,"requests":1}
+{"runId":"3d7cbba8-c874-48b2-b106-a947fb1e9780","country":"GB","state":"failed","error":"SSRF_DNS_REJECTED","candidates":0,"requests":1}
+{"runId":"5955d129-a452-40d4-9335-c62c399112ba","country":"AU","state":"failed","error":"SSRF_DNS_REJECTED","candidates":0,"requests":1}

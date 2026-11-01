@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-28T15:17:11.227Z",
+  "exitCode": 0,
+  "result": {
+    "stage": "B",
+    "productId": "eb614f6f-d6c2-4a4b-a378-170d7f55445e",
+    "created": false,
+    "threadId": "7a481a30-908e-4f90-b966-589f31c55255",
+    "opportunityId": "d615a385-fca9-4105-a874-d1566fd4c376",
+    "note": "Simulation only. Existing seed rows and all prior revisions remain unchanged."
+  },
+  "identicalProductSourcesFactsPrices": true,
+  "existingWorkspace": "66274c80-327e-48de-a946-fd8e77537497",
+  "newAccounts": false,
+  "newBuyerThread": false,
+  "preservedValidUntil": true,
+  "preservedFrozenVersions": true
+}

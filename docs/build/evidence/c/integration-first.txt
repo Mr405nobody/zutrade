@@ -1,0 +1,14 @@
+file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/quoting.js:154
+        throw new BoundaryError(404, '报价版本不存在或未获授权');
+              ^
+
+BoundaryError: 报价版本不存在或未获授权
+    at requireQuoteVersion (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/quoting.js:154:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async generateQuotePdf (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/quote-pdf.js:145:21)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:285:31 {
+  status: 404
+}
+
+Node.js v24.22.1

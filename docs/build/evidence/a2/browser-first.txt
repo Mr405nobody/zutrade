@@ -1,0 +1,84 @@
+$ playwright test a2.spec.ts
+
+Running 2 tests using 1 worker
+
+(node:45751) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (5.7s)
+(node:45864) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [mobile] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (5.6s)
+
+
+  1) [desktop] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ─────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '消息', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '消息', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: '消息', exact: true })
+
+
+      23 |   await page.getByLabel('密码', { exact: true }).fill(accounts[role].password);
+      24 |   await page.getByRole('button', { name: '登录', exact: true }).click();
+    > 25 |   await expect(page.getByRole('heading', { name: '消息', exact: true })).toBeVisible();
+         |                                                                        ^
+      26 |   const workspace = page.getByRole('combobox', { name: '消息工作区' });
+      27 |   if (await workspace.count()) await workspace.selectOption(accounts.workspaceId);
+      28 | }
+        at login (/Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:25:72)
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:63:5
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: '消息', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: '消息', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: '消息', exact: true })
+
+
+      23 |   await page.getByLabel('密码', { exact: true }).fill(accounts[role].password);
+      24 |   await page.getByRole('button', { name: '登录', exact: true }).click();
+    > 25 |   await expect(page.getByRole('heading', { name: '消息', exact: true })).toBeVisible();
+         |                                                                        ^
+      26 |   const workspace = page.getByRole('combobox', { name: '消息工作区' });
+      27 |   if (await workspace.count()) await workspace.selectOption(accounts.workspaceId);
+      28 | }
+        at login (/Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:25:72)
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:63:5
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+    [mobile] › tests/e2e/a2.spec.ts:49:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ───────────────────────────────
+[ELIFECYCLE] Command failed with exit code 1.

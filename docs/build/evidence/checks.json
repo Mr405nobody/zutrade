@@ -1,0 +1,32 @@
+[
+  {
+    "command": "./scripts/zu install --frozen-lockfile",
+    "startedAt": "2026-10-28T12:25:30.279Z",
+    "exitCode": 0,
+    "evidence": "install.txt"
+  },
+  {
+    "command": "./scripts/zu lint",
+    "startedAt": "2026-10-28T12:25:30.496Z",
+    "exitCode": 0,
+    "evidence": "lint.txt"
+  },
+  {
+    "command": "./scripts/zu typecheck",
+    "startedAt": "2026-10-28T12:25:31.327Z",
+    "exitCode": 0,
+    "evidence": "typecheck.txt"
+  },
+  {
+    "command": "./scripts/zu build",
+    "startedAt": "2026-10-28T12:25:33.896Z",
+    "exitCode": 0,
+    "evidence": "build.txt"
+  },
+  {
+    "command": "./scripts/zu test:unit",
+    "startedAt": "2026-10-28T12:25:36.800Z",
+    "exitCode": 0,
+    "evidence": "test-unit.txt"
+  }
+]

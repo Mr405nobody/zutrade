@@ -1,0 +1,9 @@
+$ eslint . && node scripts/boundaries.mjs && prettier --check .
+
+/Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs
+  172:20  error  'AbortController' is not defined  no-undef
+  186:21  error  'TextDecoder' is not defined      no-undef
+
+✖ 2 problems (2 errors, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.

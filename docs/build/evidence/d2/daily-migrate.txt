@@ -1,0 +1,3 @@
+$ node scripts/baseline-copy.mjs --check && node scripts/db-migrate.mjs
+Original checksum and exact two-line transformation verified.
+Business/auth migrations and official pg-boss initialization completed; existing rows retained.

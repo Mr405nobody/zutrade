@@ -1,0 +1,1 @@
+PASS restricted roles, all 45 FORCE RLS tables, migration checksums, ignored private materials and audit history; simulation modes only

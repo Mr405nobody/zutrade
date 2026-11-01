@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-28T12:42:33.917Z",
+  "command": "./scripts/zu test:e2e",
+  "exitCode": 0,
+  "stats": {
+    "startTime": "2026-10-28T12:40:15.412Z",
+    "duration": 24647.952999999998,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": [
+    {
+      "name": "desktop",
+      "testDir": "/Users/warren/Desktop/ZuTrade/tests/e2e"
+    },
+    {
+      "name": "mobile",
+      "testDir": "/Users/warren/Desktop/ZuTrade/tests/e2e"
+    }
+  ],
+  "screenshots": [
+    "desktop-healthy.png",
+    "mobile-healthy.png",
+    "desktop-api-unavailable.png",
+    "mobile-api-unavailable.png",
+    "desktop-database-stopped.png"
+  ]
+}

@@ -1,0 +1,154 @@
+
+Running 4 tests using 1 worker
+
+(node:29632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 (16.1s)
+(node:29762) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 [desktop] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 (15.8s)
+(node:29837) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  3 [mobile] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 (15.7s)
+(node:29920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  4 [mobile] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 (15.7s)
+
+
+  1) [desktop] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 ──────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('已消费', { exact: true }).first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('已消费', { exact: true }).first() with timeout 15000ms
+      - waiting for getByText('已消费', { exact: true }).first()
+
+
+      23 |     const form=page.getByRole('form',{name:'DEMO-A',exact:true});
+      24 |     await form.getByRole('button',{name:'保存并验证队列'}).click();
+    > 25 |     await expect(page.getByText('已消费',{exact:true}).first()).toBeVisible({timeout:15000});
+         |                                                              ^
+      26 |     await page.reload();await expect(page.getByRole('button',{name:'退出登录'})).toBeVisible();
+      27 |     const size=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));expect(size.scroll).toBeLessThanOrEqual(size.viewport);
+      28 |     await page.screenshot({path:`docs/build/evidence/a1/${testInfo.project.name}-${role}.png`,fullPage:true});
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a1.spec.ts:25:62
+
+    Error Context: test-results/a1-owner-真实登录、授权工厂、队列及退出-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a1-owner-真实登录、授权工厂、队列及退出-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a1-owner-真实登录、授权工厂、队列及退出-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 ──────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('已消费', { exact: true }).first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('已消费', { exact: true }).first() with timeout 15000ms
+      - waiting for getByText('已消费', { exact: true }).first()
+
+
+      23 |     const form=page.getByRole('form',{name:'DEMO-A',exact:true});
+      24 |     await form.getByRole('button',{name:'保存并验证队列'}).click();
+    > 25 |     await expect(page.getByText('已消费',{exact:true}).first()).toBeVisible({timeout:15000});
+         |                                                              ^
+      26 |     await page.reload();await expect(page.getByRole('button',{name:'退出登录'})).toBeVisible();
+      27 |     const size=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));expect(size.scroll).toBeLessThanOrEqual(size.viewport);
+      28 |     await page.screenshot({path:`docs/build/evidence/a1/${testInfo.project.name}-${role}.png`,fullPage:true});
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a1.spec.ts:25:62
+
+    Error Context: test-results/a1-sales-真实登录、授权工厂、队列及退出-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a1-sales-真实登录、授权工厂、队列及退出-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a1-sales-真实登录、授权工厂、队列及退出-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 ───────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('已消费', { exact: true }).first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('已消费', { exact: true }).first() with timeout 15000ms
+      - waiting for getByText('已消费', { exact: true }).first()
+
+
+      23 |     const form=page.getByRole('form',{name:'DEMO-A',exact:true});
+      24 |     await form.getByRole('button',{name:'保存并验证队列'}).click();
+    > 25 |     await expect(page.getByText('已消费',{exact:true}).first()).toBeVisible({timeout:15000});
+         |                                                              ^
+      26 |     await page.reload();await expect(page.getByRole('button',{name:'退出登录'})).toBeVisible();
+      27 |     const size=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));expect(size.scroll).toBeLessThanOrEqual(size.viewport);
+      28 |     await page.screenshot({path:`docs/build/evidence/a1/${testInfo.project.name}-${role}.png`,fullPage:true});
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a1.spec.ts:25:62
+
+    Error Context: test-results/a1-owner-真实登录、授权工厂、队列及退出-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a1-owner-真实登录、授权工厂、队列及退出-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a1-owner-真实登录、授权工厂、队列及退出-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [mobile] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 ───────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('已消费', { exact: true }).first()
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('已消费', { exact: true }).first() with timeout 15000ms
+      - waiting for getByText('已消费', { exact: true }).first()
+
+
+      23 |     const form=page.getByRole('form',{name:'DEMO-A',exact:true});
+      24 |     await form.getByRole('button',{name:'保存并验证队列'}).click();
+    > 25 |     await expect(page.getByText('已消费',{exact:true}).first()).toBeVisible({timeout:15000});
+         |                                                              ^
+      26 |     await page.reload();await expect(page.getByRole('button',{name:'退出登录'})).toBeVisible();
+      27 |     const size=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));expect(size.scroll).toBeLessThanOrEqual(size.viewport);
+      28 |     await page.screenshot({path:`docs/build/evidence/a1/${testInfo.project.name}-${role}.png`,fullPage:true});
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a1.spec.ts:25:62
+
+    Error Context: test-results/a1-sales-真实登录、授权工厂、队列及退出-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a1-sales-真实登录、授权工厂、队列及退出-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a1-sales-真实登录、授权工厂、队列及退出-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [desktop] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 ───────────────────────────────────
+    [desktop] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 ───────────────────────────────────
+    [mobile] › tests/e2e/a1.spec.ts:5:3 › owner 真实登录、授权工厂、队列及退出 ────────────────────────────────────
+    [mobile] › tests/e2e/a1.spec.ts:5:3 › sales 真实登录、授权工厂、队列及退出 ────────────────────────────────────

@@ -1,0 +1,17 @@
+file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:83
+    for(const [sql,params]of [["UPDATE app.outreach_batch_versions SET send_rules='{}' WHERE id=$1",[mixed.versionId]],["DELETE FROM app.outreach_batch_items WHERE batch_version_id=$1",[mixed.versionId]],["UPDATE app.outbound_payload_versions SET body_text='changed' WHERE id=$1",[r.current_payload_version_id]],["UPDATE app.outbound_payload_versions SET attachment_manifest='[{"filename":"changed.pdf"}]' WHERE id=$1",[r.current_payload_version_id]],["UPDATE app.outbound_requests SET channel_account_id=$2 WHERE id=$1",[rid,accounts[1]]]])await assert.rejects(()=>m.query(sql,params));
+                                                                                                                                                                                                                                                                                                                                                                                           ^^^^^^^^
+
+SyntaxError: Unexpected identifier 'filename'
+    at compileSourceTextModule (node:internal/modules/esm/utils:319:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:89:18)
+    at #translate (node:internal/modules/esm/loader:438:20)
+    at afterLoad (node:internal/modules/esm/loader:506:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:511:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:564:36)
+    at afterResolve (node:internal/modules/esm/loader:611:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:617:12)
+    at node:internal/modules/esm/loader:636:32
+    at TracingChannel.tracePromise (node:diagnostics_channel:370:14)
+
+Node.js v24.22.1

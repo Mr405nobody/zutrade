@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-10-30T05:42:01.510Z",
+  "database": "zutrade_v_test_3b33f7d7cbc64895950aaab6c5e5ced2",
+  "origin": "offline_fixture",
+  "successful": true,
+  "checks": [
+    {
+      "label": "带数据的 D2 0018 升级至 E 0019；旧工作区、产品、来源与 OID 保留",
+      "result": "passed"
+    },
+    {
+      "label": "离线来源审核→导入→模拟身份→同一商机；明确 fixture，不是真实公司",
+      "result": "passed"
+    },
+    {
+      "label": "模拟询盘→模拟 AI→sales 确认需求/工厂→USD1230→PDF/冻结→owner 审批→网关模拟执行",
+      "result": "passed"
+    },
+    {
+      "label": "跟进改期使旧版本失效；新回复停止旧计划，历史与冻结报价保留",
+      "result": "passed"
+    },
+    {
+      "label": "四入口服务器查询可追溯同一会话/商机/来源/报价/审批/跟进与 AI 历史",
+      "result": "passed"
+    },
+    {
+      "label": "消息与会话实际分页无重复；记录每个查询的 SQL 次数和测试规模",
+      "result": "passed"
+    }
+  ]
+}

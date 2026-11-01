@@ -1,0 +1,13 @@
+packages:
+  - apps/*
+  - packages/*
+engineStrict: true
+strictPeerDependencies: true
+autoInstallPeers: false
+allowBuilds:
+  '@nestjs/core': true
+  '@tailwindcss/oxide': true
+  esbuild: true
+  rolldown: true
+minimumReleaseAgeExclude:
+  - lucide-react@1.63.0

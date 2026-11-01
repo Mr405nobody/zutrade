@@ -1,0 +1,36 @@
+$ node scripts/verify-a2.mjs
+PASS A1 runtime role, RLS, original SQL and incremental migration boundaries retained
+PASS inbound receipt persists before worker; duplicate same event reused and changed content conflicts; injection owner-only
+PASS real worker restart consumes committed inbound queue without reseed
+PASS different event envelopes for same provider message do not duplicate message or advance context; same-name distinct identity stays distinct
+PASS independent read cursors; late occurred_at remains unread; monotonic reads and cursor pagination
+PASS thread lock is explicit synchronization point: concurrent inbound cannot be skipped by read or pagination
+PASS notes and free-text internal drafts never create buyer messages, frozen snapshots or delivery jobs; notes/read do not invalidate context
+PASS gateway command idempotency, fixed templates, atomic request/payload/outbox/queue and worker simulated completion
+PASS business/outbox/enqueue all roll back on enqueue failure; no partial command survives
+PASS two-window CAS conflict, takeover invalidates old action, latest human reply allowed and release explicit
+PASS claim revalidates paused channel, contact eligibility, member and factory revocation; records explicit blocking
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'claimed'
+- 'unknown'
+
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs:677:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs:74:3)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs:663:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'claimed',
+  expected: 'unknown',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

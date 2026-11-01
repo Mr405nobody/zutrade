@@ -1,0 +1,159 @@
+{
+  "name": "ZuTrade Codex Build Kit",
+  "version": "2026-10-28.1",
+  "scope": "Local MVP; simulated AI and messaging; real public company discovery; human stage acceptance",
+  "stages": [
+    "0",
+    "A1",
+    "A2",
+    "B",
+    "C",
+    "D1",
+    "D2",
+    "E",
+    "V"
+  ],
+  "schema_baseline_sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe",
+  "files": [
+    {
+      "path": "MASTER_PROMPT.md",
+      "bytes": 13900,
+      "sha256": "3e43bc5d99fddcd4def4f05ead389667c389231c114f1047f715a56c31ed2051"
+    },
+    {
+      "path": "PROMPTS_ALL_IN_ONE.md",
+      "bytes": 99366,
+      "sha256": "e8f25128ba7c116959c83ad6130b13a5f35c68b1d7ccfd8f5c1c8cc92ad74991"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5359,
+      "sha256": "77bf840113a9e2aea7acd19cc576d98b7d8777667caee68c41f6947679df5847"
+    },
+    {
+      "path": "prompts/FIX_CURRENT_STAGE.md",
+      "bytes": 638,
+      "sha256": "7e083f7a81dbac324cf017eec3e577d38e759854401fb3229e66b3068ceae7c3"
+    },
+    {
+      "path": "prompts/NEXT_STAGE.md",
+      "bytes": 583,
+      "sha256": "4c7e6aca6362ff58e93757c4e731b51ea5ef62d2ac16774bb7d377cd0071004f"
+    },
+    {
+      "path": "prompts/RESUME.md",
+      "bytes": 823,
+      "sha256": "e297c04d45e4c8a8b07709516411fe02da84adec0d0a82c311cd12c9f60ecca5"
+    },
+    {
+      "path": "references/ARCHITECTURE_BASELINE.md",
+      "bytes": 49994,
+      "sha256": "575ab62fb75f314b447e5510da61c8b35e81ac05ce5900ca72cdefb2efdd2ae8"
+    },
+    {
+      "path": "references/PRODUCT_BASELINE.md",
+      "bytes": 33724,
+      "sha256": "be2b9436008013cea0d1b36209597d77e48943e38de600f93fbee98d0e681940"
+    },
+    {
+      "path": "references/approved-ui.png",
+      "bytes": 1277562,
+      "sha256": "f8f00d8125039420754a2cee7b94af92dbc33f44f9fd84a02ceaf8b8789cdec0"
+    },
+    {
+      "path": "references/workbench-prototype.html",
+      "bytes": 58990,
+      "sha256": "e5ef746714a39ec2c13d2099ec0462d3526af3dff01ec7b34c6df9d4dc35b41a"
+    },
+    {
+      "path": "references/zutrade-schema-v1.sql",
+      "bytes": 75172,
+      "sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"
+    },
+    {
+      "path": "specs/ACCEPTANCE_MATRIX.md",
+      "bytes": 12840,
+      "sha256": "57b3938a9c18aa10ce75c69ff4ec0c12b12559f552c93ecc76b229cc682bbafe"
+    },
+    {
+      "path": "specs/CONFIRMED_SCOPE.md",
+      "bytes": 3654,
+      "sha256": "0520767a61aa750b962584972efff3ecb45c30a9970930cfc48575290e58c20a"
+    },
+    {
+      "path": "specs/DATABASE_NOTES.md",
+      "bytes": 10632,
+      "sha256": "3692fcbb88dbee3f483b57e2587ecc10cef5a34948f4d88eb5fcf77d4789f269"
+    },
+    {
+      "path": "specs/PROSPECTING_SPEC.md",
+      "bytes": 8987,
+      "sha256": "8edbab0186467b72a2e4c305099cde3ca87add167a9e6472576c3bc67aa2ea0b"
+    },
+    {
+      "path": "specs/UI_SPEC.md",
+      "bytes": 3097,
+      "sha256": "692f70dbd4064e6a1c09c578b42f6cd5b84937b74aad82e1e5276f401abb58a7"
+    },
+    {
+      "path": "stages/00-bootstrap.md",
+      "bytes": 3032,
+      "sha256": "44ec242ad20381719dd287ce3bc80920b82f86835d996c67e1357da1638ced22"
+    },
+    {
+      "path": "stages/A1-identity-database.md",
+      "bytes": 3507,
+      "sha256": "aa23b95f436f9b86c82ba519119aa7f972bc82dc85c524f42e60ee636eea7520"
+    },
+    {
+      "path": "stages/A2-inbox.md",
+      "bytes": 4042,
+      "sha256": "eb3a9c5e4e19dac7c823cd719d2faf5ef8ed8bf8211a673aa671ed9c0b9ef066"
+    },
+    {
+      "path": "stages/B-supply-quoting.md",
+      "bytes": 3492,
+      "sha256": "be8a64086455dcc2c5c67f76b22ed12a351095df29a2b59625e2b1b14c442de6"
+    },
+    {
+      "path": "stages/C-approval-dispatch.md",
+      "bytes": 5213,
+      "sha256": "1d9d7c0225552cc77de66027c0b68a2bf61ccb4155f298011a9c93bce378b543"
+    },
+    {
+      "path": "stages/D1-live-prospecting.md",
+      "bytes": 4847,
+      "sha256": "1183f5f561220719ccdc75f48a070f33ad8392309c8eaa258e656a57bd72f658"
+    },
+    {
+      "path": "stages/D2-outreach-followup.md",
+      "bytes": 3444,
+      "sha256": "b3e82be172138b0be3eb2eec0e986a2f8fa6279bf72cade28a44b908735dfce7"
+    },
+    {
+      "path": "stages/E-mock-ai.md",
+      "bytes": 3543,
+      "sha256": "eaf7c0eea7a784e19b1dac4340e0050aa0dec7611e8e7d184bccdff705e2fe00"
+    },
+    {
+      "path": "stages/V-local-acceptance.md",
+      "bytes": 3535,
+      "sha256": "126e582fdb427acd40be80a507b08a92dc6ed7bbfb317239f28ebfc22db17b95"
+    },
+    {
+      "path": "templates/HANDOFF.md",
+      "bytes": 813,
+      "sha256": "17cbbc737b94cac91e52f4f190dc6413cfeb1779dc4e942e4db1a317bdfb27c2"
+    },
+    {
+      "path": "templates/PROGRESS.md",
+      "bytes": 1273,
+      "sha256": "084560d9b2df526ff13d16aad3414090a8c91f6472582a936f02e2d828919ce8"
+    },
+    {
+      "path": "templates/STAGE_REPORT.md",
+      "bytes": 1395,
+      "sha256": "b56f8083639a563bea3e90597e11810fc100c84e9eccb85fd0c59ccc1276e78a"
+    }
+  ]
+}

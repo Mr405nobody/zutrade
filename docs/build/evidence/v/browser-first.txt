@@ -1,0 +1,44 @@
+$ node scripts/verify-v-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:54790) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/v.spec.ts:8:1 › V 四入口、冻结历史、移动端、失败/加载反馈、下载/SSE/失效会话 (2.0m)
+(node:55149) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/v.spec.ts:8:1 › V 四入口、冻结历史、移动端、失败/加载反馈、下载/SSE/失效会话 (6.3s)
+
+
+  1) [desktop] › tests/e2e/v.spec.ts:8:1 › V 四入口、冻结历史、移动端、失败/加载反馈、下载/SSE/失效会话 ──────────────────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for locator('[data-thread-id="ed805673-5035-4024-b3ff-549bffd78586"]')
+
+
+      47 |     await expect.poll(() => page.locator('[data-thread-id]').count()).toBeGreaterThan(before);
+      48 |   }
+    > 49 |   await page.locator(`[data-thread-id="${f.ui.threadId}"]`).click();
+         |                                                             ^
+      50 |   await page.getByRole('button', { name: /内部工作区 · 仅团队可见/ }).click();
+      51 |   const ai = page.getByRole('region', { name: '模拟 AI', exact: true });
+      52 |   await expect(ai).toBeVisible();
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/v.spec.ts:49:61
+
+    Error Context: test-results/v-V-四入口、冻结历史、移动端、失败-加载反馈、下载-SSE-失效会话-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v-V-四入口、冻结历史、移动端、失败-加载反馈、下载-SSE-失效会话-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/v-V-四入口、冻结历史、移动端、失败-加载反馈、下载-SSE-失效会话-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop] › tests/e2e/v.spec.ts:8:1 › V 四入口、冻结历史、移动端、失败/加载反馈、下载/SSE/失效会话 ───────────────────────
+  1 passed (2.2m)
+[ELIFECYCLE] Command failed with exit code 1.

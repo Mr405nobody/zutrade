@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-28",
+  "failures": [
+    {"evidence": "integration-first.txt", "cause": "Non-admin pg_stat_activity did not disclose other role's lock wait; test teardown waited on held synchronization lock", "repair": "Admin read-only lock observer plus finally release"},
+    {"evidence": "integration-second.txt", "postgresCode": "42P08", "cause": "UUID request identity reused as text provider key without explicit cast", "repair": "Explicit uuid-to-text conversion"},
+    {"evidence": "integration-third.txt", "queueOutputObserved": {"code": "42501", "message": "permission denied for table outbound_payload_versions", "where": "require_frozen_batch_payload SELECT FOR SHARE"}, "repair": "Incremental migration 0004 grants worker UPDATE(id) for row locks; frozen-content trigger retained"},
+    {"evidence": "integration-fourth.txt", "cause": "All business assertions passed, teardown waited a second time for an already signalled child process", "repair": "Check child.signalCode as well as exitCode", "subsequentExit": 0},
+    {"evidence": "build-second.txt", "cause": "Union inference widened kind after adding asynchronous authorization failure projection", "repair": "Explicit transaction<Claim> type", "subsequentExit": 0},
+    {"evidence": "inbound-scope-check.txt", "cause": "Installed pg-boss FindJobsOptions does not accept state; old maintenance counted created jobs as failed", "repair": "Bounded pagination and explicit job.state filtering before official retry", "subsequentExit": 0},
+    {"evidence": "browser-first.txt", "cause": "Clearing shared me query cache split login and application identity observers", "repair": "Keep me query and invalidate after login/logout"},
+    {"evidence": "browser-second.txt", "cause": "Nested select label included option text, preventing exact accessible name selection", "repair": "Explicit aria-label on factory selector"}
+  ]
+}

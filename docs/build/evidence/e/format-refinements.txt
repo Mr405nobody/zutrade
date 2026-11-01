@@ -1,0 +1,6 @@
+packages/contracts/src/ai.ts 31ms
+packages/ai/src/index.ts 14ms (unchanged)
+packages/domain/src/ai.ts 28ms
+apps/web/src/ai-workspace.tsx 20ms
+apps/web/src/main.tsx 9ms (unchanged)
+tests/e2e/e.spec.ts 8ms

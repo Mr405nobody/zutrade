@@ -1,0 +1,10 @@
+$ vitest run
+
+ RUN  v5.0.5 /Users/warren/Desktop/ZuTrade
+
+
+ Test Files  8 passed (8)
+      Tests  93 passed (93)
+   Start at  13:42:14
+   Duration  793ms (import 72%, tests 22%, transform 6%, worker 1%)
+

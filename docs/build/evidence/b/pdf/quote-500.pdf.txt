@@ -1,0 +1,42 @@
+QUOTATION
+SIMULATION - INTERNAL PREVIEW - NOT APPROVED FOR SENDING
+ZT-PDF-QA-500 | Version 1 | Product-only quote
+Issued: 28 Oct 2026, 12:00 (Asia/Shanghai)
+Valid until: 4 Nov 2026, 12:00 (Asia/Shanghai)
+Seller and recipient
+Seller: 模拟棉布袋工厂 · 苏州可信供给有限公司
+Sales agent: ZuTrade. The factory is the contracting, payment and fulfillment party.
+Buyer: Alex Demonstration Buyer Ltd
+Recipient: Alex
+Account: alex@example.test
+Product and requirements
+Product: CT-01 Cotton tote bag 棉布袋
+Specifications: 12oz; 35×40cm; Natural 本色
+Print: One-color, one-side logo 单色单面
+Quantity: 500 piece
+Destination: United Kingdom
+Use: Retail promotion
+Buyer timing request (not a commitment): Arrival within six weeks
+Price breakdown (USD)
+CT-01 Cotton tote bag 棉布袋 1200.00
+500 piece x USD 2.40
+One-time logo setup 30.00
+1 quote x USD 30.00
+TOTAL: USD 1230.00
+Rounding: half_up_per_line; calculator: b-calc-v1.
+Production and commercial terms
+Production: 20 business days.
+Starts after: After artwork/sample approval and deposit confirmation.
+SIMULATION | ZT-PDF-QA-500 v1 | 1/2
+Arrival date: not committed. Production lead time is not a delivery or arrival promise.
+Payment: To be confirmed; no payment ratio or bank details committed.
+Samples: Separately quoted; no sample price committed.
+Scope and exclusions
+- Freight excluded; to be confirmed.
+- Taxes excluded; to be confirmed.
+- Samples are quoted separately.
+Items requiring confirmation
+- Arrival within six weeks remains unconfirmed.
+Validity basis
+- Seven days, limited by the confirmed source and price validity.
+SIMULATION | ZT-PDF-QA-500 v1 | 2/2

@@ -1,0 +1,17 @@
+{
+  "versionId": "950f5d3f-645e-4f12-9f67-4eb81bd50c32",
+  "threadId": "7a481a30-908e-4f90-b966-589f31c55255",
+  "productId": "eb614f6f-d6c2-4a4b-a378-170d7f55445e",
+  "created": true,
+  "totalAmount": "1230.00",
+  "quantity": "500",
+  "availability": {
+    "available": true,
+    "reasons": []
+  },
+  "pdf": {
+    "state": "ready",
+    "pdf_sha256": "f2363a0394930ca647a8b9e568a94a7250a9bb22c0576d989843c06badd0032f"
+  },
+  "validUntil": "2026-11-04T15:28:48.821Z"
+}

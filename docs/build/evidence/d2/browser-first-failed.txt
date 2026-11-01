@@ -1,0 +1,12 @@
+$ node scripts/verify-d2-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:64962) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop] › tests/e2e/d2.spec.ts:7:1 › D2 桌面与手机：逐人预览、明确审批、实际结果、跟进、冲突及重登持久化 (2.0m)
+(node:65371) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+undefined
+[ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL] Command was killed with SIGTERM (Termination): playwright test d2.spec.ts
+[ELIFECYCLE] Command failed with exit code 1.

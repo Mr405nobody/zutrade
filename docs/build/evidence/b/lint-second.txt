@@ -1,0 +1,8 @@
+$ eslint . && node scripts/boundaries.mjs && prettier --check .
+
+/Users/warren/Desktop/ZuTrade/scripts/verify-b.mjs
+  5:36  error  'readFileSync' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.

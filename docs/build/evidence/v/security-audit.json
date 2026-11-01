@@ -1,0 +1,480 @@
+{
+  "observedAt": "2026-10-30T05:49:42.451Z",
+  "runtimeRoles": [
+    {
+      "role": "zutrade_api"
+    },
+    {
+      "role": "zutrade_worker"
+    }
+  ],
+  "tables": [
+    {
+      "relname": "ai_runs",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "app_users",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "approval_events",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "approvals",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "audit_events",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "buyers",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "channel_accounts",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "command_receipts",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "contact_permissions",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "contact_points",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "contacts",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "delivery_attempts",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "fact_evidence",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "fact_versions",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "factories",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "factory_memberships",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "facts",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "followups",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "inbound_events",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "leads",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "messages",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "opportunities",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "opportunity_threads",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "outbound_payload_versions",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "outbound_requests",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "outbox_events",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "outreach_batch_items",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "outreach_batch_versions",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "outreach_batches",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "payload_evidence",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "price_rules",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "products",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "prospecting_runs",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "quote_evidence",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "quote_lines",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "quote_pdf_artifacts",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "quote_versions",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "quotes",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "source_documents",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "source_versions",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "team_notes",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "thread_reads",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "threads",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "workspace_members",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    },
+    {
+      "relname": "workspaces",
+      "relrowsecurity": true,
+      "relforcerowsecurity": true,
+      "owner": "zutrade_migrator"
+    }
+  ],
+  "migrations": [
+    {
+      "hash": "210777c190f4ac7ec1e76a1549b0be40594f455894647750f95a0d381ce3060b",
+      "created_at": "1793188800000"
+    },
+    {
+      "hash": "aa6804cfe4a68fb5c7e6ce0c92d6a1d747741cf9f3d8b4cb92cce44a7d58344e",
+      "created_at": "1793188800001"
+    },
+    {
+      "hash": "87692c2cda2aa249f181f7035b213f75b16ecac96fd0fb43b43bb4b04f0b7c6a",
+      "created_at": "1793188800002"
+    },
+    {
+      "hash": "11852f10ca85437550c89e4e84d735b6469b933172f7a52bad2af83fa5e7964b",
+      "created_at": "1793188800003"
+    },
+    {
+      "hash": "88a92dee72cebc5bf388e41236d9e8c706c6158a7d35f1c66f06671cb101acab",
+      "created_at": "1793188800004"
+    },
+    {
+      "hash": "927d0332678ba4a94e78c977b156a3ff497efc95885a1f2a9fedaf7b7da62246",
+      "created_at": "1793188800005"
+    },
+    {
+      "hash": "f25800fa138c0d0ca8f7e361a0cc0c06c9f9ccda7d1ce1640d2c897a6f9fac19",
+      "created_at": "1793188800006"
+    },
+    {
+      "hash": "13767ddb0cdc103e86d6896ca32565f784e07ce3fb104f84c567371c46a39c66",
+      "created_at": "1793188800007"
+    },
+    {
+      "hash": "68dc46d146e25626616c59d7f875009cd1c85618c2178f762fdcf1ad4c14b4c7",
+      "created_at": "1793188800008"
+    },
+    {
+      "hash": "e0d53f6ba873daac2f089509df2d46fba42ff036cdd0126a9448b2a91a9f5a67",
+      "created_at": "1793188800009"
+    },
+    {
+      "hash": "de00009269cfbc66486df36205ec0e90b26248f512a48b9fc459725be9abfb2b",
+      "created_at": "1793188800010"
+    },
+    {
+      "hash": "218a10c8cfcf70ab97ec7ee21112e5afad3ae69a022d37bb618d15d4a98b8eb6",
+      "created_at": "1793188800011"
+    },
+    {
+      "hash": "c18ec0cfcdab0e3e4e75c5d22849012bd3246fa1df38df24710d34552ed5c40d",
+      "created_at": "1793188800012"
+    },
+    {
+      "hash": "8541bec45515f83dd6e6a8055449b804c47440f352d90eda4aad2c3fba22eb3a",
+      "created_at": "1793188800013"
+    },
+    {
+      "hash": "fafb7bf4997fc5f1069cc2417a3fc0ddbd3c5f4fbe59d4dd585a20e8b1d4a232",
+      "created_at": "1793188800014"
+    },
+    {
+      "hash": "a6d0934480d7c088e0cd6f78cc37383d38fcb50c1b67b22bf9711d862218283c",
+      "created_at": "1793188800015"
+    },
+    {
+      "hash": "d82503810cec88a4341fb2d34eda87cee9567cde1cec7e423b8dfc62def7d375",
+      "created_at": "1793188800016"
+    },
+    {
+      "hash": "bd29b87395f79d4fa6f1c2b71e057555a045235e222137268e209c721839876f",
+      "created_at": "1793188800017"
+    },
+    {
+      "hash": "c0db08ed8656617874bb8355cd908ffe645c05244b2a14730854868b849b22e7",
+      "created_at": "1793188800018"
+    },
+    {
+      "hash": "e79fc25bc33238ab0ffa07d727addc7e45e364ea786a180923cafe0265e794b0",
+      "created_at": "1793188800019"
+    }
+  ],
+  "originalSql": {
+    "bytes": 75172,
+    "sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"
+  },
+  "ignoredCredentialsAndBackups": true,
+  "webPublicPaths": [],
+  "audits": [
+    {
+      "action": "a2.inbound-normalized",
+      "count": 90
+    },
+    {
+      "action": "a2.note-added",
+      "count": 1
+    },
+    {
+      "action": "a2.simulation-injected",
+      "count": 90
+    },
+    {
+      "action": "b.fact-draft-created",
+      "count": 1
+    },
+    {
+      "action": "b.fact-published",
+      "count": 1
+    },
+    {
+      "action": "b.price-published",
+      "count": 1
+    },
+    {
+      "action": "b.product-created",
+      "count": 1
+    },
+    {
+      "action": "b.quote-validated",
+      "count": 1
+    },
+    {
+      "action": "b.requirements-saved",
+      "count": 2
+    },
+    {
+      "action": "b.source-created",
+      "count": 1
+    },
+    {
+      "action": "c.approved-and-enqueued",
+      "count": 1
+    },
+    {
+      "action": "c.delivery-claimed",
+      "count": 1
+    },
+    {
+      "action": "c.prepared",
+      "count": 1
+    },
+    {
+      "action": "c.provider-evidence",
+      "count": 1
+    },
+    {
+      "action": "d1.candidate-imported",
+      "count": 1
+    },
+    {
+      "action": "d1.candidate-reviewed",
+      "count": 1
+    },
+    {
+      "action": "d1.research-created",
+      "count": 1
+    },
+    {
+      "action": "d1.research-execution",
+      "count": 1
+    },
+    {
+      "action": "d1.research-finished",
+      "count": 1
+    },
+    {
+      "action": "d2.followup-stopped",
+      "count": 3
+    },
+    {
+      "action": "d2.followup-version",
+      "count": 4
+    },
+    {
+      "action": "d2.simulation-authorized",
+      "count": 1
+    },
+    {
+      "action": "e.ai-completed",
+      "count": 2
+    },
+    {
+      "action": "e.ai-decision",
+      "count": 2
+    },
+    {
+      "action": "e.ai-requested",
+      "count": 2
+    }
+  ],
+  "mixedModes": {
+    "nonsimulationrequests": 0,
+    "realcontactpermissions": 0,
+    "realairuns": 0
+  },
+  "ssrf": "Production source unchanged; negative unit and D1 integration evidence referenced by V_MATRIX.md; no real public discovery in V",
+  "sse": "Fresh desktop/mobile HTTP revocation and session checks in browser evidence"
+}

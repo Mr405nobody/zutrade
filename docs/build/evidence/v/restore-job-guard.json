@@ -1,0 +1,15 @@
+{
+  "observedAt": "2026-10-30T05:46:32.528Z",
+  "database": "zutrade_v_restore_808bb34c73604bbeacc56a69029a5cfd",
+  "jobId": "61a6cbc2-a932-4f7e-b7fe-b04fe5ad2845",
+  "followupId": "eba17455-8da2-44e4-9c37-91717394edba",
+  "beforeDue": "scheduled, not executed",
+  "afterRevocation": {
+    "state": "cancelled",
+    "stop_reason": "ACTOR_NO_LONGER_AUTHORIZED"
+  },
+  "providerInvocationCountBefore": 1,
+  "providerInvocationCountAfter": 1,
+  "sourceUnchanged": true,
+  "successful": true
+}

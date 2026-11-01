@@ -1,0 +1,12 @@
+# Reference for a new profile; do not overwrite an existing user's config.
+# Current machine already has these settings in ~/.colima/zutrade/colima.yaml.
+cpu: 2
+memory: 2
+disk: 20
+arch: aarch64
+vmType: vz
+docker:
+  registry-mirrors:
+    - https://mirror.gcr.io
+  max-concurrent-downloads: 1
+  max-download-attempts: 10

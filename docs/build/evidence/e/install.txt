@@ -1,0 +1,9 @@
+Scope: all 13 workspace projects
+✓ Lockfile passes supply-chain policies (verified 5h ago)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 575, reused 459, downloaded 0, added 0
+[WARN] 3 deprecated subdependencies found: @esbuild-kit/core-utils@3.3.2, @esbuild-kit/esm-loader@2.6.5, whatwg-encoding@3.1.1
+Already up to date
+Progress: resolved 575, reused 459, downloaded 0, added 0, done
+
+Done in 1.4s using pnpm v11.25.0

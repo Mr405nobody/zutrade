@@ -1,0 +1,11 @@
+$ node scripts/verify-c-browser.mjs
+file:///Users/warren/Desktop/ZuTrade/scripts/verify-c-browser.mjs:328
+  if (code !== 0) throw new Error('C UI verification failed; see browser evidence');
+                        ^
+
+Error: C UI verification failed; see browser evidence
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-c-browser.mjs:328:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

@@ -1,0 +1,1 @@
+PASS sales submits current 800 / 1950 quote, owner sees exact content and stored PDF; strict payload identity and full hash

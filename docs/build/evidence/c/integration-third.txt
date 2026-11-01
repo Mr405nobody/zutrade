@@ -1,0 +1,33 @@
+/Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694
+          Error.captureStackTrace(err)
+                ^
+
+error: inconsistent types deduced for parameter $1
+    at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/approval.js:128:18
+    at async command (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/approval.js:45:20)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:322:12
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:114:3)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-c.mjs:321:3 {
+  length: 142,
+  severity: 'ERROR',
+  code: '42P08',
+  detail: 'text versus uuid',
+  hint: undefined,
+  position: '255',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_param.c',
+  line: '220',
+  routine: 'variable_coerce_param_hook'
+}
+
+Node.js v24.22.1

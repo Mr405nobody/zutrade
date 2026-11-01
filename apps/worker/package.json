@@ -1,0 +1,18 @@
+{
+  "name": "@zutrade/worker",
+  "version": "0.0.0-stage.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --watch dist/main.js",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@zutrade/config": "workspace:*",
+    "@zutrade/contracts": "workspace:*",
+    "@zutrade/db": "workspace:*",
+    "@zutrade/domain": "workspace:*"
+  }
+}

@@ -1,0 +1,11 @@
+$ eslint . && node scripts/boundaries.mjs && prettier --check .
+Dependency boundaries: 12 packages, no cycles or browser/server leaks.
+Checking formatting...
+[warn] apps/web/src/main.tsx
+[warn] docs/build/PROGRESS.md
+[warn] packages/contracts/src/prospecting.ts
+[warn] packages/prospecting/src/network.ts
+[warn] packages/prospecting/src/providers.ts
+[warn] scripts/db-migrate.mjs
+[warn] Code style issues found in 6 files. Run Prettier with --write to fix.
+[ELIFECYCLE] Command failed with exit code 1.

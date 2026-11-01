@@ -1,0 +1,33 @@
+/Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694
+          Error.captureStackTrace(err)
+                ^
+
+error: new row violates row-level security policy "a2_thread_access" for table "threads"
+    at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/outreach.js:41:18
+    at async command (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/approval.js:67:20)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:66:21
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:24:32)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:58:3 {
+  length: 149,
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2332',
+  routine: 'ExecWithCheckOptions'
+}
+
+Node.js v24.22.1

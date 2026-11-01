@@ -1,0 +1,103 @@
+$ playwright test
+
+Running 10 tests using 1 worker
+
+(node:66192) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.7s)
+  ✓   2 [desktop] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.3s)
+  ✘   3 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (8.0s)
+(node:66319) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 [desktop] › tests/e2e/b.spec.ts:63:1 › B 真实供给、500/800 报价历史、PDF、缺项、冲突与失效 (4.3s)
+  ✓   5 [desktop] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+(node:66515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [mobile] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.5s)
+  ✓   7 [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.5s)
+  ✘   8 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (15.9s)
+(node:66627) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [mobile] › tests/e2e/b.spec.ts:63:1 › B 真实供给、500/800 报价历史、PDF、缺项、冲突与失效 (4.5s)
+  ✓  10 [mobile] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+
+
+  1) [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ─────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected substring: "版本或幂等冲突"
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <div role="alert" class="inbox-alert">…</div> aka getByRole('alert').filter({ hasText: '版本或幂等冲突：会话已被另一成员修改，请刷新后重试。已重新读取最新状态，请核对后重试。' })
+        2) <div role="alert" class="commerce-error">…</div> aka getByText('采购需求已实质变化来源资料已撤回、过期或被替代历史金额、条款和文件仍保留；需核对依据并生成新版本。')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 5000ms
+      - waiting for getByRole('alert')
+
+
+      252 |     );
+      253 |     expect(conflict.status()).toBe(409);
+    > 254 |     await expect(page.getByRole('alert')).toContainText('版本或幂等冲突');
+          |                                           ^
+      255 |     await page.screenshot({ path: `${evidence}/${project}-version-conflict.png`, fullPage: true });
+      256 |     const released = await postWithUi(page, '/release', () =>
+      257 |       page.getByRole('button', { name: '释放接管', exact: true }).click(),
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:254:43
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-desktop/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '人工接管', exact: true })
+
+
+      223 |
+      224 |     const takeover = await postWithUi(page, '/takeover', () =>
+    > 225 |       page.getByRole('button', { name: '人工接管', exact: true }).click(),
+          |                                                               ^
+      226 |     );
+      227 |     expect(takeover.status()).toBe(201);
+      228 |     await expect(page.getByRole('button', { name: '释放接管', exact: true })).toBeVisible();
+        at action (/Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:225:63)
+        at postWithUi (/Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:47:9)
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:224:28
+
+    Error: page.waitForResponse: Test ended.
+
+      41 | }
+      42 | async function postWithUi(page: Page, suffix: string, action: () => Promise<unknown>) {
+    > 43 |   const response = page.waitForResponse(
+         |                         ^
+      44 |     (result) => result.request().method() === 'POST' && result.url().endsWith(suffix),
+      45 |     { timeout: 15000 },
+      46 |   );
+        at postWithUi (/Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:43:25)
+        at /Users/warren/Desktop/ZuTrade/tests/e2e/a2.spec.ts:224:28
+
+    Error Context: test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+    Usage:
+
+        pnpm exec playwright show-trace test-results/a2-A2-真实消息闭环、双账号协作、版本冲突与断线恢复-mobile/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ──────────────────────────────
+    [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 ───────────────────────────────
+  8 passed (1.3m)
+[ELIFECYCLE] Command failed with exit code 1.

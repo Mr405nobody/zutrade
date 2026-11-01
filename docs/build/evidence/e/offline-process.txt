@@ -1,0 +1,1 @@
+{"networkPolicy":"OS deny network-outbound","probe":"1.1.1.1:443","denied":"EPERM","provider":"zutrade-mock","scenarioId":"material","replayEqual":true,"outputMatchesDatabaseRun":true}

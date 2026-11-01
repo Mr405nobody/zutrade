@@ -1,0 +1,16 @@
+$ playwright test
+
+Running 6 tests using 1 worker
+
+(node:32737) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (1.1s)
+  ✓  2 [desktop] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (886ms)
+  ✓  3 [desktop] › tests/e2e/bootstrap.spec.ts:4:1 › 真实健康页、四入口、断网及恢复 (16.2s)
+(node:32861) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [mobile] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (1.1s)
+  ✓  5 [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (933ms)
+  ✓  6 [mobile] › tests/e2e/bootstrap.spec.ts:4:1 › 真实健康页、四入口、断网及恢复 (7.1s)
+
+  6 passed (28.2s)

@@ -1,0 +1,134 @@
+{
+  "observedAt": "2026-10-29T14:53:44.562Z",
+  "scope": "E only; D1/D2 live chain deferred, not accepted",
+  "checks": [
+    {
+      "command": "./scripts/zu build",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-build.txt"
+    },
+    {
+      "command": "./scripts/zu typecheck",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-typecheck.txt"
+    },
+    {
+      "command": "./scripts/zu lint",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-lint.txt"
+    },
+    {
+      "command": "./scripts/zu test:unit",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-unit.txt"
+    },
+    {
+      "command": "./scripts/zu db:migrate",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-migrate-repeat.txt"
+    },
+    {
+      "command": "./scripts/zu doctor",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-doctor.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/e-audit.mjs",
+      "exitCode": 0,
+      "signal": null,
+      "evidence": "verified-audit.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/e-services.mjs",
+      "exitCode": 0,
+      "evidence": "services-final.json"
+    },
+    {
+      "command": "./scripts/zu doctor --services",
+      "exitCode": 0,
+      "evidence": "doctor-services.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/e-audit.mjs",
+      "exitCode": 0,
+      "evidence": "audit-after-start.txt"
+    }
+  ],
+  "behavior": [
+    {
+      "command": "./scripts/zu test:e",
+      "exitCode": 0,
+      "successful": true,
+      "groups": 21,
+      "evidence": "integration-verified.txt; integration.json"
+    },
+    {
+      "command": "./scripts/zu test:e:browser",
+      "exitCode": 0,
+      "viewports": [
+        "desktop",
+        "mobile"
+      ],
+      "errors": [],
+      "evidence": "browser-verified.txt; browser/"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/verify-e-offline.mjs",
+      "exitCode": 0,
+      "result": {
+        "networkPolicy": "OS deny network-outbound",
+        "probe": "1.1.1.1:443",
+        "denied": "EPERM",
+        "provider": "zutrade-mock",
+        "scenarioId": "material",
+        "replayEqual": true,
+        "outputMatchesDatabaseRun": true
+      },
+      "evidence": "offline-verified.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/e/regression/b ./scripts/zu test:b",
+      "exitCode": 0,
+      "groups": 14,
+      "evidence": "regression-b.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/e/regression/c C_API_PORT=4001 C_WORKER_PORT=4002 ./scripts/zu test:c",
+      "exitCode": 0,
+      "groups": 23,
+      "evidence": "regression-c.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/e/regression/d2 ./scripts/zu test:d2",
+      "exitCode": 0,
+      "signal": null,
+      "originalUiPointerPreserved": true,
+      "groups": 21,
+      "evidence": "regression-d2.txt"
+    }
+  ],
+  "failuresRetained": [
+    "build-first.txt",
+    "integration-first.txt",
+    "integration-second.txt",
+    "integration-third.txt",
+    "integration-fourth.txt",
+    "integration-fifth.txt",
+    "offline-first.txt",
+    "browser-first.txt",
+    "browser-second.txt (exit130, mobile interrupted)",
+    "browser-third.txt",
+    "browser-fourth.txt",
+    "browser-fifth.txt",
+    "lint-first.txt",
+    "lint-final.txt",
+    "services-first.txt (daily 5173 stopped; recovered with ./scripts/zu start, no seed/reset)"
+  ],
+  "status": "ready_for_user_review"
+}

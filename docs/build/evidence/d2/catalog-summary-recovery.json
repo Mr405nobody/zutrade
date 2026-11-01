@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-10-29T10:05:20.042Z",
+  "reason": "Initial db-map used its historical default output path. Restored pre-D2 catalog summary from retained D1 database; new D2 summary has a separate output path.",
+  "database": "zutrade_d1_test_1c37ac9f348f4e3ba47714063e0064df",
+  "restored": {
+    "tables": 45,
+    "columns": 640,
+    "foreignKeys": 155,
+    "compositeForeignKeys": 111,
+    "checks": 190
+  }
+}

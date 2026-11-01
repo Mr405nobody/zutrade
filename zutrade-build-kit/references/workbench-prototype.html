@@ -1,0 +1,310 @@
+<div id="zutrade-workbench-fixed">
+  <div class="zt-window">
+    <header class="zt-chrome">
+      <div class="zt-wordmark"><span class="zt-logo">z</span><span>ZuTrade</span><span class="zt-demo">交互演示</span></div>
+      <label class="zt-role-label"><span>演示身份</span><select id="zt-role" aria-label="切换演示身份"><option value="owner">笑笑 · 审批人</option><option value="sales">林悦 · 业务员</option></select></label>
+    </header>
+    <div class="zt-layout">
+      <nav class="zt-rail" aria-label="主导航">
+        <button type="button" class="zt-nav is-active cursor-interaction" data-action="nav" data-page="messages" aria-current="page"><i data-lucide="message-circle" aria-hidden="true"></i><span>消息</span></button>
+        <button type="button" class="zt-nav cursor-interaction" data-action="nav" data-page="buyers"><i data-lucide="search" aria-hidden="true"></i><span>找客户</span></button>
+        <button type="button" class="zt-nav cursor-interaction" data-action="nav" data-page="products"><i data-lucide="package" aria-hidden="true"></i><span>产品</span></button>
+        <button type="button" class="zt-nav cursor-interaction" data-action="nav" data-page="tasks"><i data-lucide="circle-check" aria-hidden="true"></i><span>待办</span></button>
+        <div class="zt-rail-bottom"><span class="zt-avatar zt-self">笑</span><span>团队 3 人</span></div>
+      </nav>
+      <div class="zt-workspace" id="zt-workspace">
+<div class="zt-inbox "><aside class="zt-conversations"><div class="zt-list-head"><h2>消息</h2><div class="zt-search"><i data-lucide="search" aria-hidden="true"></i><input id="zt-chat-search" aria-label="搜索买家" placeholder="搜索买家或公司" value=""></div><div class="zt-filter-row"><button type="button" class="zt-filter cursor-interaction is-active" data-action="filter" data-filter="all">全部</button><button type="button" class="zt-filter cursor-interaction " data-action="filter" data-filter="attention">待处理</button><button type="button" class="zt-filter cursor-interaction " data-action="filter" data-filter="manual">已接管</button></div></div><button type="button" class="zt-conversation cursor-interaction is-active" data-action="thread" data-thread="0" aria-label="打开 Alex Morgan 的会话"><span class="zt-avatar">AM</span><span class="zt-conversation-body"><span class="zt-conversation-name">Alex Morgan<time>10:42</time></span><span class="zt-company">Northstar Events</span><span class="zt-preview" style="display:block">Can you quote for 500 bags?</span><span class="zt-tag amber">待审批报价</span></span></button><button type="button" class="zt-conversation cursor-interaction " data-action="thread" data-thread="1" aria-label="打开 Maya Lee 的会话"><span class="zt-avatar">ML</span><span class="zt-conversation-body"><span class="zt-conversation-name">Maya Lee<time>09:16</time></span><span class="zt-company">Studio Willow</span><span class="zt-preview" style="display:block">Do you offer a natural colour?</span><span class="zt-tag green">AI 已回复</span></span></button><button type="button" class="zt-conversation cursor-interaction " data-action="thread" data-thread="2" aria-label="打开 Daniel Ortiz 的会话"><span class="zt-avatar">DO</span><span class="zt-conversation-body"><span class="zt-conversation-name">Daniel Ortiz<time>昨天</time></span><span class="zt-company">Gather & Co.</span><span class="zt-preview" style="display:block">Could you confirm the quantity?</span><span class="zt-tag ">待补充需求</span></span></button><button type="button" class="zt-conversation cursor-interaction " data-action="thread" data-thread="3" aria-label="打开 Nora King 的会话"><span class="zt-avatar">NK</span><span class="zt-conversation-body"><span class="zt-conversation-name">Nora King<time>昨天</time></span><span class="zt-company">Harbor Gift Studio</span><span class="zt-preview" style="display:block">Let me check with our team.</span><span class="zt-tag ">等待买家</span></span></button></aside><section class="zt-chat" aria-label="买家会话"><header class="zt-chat-header"><div><button type="button" class="zt-text-button zt-mobile-back cursor-interaction" data-action="back-list">‹ 全部消息</button><h3>Alex Morgan</h3><p class="zt-subtle">Northstar Events · 新加坡 · WhatsApp（模拟）</p></div><div class="zt-chat-header-actions"><button type="button" class="zt-button cursor-interaction small" data-action="customer" ><i data-lucide="user-round" aria-hidden="true"></i>资料</button><button type="button" class="zt-button cursor-interaction small" data-action="pause" >人工接管</button></div></header><div class="zt-chat-feed"><div class="zt-time">2026 年 10 月 28 日 · 模拟会话</div><div class="zt-message "><span class="zt-avatar ">AM</span><div><div class="zt-bubble">We need 500 cotton tote bags with a one-colour logo on one side, 35 × 40 cm. Could you send a quote? We have an event in six weeks.</div><div class="zt-message-meta"><button type="button" class="zt-text-button cursor-interaction" data-action="translate">查看译文</button></div></div></div><div class="zt-message outgoing"><span class="zt-avatar zt-self">Z</span><div><div class="zt-bubble">Our classic tote is made from 12 oz cotton canvas. It supports a one-colour logo on one side. I have recorded the size and quantity for your quotation.</div><div class="zt-message-meta"><i data-lucide="sparkles" aria-hidden="true"></i>AI 常规问答 · <button type="button" class="zt-text-button cursor-interaction" data-action="source">查看依据</button></div></div></div><div class="zt-message "><span class="zt-avatar ">AM</span><div><div class="zt-bubble">Great, please quote for that specification. Can we review a sample first?</div></div></div></div><section class="zt-internal" aria-label="内部销售处理"><div class="zt-internal-label"><i data-lucide="lock-keyhole" aria-hidden="true"></i>内部工作区 · 买家不可见</div><div class="zt-card-heading"><h3>报价准备就绪</h3><span class="zt-tag amber">待笑笑审批</span></div><div class="zt-amount"><small>USD</small> 1,230.00 <small>v1</small></div><p class="zt-subtle">500 只 × $2.40 ＋ 制版 $30.00</p><p class="zt-subtle" style="margin-top:5px">产品出厂价；运费、关税及税费另计</p><div class="zt-action-row"><button type="button" class="zt-button cursor-interaction " data-action="quote" >查看报价与依据</button></div></section><div class="zt-compose"><textarea id="zt-reply" aria-label="给买家的普通文字回复" placeholder="给 Alex 回复…"></textarea><div class="zt-compose-footer"><span class="zt-ai-state"><span class="zt-dot" style=""></span>AI 常规问答开启</span><div class="zt-action-row" style="margin:0"><button type="button" class="zt-button cursor-interaction ghost small" data-action="suggest" ><i data-lucide="sparkles" aria-hidden="true"></i>建议回复</button><button type="button" class="zt-button cursor-interaction primary small" data-action="send-reply" >模拟发送</button></div></div></div></section></div>
+</div>
+    </div>
+    <div id="zt-announcement" class="zt-toast" aria-live="polite" hidden></div>
+  </div>
+</div>
+<style>
+#zutrade-workbench-fixed{--zt-bg:light-dark(#f4f5f3,#161a18);--zt-panel:light-dark(#ffffff,#202623);--zt-panel2:light-dark(#f7f8f6,#252c28);--zt-text:light-dark(#202a25,#edf2ee);--zt-muted:light-dark(#627069,#aebcb3);--zt-line:light-dark(#e4e9e4,#38443b);--zt-green:light-dark(#16875c,#6bd3a0);--zt-green-soft:light-dark(#e8f4ec,#284636);--zt-outgoing:light-dark(#d9f0df,#274c37);--zt-button:light-dark(#167a54,#87dcb0);--zt-button-text:light-dark(#ffffff,#12301e);--zt-amber:light-dark(#8c5913,#efc174);--zt-amber-bg:light-dark(#fff3dc,#443722);--zt-red:light-dark(#a33535,#ffaaaa);--zt-red-bg:light-dark(#fff0ee,#482c2b);--zt-shadow:light-dark(#14271a10,#00000024);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--zt-text);width:100%;color-scheme:inherit}
+#zutrade-workbench-fixed *{box-sizing:border-box}
+#zutrade-workbench-fixed [hidden]{display:none!important}
+#zutrade-workbench-fixed button,#zutrade-workbench-fixed input,#zutrade-workbench-fixed textarea,#zutrade-workbench-fixed select{font:inherit;color:inherit}
+#zutrade-workbench-fixed button{border:0}
+#zutrade-workbench-fixed button:disabled{opacity:.44;cursor:not-allowed}
+#zutrade-workbench-fixed .zt-window{position:relative;background:var(--zt-panel);border:1px solid var(--zt-line);border-radius:14px;overflow:hidden;box-shadow:0 12px 40px var(--zt-shadow)}
+#zutrade-workbench-fixed .zt-chrome{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid var(--zt-line);padding:12px 100px 12px 20px;background:var(--zt-panel)}
+#zutrade-workbench-fixed .zt-wordmark{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600;white-space:nowrap}
+#zutrade-workbench-fixed .zt-logo{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:var(--zt-green);color:var(--zt-panel);font-size:24px;font-weight:700;line-height:1}
+#zutrade-workbench-fixed .zt-demo{margin-left:6px;color:var(--zt-muted);font-size:11px;font-weight:400;background:var(--zt-panel2);border:1px solid var(--zt-line);border-radius:5px;padding:2px 6px}
+#zutrade-workbench-fixed .zt-role-label{display:flex;align-items:center;gap:7px;color:var(--zt-muted);font-size:12px;flex-wrap:wrap}
+#zutrade-workbench-fixed select{background:var(--zt-panel);border:1px solid var(--zt-line);border-radius:7px;padding:5px 7px;max-width:100%}
+#zutrade-workbench-fixed .zt-layout{display:flex;min-height:690px}
+#zutrade-workbench-fixed .zt-rail{width:76px;flex:0 0 76px;display:flex;flex-direction:column;gap:8px;padding:20px 8px 16px;background:var(--zt-panel2);border-right:1px solid var(--zt-line)}
+#zutrade-workbench-fixed .zt-nav{display:flex;flex-direction:column;align-items:center;gap:5px;padding:11px 4px;border-radius:9px;background:transparent;color:var(--zt-muted);font-size:11px}
+#zutrade-workbench-fixed .zt-nav svg{width:21px;height:21px}
+#zutrade-workbench-fixed .zt-nav.is-active{background:var(--zt-green-soft);color:var(--zt-green)}
+#zutrade-workbench-fixed .zt-nav:hover{background:var(--zt-green-soft)}
+#zutrade-workbench-fixed .zt-rail-bottom{margin-top:auto;padding-top:40px;display:flex;align-items:center;flex-direction:column;gap:7px;color:var(--zt-muted);font-size:11px;white-space:nowrap}
+#zutrade-workbench-fixed .zt-avatar{width:36px;height:36px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;background:var(--zt-green-soft);color:var(--zt-green);font-weight:600;font-size:13px}
+#zutrade-workbench-fixed .zt-self{background:var(--zt-green);color:var(--zt-panel)}
+#zutrade-workbench-fixed .zt-workspace{flex:1;min-width:0}
+#zutrade-workbench-fixed .zt-inbox{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:690px}
+#zutrade-workbench-fixed .zt-conversations{border-right:1px solid var(--zt-line);background:var(--zt-panel)}
+#zutrade-workbench-fixed .zt-list-head{padding:21px 18px 15px}
+#zutrade-workbench-fixed h2,#zutrade-workbench-fixed h3,#zutrade-workbench-fixed p{margin:0}
+#zutrade-workbench-fixed h2{font-size:20px;font-weight:600;letter-spacing:-.4px}
+#zutrade-workbench-fixed h3{font-size:15px;font-weight:600}
+#zutrade-workbench-fixed .zt-subtle{color:var(--zt-muted);font-size:12px}
+#zutrade-workbench-fixed .zt-search{margin-top:15px;display:flex;align-items:center;gap:8px;border:1px solid var(--zt-line);background:var(--zt-panel2);padding:8px 10px;border-radius:7px}
+#zutrade-workbench-fixed .zt-search svg{width:15px;height:15px;color:var(--zt-muted);flex-shrink:0}
+#zutrade-workbench-fixed .zt-search input{width:100%;min-width:0;background:transparent;border:0;padding:0;outline-offset:3px;font-size:12px}
+#zutrade-workbench-fixed .zt-filter-row{display:flex;gap:12px;align-items:center;margin-top:15px}
+#zutrade-workbench-fixed .zt-filter{padding:0 0 6px;color:var(--zt-muted);background:transparent;border-bottom:2px solid transparent;font-size:12px}
+#zutrade-workbench-fixed .zt-filter.is-active{color:var(--zt-green);border-color:var(--zt-green)}
+#zutrade-workbench-fixed .zt-conversation{display:flex;width:100%;align-items:flex-start;gap:10px;padding:17px 16px;background:transparent;text-align:left;border-top:1px solid var(--zt-line)}
+#zutrade-workbench-fixed .zt-conversation.is-active{background:var(--zt-green-soft);box-shadow:inset 3px 0 var(--zt-green)}
+#zutrade-workbench-fixed .zt-conversation-body{min-width:0;flex:1}
+#zutrade-workbench-fixed .zt-conversation-name{display:flex;justify-content:space-between;gap:6px;align-items:center;font-size:13px;font-weight:600}
+#zutrade-workbench-fixed .zt-conversation-name time{font-size:11px;font-weight:400;color:var(--zt-muted);white-space:nowrap}
+#zutrade-workbench-fixed .zt-company{font-size:11px;color:var(--zt-muted);margin-top:1px}
+#zutrade-workbench-fixed .zt-preview{font-size:12px;margin:8px 0 7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--zt-muted)}
+#zutrade-workbench-fixed .zt-tag{display:inline-flex;align-items:center;gap:5px;border-radius:4px;padding:2px 5px;font-size:11px;white-space:nowrap;background:var(--zt-panel2);color:var(--zt-muted)}
+#zutrade-workbench-fixed .zt-tag.amber{background:var(--zt-amber-bg);color:var(--zt-amber)}
+#zutrade-workbench-fixed .zt-tag.green{background:var(--zt-green-soft);color:var(--zt-green)}
+#zutrade-workbench-fixed .zt-tag.red{background:var(--zt-red-bg);color:var(--zt-red)}
+#zutrade-workbench-fixed .zt-chat{min-width:0;background:var(--zt-bg)}
+#zutrade-workbench-fixed .zt-chat-header{background:var(--zt-panel);border-bottom:1px solid var(--zt-line);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:88px}
+#zutrade-workbench-fixed .zt-chat-header h3{font-size:17px}
+#zutrade-workbench-fixed .zt-chat-header-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+#zutrade-workbench-fixed .zt-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--zt-line);background:var(--zt-panel);border-radius:7px;padding:8px 11px;font-size:12px;white-space:nowrap}
+#zutrade-workbench-fixed .zt-button svg{width:14px;height:14px;flex-shrink:0}
+#zutrade-workbench-fixed .zt-button.primary{background:var(--zt-button);border-color:var(--zt-button);color:var(--zt-button-text)}
+#zutrade-workbench-fixed .zt-button.ghost{background:transparent;border-color:transparent;color:var(--zt-muted)}
+#zutrade-workbench-fixed .zt-button.small{padding:5px 8px;font-size:11px}
+#zutrade-workbench-fixed .zt-text-button{background:transparent;padding:0;color:var(--zt-green);font-size:11px;text-align:left}
+#zutrade-workbench-fixed .zt-chat-feed{padding:16px 22px 8px;min-height:283px;display:flex;flex-direction:column;gap:14px}
+#zutrade-workbench-fixed .zt-time{text-align:center;color:var(--zt-muted);font-size:11px}
+#zutrade-workbench-fixed .zt-message{display:flex;gap:9px;align-items:flex-start;max-width:96%}
+#zutrade-workbench-fixed .zt-message.outgoing{align-self:flex-end;flex-direction:row-reverse}
+#zutrade-workbench-fixed .zt-message .zt-avatar{width:28px;height:28px;border-radius:8px;font-size:11px}
+#zutrade-workbench-fixed .zt-bubble{background:var(--zt-panel);padding:11px 13px;border-radius:3px 12px 12px 12px;font-size:12px;line-height:1.65;max-width:440px;overflow-wrap:anywhere;border:1px solid var(--zt-line)}
+#zutrade-workbench-fixed .zt-message.outgoing .zt-bubble{background:var(--zt-outgoing);border-color:transparent;border-radius:12px 3px 12px 12px}
+#zutrade-workbench-fixed .zt-bubble small{display:block;color:var(--zt-muted);font-size:11px;margin-top:6px}
+#zutrade-workbench-fixed .zt-translation{font-size:11px;color:var(--zt-muted);padding-top:8px;margin-top:8px;border-top:1px solid var(--zt-line)}
+#zutrade-workbench-fixed .zt-message-meta{display:flex;align-items:center;gap:8px;margin-top:5px;font-size:11px;color:var(--zt-muted);flex-wrap:wrap}
+#zutrade-workbench-fixed .zt-internal{margin:8px 22px 18px;background:var(--zt-panel);border:1px solid var(--zt-line);border-radius:10px;padding:14px}
+#zutrade-workbench-fixed .zt-internal-label{display:flex;align-items:center;gap:6px;color:var(--zt-muted);font-size:11px;margin-bottom:11px}
+#zutrade-workbench-fixed .zt-internal-label svg{width:12px;height:12px}
+#zutrade-workbench-fixed .zt-card-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+#zutrade-workbench-fixed .zt-amount{font-size:24px;font-weight:600;letter-spacing:-.6px;font-variant-numeric:tabular-nums}
+#zutrade-workbench-fixed .zt-amount small{font-size:11px;font-weight:400;color:var(--zt-muted);letter-spacing:0}
+#zutrade-workbench-fixed .zt-action-row{display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+#zutrade-workbench-fixed .zt-compose{background:var(--zt-panel);border-top:1px solid var(--zt-line);padding:12px 22px 17px}
+#zutrade-workbench-fixed .zt-compose textarea{display:block;width:100%;min-height:60px;resize:vertical;border:0;background:transparent;padding:5px 0;outline-offset:2px;font-size:12px}
+#zutrade-workbench-fixed .zt-compose-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px}
+#zutrade-workbench-fixed .zt-ai-state{font-size:11px;color:var(--zt-green);display:flex;align-items:center;gap:6px}
+#zutrade-workbench-fixed .zt-dot{width:6px;height:6px;border-radius:50%;background:var(--zt-green);display:inline-block}
+#zutrade-workbench-fixed .zt-mobile-back{display:none}
+#zutrade-workbench-fixed .zt-detail{padding:22px;background:var(--zt-panel);min-height:602px}
+#zutrade-workbench-fixed .zt-detail-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:20px}
+#zutrade-workbench-fixed .zt-detail-heading h3{font-size:17px;margin-top:12px}
+#zutrade-workbench-fixed .zt-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#zutrade-workbench-fixed .zt-field{display:flex;flex-direction:column;gap:5px;color:var(--zt-muted);font-size:11px}
+#zutrade-workbench-fixed .zt-field input,#zutrade-workbench-fixed .zt-field textarea{width:100%;min-width:0;background:var(--zt-panel);border:1px solid var(--zt-line);border-radius:6px;padding:8px 10px;color:var(--zt-text);font-size:13px}
+#zutrade-workbench-fixed .zt-spec{margin:18px 0;padding:13px 0;border-top:1px solid var(--zt-line);border-bottom:1px solid var(--zt-line);display:grid;grid-template-columns:84px 1fr;gap:9px;font-size:12px}
+#zutrade-workbench-fixed .zt-spec dt{color:var(--zt-muted)}
+#zutrade-workbench-fixed .zt-spec dd{margin:0;overflow-wrap:anywhere}
+#zutrade-workbench-fixed .zt-spec strong{font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+#zutrade-workbench-fixed .zt-note{padding:10px 12px;border-radius:7px;background:var(--zt-panel2);font-size:11px;color:var(--zt-muted);margin-top:12px;overflow-wrap:anywhere}
+#zutrade-workbench-fixed .zt-note.amber{background:var(--zt-amber-bg);color:var(--zt-amber)}
+#zutrade-workbench-fixed .zt-note.red{background:var(--zt-red-bg);color:var(--zt-red)}
+#zutrade-workbench-fixed .zt-note.green{background:var(--zt-green-soft);color:var(--zt-green)}
+#zutrade-workbench-fixed .zt-source{margin-top:12px;border:1px solid var(--zt-line);border-radius:8px;padding:12px}
+#zutrade-workbench-fixed .zt-source p{margin-top:6px;font-size:11px;color:var(--zt-muted)}
+#zutrade-workbench-fixed .zt-page{padding:28px 28px 32px;min-height:690px}
+#zutrade-workbench-fixed .zt-page-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+#zutrade-workbench-fixed .zt-page-heading p{margin-top:5px}
+#zutrade-workbench-fixed .zt-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+#zutrade-workbench-fixed .zt-toolbar .zt-search{margin-top:0;width:260px;max-width:100%}
+#zutrade-workbench-fixed .zt-lead-table{width:100%;border-collapse:collapse;font-size:12px}
+#zutrade-workbench-fixed .zt-lead-table th{font-size:11px;font-weight:400;color:var(--zt-muted);padding:10px;text-align:left;background:var(--zt-panel2)}
+#zutrade-workbench-fixed .zt-lead-table td{padding:18px 10px;border-bottom:1px solid var(--zt-line);vertical-align:top}
+#zutrade-workbench-fixed .zt-lead-table td:first-child{width:35px}
+#zutrade-workbench-fixed .zt-lead-table input{accent-color:var(--zt-green);width:15px;height:15px}
+#zutrade-workbench-fixed .zt-company-cell strong{display:block;font-weight:600;margin-bottom:4px}
+#zutrade-workbench-fixed .zt-company-cell small{font-size:11px;color:var(--zt-muted)}
+#zutrade-workbench-fixed .zt-review{border:1px solid var(--zt-line);border-radius:10px;margin-top:22px;overflow:hidden}
+#zutrade-workbench-fixed .zt-review-top{display:flex;align-items:center;justify-content:space-between;padding:14px 17px;background:var(--zt-panel2);gap:12px;flex-wrap:wrap}
+#zutrade-workbench-fixed .zt-review-body{padding:18px}
+#zutrade-workbench-fixed .zt-pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}
+#zutrade-workbench-fixed .zt-pill{background:var(--zt-panel);border:1px solid var(--zt-line);border-radius:6px;padding:6px 9px;font-size:11px}
+#zutrade-workbench-fixed .zt-pill.is-active{background:var(--zt-green-soft);color:var(--zt-green);border-color:var(--zt-green)}
+#zutrade-workbench-fixed .zt-email{white-space:pre-wrap;font-size:12px;line-height:1.8;padding:15px;border-left:3px solid var(--zt-line);background:var(--zt-panel2);overflow-wrap:anywhere}
+#zutrade-workbench-fixed .zt-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#zutrade-workbench-fixed .zt-product{border:1px solid var(--zt-line);border-radius:10px;overflow:hidden}
+#zutrade-workbench-fixed .zt-product-art{height:112px;background:var(--zt-green-soft);display:flex;align-items:center;justify-content:center}
+#zutrade-workbench-fixed .zt-tote{height:65px;width:62px;border:2px solid var(--zt-green);border-radius:2px 2px 9px 9px;position:relative;display:grid;place-items:center;color:var(--zt-green);font-size:11px;font-weight:600}
+#zutrade-workbench-fixed .zt-tote:before{content:"";position:absolute;width:28px;height:25px;border:2px solid var(--zt-green);border-bottom:0;top:-24px;left:15px;border-radius:15px 15px 0 0}
+#zutrade-workbench-fixed .zt-product-body{padding:15px}
+#zutrade-workbench-fixed .zt-product-body p{margin:8px 0 14px}
+#zutrade-workbench-fixed .zt-task-row{display:flex;align-items:flex-start;gap:14px;border-top:1px solid var(--zt-line);padding:19px 0}
+#zutrade-workbench-fixed .zt-task-row>div{flex:1;min-width:0}
+#zutrade-workbench-fixed .zt-task-row p{margin-top:5px}
+#zutrade-workbench-fixed .zt-task-row svg{width:18px;height:18px;color:var(--zt-muted);margin-top:3px}
+#zutrade-workbench-fixed .zt-toast{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);max-width:calc(100% - 36px);width:max-content;background:var(--zt-text);color:var(--zt-panel);border-radius:9px;padding:11px 15px;box-shadow:0 5px 20px var(--zt-shadow);font-size:12px;z-index:3}
+#zutrade-workbench-fixed .zt-empty{padding:45px 22px;color:var(--zt-muted);text-align:center;font-size:12px}
+#zutrade-workbench-fixed .zt-error{font-size:11px;color:var(--zt-red);margin-top:10px}
+#zutrade-workbench-fixed .zt-footer-note{color:var(--zt-muted);font-size:11px;margin-top:22px}
+@media(max-width:900px){#zutrade-workbench-fixed .zt-inbox{grid-template-columns:211px minmax(0,1fr)}#zutrade-workbench-fixed .zt-chat-header{padding:15px}#zutrade-workbench-fixed .zt-chat-header-actions{max-width:100px}#zutrade-workbench-fixed .zt-chat-feed{padding:15px}#zutrade-workbench-fixed .zt-internal{margin:8px 15px 15px}#zutrade-workbench-fixed .zt-compose{padding:10px 15px 15px}#zutrade-workbench-fixed .zt-page{padding:24px 20px}#zutrade-workbench-fixed .zt-product-grid{gap:10px}#zutrade-workbench-fixed .zt-role-label>span{display:none}}
+@media(max-width:700px){#zutrade-workbench-fixed .zt-chrome{padding-left:13px;gap:12px;align-items:flex-start;flex-direction:column}#zutrade-workbench-fixed .zt-wordmark{font-size:15px}#zutrade-workbench-fixed .zt-layout{min-height:650px}#zutrade-workbench-fixed .zt-rail{width:62px;flex-basis:62px;padding:15px 5px}#zutrade-workbench-fixed .zt-inbox{grid-template-columns:185px minmax(0,1fr)}#zutrade-workbench-fixed .zt-list-head{padding:16px 12px 12px}#zutrade-workbench-fixed .zt-conversation{padding:15px 10px;gap:7px}#zutrade-workbench-fixed .zt-conversation .zt-avatar{width:29px;height:29px;border-radius:8px;font-size:11px}#zutrade-workbench-fixed .zt-chat-header{align-items:flex-start;flex-wrap:wrap}#zutrade-workbench-fixed .zt-chat-header-actions{max-width:none}#zutrade-workbench-fixed .zt-field-grid{grid-template-columns:1fr}#zutrade-workbench-fixed .zt-product-grid{grid-template-columns:1fr}#zutrade-workbench-fixed .zt-product{display:grid;grid-template-columns:105px 1fr}#zutrade-workbench-fixed .zt-product-art{height:100%;min-height:130px}#zutrade-workbench-fixed .zt-lead-table th:nth-child(3),#zutrade-workbench-fixed .zt-lead-table td:nth-child(3){display:none}}
+@media(max-width:600px){#zutrade-workbench-fixed .zt-rail{width:54px;flex-basis:54px}#zutrade-workbench-fixed .zt-nav{font-size:11px}#zutrade-workbench-fixed .zt-rail-bottom{font-size:11px}#zutrade-workbench-fixed .zt-inbox{display:block;min-height:650px}#zutrade-workbench-fixed .zt-conversations{display:none;border-right:0}#zutrade-workbench-fixed .zt-inbox.show-list .zt-conversations{display:block}#zutrade-workbench-fixed .zt-inbox.show-list .zt-chat{display:none}#zutrade-workbench-fixed .zt-mobile-back{display:inline-flex}#zutrade-workbench-fixed .zt-chat-header{padding:14px 12px;gap:8px}#zutrade-workbench-fixed .zt-chat-header h3{font-size:15px}#zutrade-workbench-fixed .zt-chat-feed{padding:13px 10px}#zutrade-workbench-fixed .zt-message{max-width:100%;gap:6px}#zutrade-workbench-fixed .zt-message .zt-avatar{display:none}#zutrade-workbench-fixed .zt-bubble{padding:10px;font-size:12px}#zutrade-workbench-fixed .zt-internal{margin:8px 10px 13px;padding:12px}#zutrade-workbench-fixed .zt-compose{padding:10px 12px 14px}#zutrade-workbench-fixed .zt-compose-footer{flex-wrap:wrap}#zutrade-workbench-fixed .zt-amount{font-size:22px}#zutrade-workbench-fixed .zt-detail{padding:16px 12px}#zutrade-workbench-fixed .zt-spec{grid-template-columns:65px 1fr;gap:9px}#zutrade-workbench-fixed .zt-page{padding:20px 13px}#zutrade-workbench-fixed .zt-page-heading{gap:12px;margin-bottom:18px}#zutrade-workbench-fixed .zt-page-heading h2{font-size:19px}#zutrade-workbench-fixed .zt-lead-table th:nth-child(4),#zutrade-workbench-fixed .zt-lead-table td:nth-child(4){display:none}#zutrade-workbench-fixed .zt-lead-table td{padding:15px 5px}#zutrade-workbench-fixed .zt-lead-table th{padding:9px 5px}#zutrade-workbench-fixed .zt-review-body{padding:13px}#zutrade-workbench-fixed .zt-product{display:block}#zutrade-workbench-fixed .zt-product-art{height:110px;min-height:110px}#zutrade-workbench-fixed .zt-task-row{gap:8px;flex-wrap:wrap}#zutrade-workbench-fixed .zt-task-row .zt-button{margin-left:26px}#zutrade-workbench-fixed .zt-demo{font-size:11px}#zutrade-workbench-fixed .zt-button{min-height:36px}#zutrade-workbench-fixed .zt-product-body{padding:13px}}
+@media(pointer:coarse){#zutrade-workbench-fixed .zt-button,#zutrade-workbench-fixed .zt-pill{min-height:44px}#zutrade-workbench-fixed input,#zutrade-workbench-fixed textarea,#zutrade-workbench-fixed select{font-size:16px!important}}
+</style>
+<script>
+(() => {
+  let initializeAttempts=0;
+  function initializeZuTrade() {
+  const root=document.getElementById('zutrade-workbench-fixed');
+  if (!root) {
+    if (initializeAttempts++ < 40) setTimeout(initializeZuTrade,50);
+    return;
+  }
+  const workspace=root.querySelector('#zt-workspace');
+  if (!workspace) {
+    if (initializeAttempts++ < 40) setTimeout(initializeZuTrade,50);
+    return;
+  }
+  if (root.getAttribute('data-zt-initialized')==='true') return;
+  const state={page:'messages',thread:0,role:'owner',panel:null,filter:'all',query:'',showList:false,translate:false,paused:{},quote:{qty:500,price:2.4,fee:30,version:1,approved:null,approvedText:null,sent:null},selected:new Set([0,1]),review:false,reviewLead:0,channel:'email',batchDone:false,sentLeadIds:new Set(),taskDone:false,sourceOpen:false,messages:{0:[],1:[],2:[],3:[]}};
+  const threads=[
+    {name:'Alex Morgan',company:'Northstar Events',country:'新加坡',initials:'AM',preview:'Can you quote for 500 bags?',time:'10:42',status:'待审批报价',tag:'amber',text:'We need 500 cotton tote bags with a one-colour logo on one side, 35 × 40 cm. Could you send a quote? We have an event in six weeks.',ai:'Our classic tote is made from 12 oz cotton canvas. It supports a one-colour logo on one side. I have recorded the size and quantity for your quotation.',last:'Great, please quote for that specification. Can we review a sample first?'},
+    {name:'Maya Lee',company:'Studio Willow',country:'澳大利亚',initials:'ML',preview:'Do you offer a natural colour?',time:'09:16',status:'AI 已回复',tag:'green',text:'Do you offer a natural colour, without bleaching?',ai:'Yes. The approved product sheet lists natural, unbleached cotton for model CT-01. Would you like the standard 35 × 40 cm size?',last:null},
+    {name:'Daniel Ortiz',company:'Gather & Co.',country:'英国',initials:'DO',preview:'Could you confirm the quantity?',time:'昨天',status:'待补充需求',tag:'',text:'We are looking for branded tote bags for a conference.',ai:'Happy to help. How many bags do you need, and do you have a preferred size and logo artwork?',last:null},
+    {name:'Nora King',company:'Harbor Gift Studio',country:'加拿大',initials:'NK',preview:'Let me check with our team.',time:'昨天',status:'等待买家',tag:'',text:'Thank you for the product details. Let me check with our team.',ai:null,last:null}
+  ];
+  const leads=[
+    {name:'Luma Events',location:'新加坡',contact:'Avery',type:'企业活动策划',email:'avery@luma.example',emailOK:true,wa:false,evidence:'演示企业简介列出企业活动策划及活动物料采购。',reason:'活动物料与定制帆布袋相匹配'},
+    {name:'Oak & Paper',location:'澳大利亚',contact:'Jamie',type:'品牌礼品采购',email:'jamie@oakpaper.example',emailOK:true,wa:true,evidence:'演示采购页列出定制品牌礼品，并记录接收产品信息许可。',reason:'采购目录包含可定制礼品'},
+    {name:'Summit Studio',location:'英国',contact:'Taylor',type:'展会设计',email:'hello@summit.example',emailOK:false,wa:false,evidence:'只有演示公开联系邮箱；尚未完成首次联系资格核验。',reason:'需要核实采购职责与联系资格'},
+    {name:'Fieldwork Agency',location:'新加坡',contact:'Robin',type:'市场活动执行',email:'robin@fieldwork.example',emailOK:true,wa:false,evidence:'演示引荐记录包含市场活动物料需求及联系许可。',reason:'有活动物料采购线索'}
+  ];
+  const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const money=x=>new Intl.NumberFormat('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}).format(x);
+  const icon=n=>`<i data-lucide="${n}" aria-hidden="true"></i>`;
+  const button=(text,action,extra='',classes='')=>`<button type="button" class="zt-button cursor-interaction ${classes}" data-action="${action}" ${extra}>${text}</button>`;
+  let toastTimer;
+  function toast(text){const el=root.querySelector('#zt-announcement');el.textContent=text;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{el.hidden=true},5000)}
+  function total(){return (state.quote.qty*Math.round(state.quote.price*100)+Math.round(state.quote.fee*100))/100}
+  function quoteSupported(){return state.quote.qty>=500&&state.quote.qty<=999&&Math.round(state.quote.price*100)===240}
+  function quoteStatus(){if(!quoteSupported())return '待工厂确认';return state.quote.sent===state.quote.version?'已模拟发送':state.quote.approved===state.quote.version?'已批准 · 待发送':'待笑笑审批'}
+  function quoteText(){const q=state.quote;return `Quotation ZT-001 · v${q.version}\n${q.qty} cotton tote bags · 12 oz · 35 × 40 cm · one-colour, one-side logo\nUSD ${money(q.price)} / bag + USD ${money(q.fee)} one-time printing setup\nTotal: USD ${money(total())}\nProduct price only; freight, duties and taxes are excluded.\nProduction: 20 working days after artwork/sample approval and deposit confirmation. Transit time requires separate confirmation; arrival within six weeks is not promised.\nValid through 4 November 2026, 18:00 UTC+8. Sample fees and delivery are to be quoted separately.`}
+  function bubble(text,out=false,meta=''){return `<div class="zt-message ${out?'outgoing':''}"><span class="zt-avatar ${out?'zt-self':''}">${out?'Z':threads[state.thread].initials}</span><div><div class="zt-bubble">${esc(text).replace(/\n/g,'<br>')}</div>${meta?`<div class="zt-message-meta">${meta}</div>`:''}</div></div>`}
+  function render(){
+    root.querySelectorAll('[data-action="nav"]').forEach(b=>{const active=b.dataset.page===state.page;b.classList.toggle('is-active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+    if(state.page==='messages')workspace.innerHTML=renderMessages();
+    if(state.page==='buyers')workspace.innerHTML=renderBuyers();
+    if(state.page==='products')workspace.innerHTML=renderProducts();
+    if(state.page==='tasks')workspace.innerHTML=renderTasks();
+    // Icons are decorative. A late or incomplete icon runtime must not stop sales interactions.
+    if (typeof lucide !== 'undefined' && lucide && typeof lucide.createIcons === 'function') {
+      try { lucide.createIcons({attrs:{width:16,height:16}}); }
+      catch (iconError) { /* Visible text labels remain available without decorative icons. */ }
+    }
+  }
+  function renderMessages(){
+    const t=threads[state.thread];
+    const visible=threads.map((v,i)=>({...v,i})).filter(v=>(state.filter==='all'||(state.filter==='attention'&&(v.i===0||v.i===2))||(state.filter==='manual'&&state.paused[v.i]))&&`${v.name} ${v.company}`.toLowerCase().includes(state.query.toLowerCase()));
+    return `<div class="zt-inbox ${state.showList?'show-list':''}"><aside class="zt-conversations"><div class="zt-list-head"><h2>消息</h2><div class="zt-search">${icon('search')}<input id="zt-chat-search" aria-label="搜索买家" placeholder="搜索买家或公司" value="${esc(state.query)}"></div><div class="zt-filter-row"><button type="button" class="zt-filter cursor-interaction ${state.filter==='all'?'is-active':''}" data-action="filter" data-filter="all">全部</button><button type="button" class="zt-filter cursor-interaction ${state.filter==='attention'?'is-active':''}" data-action="filter" data-filter="attention">待处理</button><button type="button" class="zt-filter cursor-interaction ${state.filter==='manual'?'is-active':''}" data-action="filter" data-filter="manual">已接管</button></div></div>${visible.length?visible.map(v=>`<button type="button" class="zt-conversation cursor-interaction ${v.i===state.thread?'is-active':''}" data-action="thread" data-thread="${v.i}" aria-label="打开 ${v.name} 的会话"><span class="zt-avatar">${v.initials}</span><span class="zt-conversation-body"><span class="zt-conversation-name">${v.name}<time>${v.time}</time></span><span class="zt-company">${v.company}</span><span class="zt-preview" style="display:block">${v.preview}</span><span class="zt-tag ${v.i===0&&state.quote.sent===state.quote.version?'green':v.tag}">${v.i===0&&state.quote.sent===state.quote.version?'已报价 · 待跟进':v.status}</span></span></button>`).join(''):'<div class="zt-empty">没有匹配的会话</div>'}</aside><section class="zt-chat" aria-label="买家会话"><header class="zt-chat-header"><div><button type="button" class="zt-text-button zt-mobile-back cursor-interaction" data-action="back-list">‹ 全部消息</button><h3>${t.name}</h3><p class="zt-subtle">${t.company} · ${t.country} · WhatsApp（模拟）</p></div><div class="zt-chat-header-actions">${button(icon('user-round')+'资料','customer','','small')}${button(state.paused[state.thread]?'恢复 AI':'人工接管','pause','','small')}</div></header>${state.panel==='quote'?renderQuote():state.panel==='customer'?renderCustomer():state.panel==='source'?renderSource():renderChat()}</section></div>`;
+  }
+  function renderChat(){
+    const t=threads[state.thread];
+    let content=`<div class="zt-chat-feed"><div class="zt-time">2026 年 10 月 28 日 · 模拟会话</div>${bubble(t.text,false,`<button type="button" class="zt-text-button cursor-interaction" data-action="translate">${state.translate?'收起译文':'查看译文'}</button>`)}`;
+    if(state.translate)content+=`<div class="zt-translation">${state.thread===0?'我们需要 500 只 35 × 40 cm 的棉质帆布袋，单色单面 Logo。请报价，活动在六周后举行。':state.thread===1?'有未经漂白的本色面料吗？':state.thread===2?'我们在寻找会议用的品牌帆布袋。':'谢谢产品资料，我和团队讨论一下。'}</div>`;
+    if(t.ai)content+=bubble(t.ai,true,`${icon('sparkles')}AI 常规问答 · <button type="button" class="zt-text-button cursor-interaction" data-action="source">查看依据</button>`);
+    if(t.last)content+=bubble(t.last);
+    content+=state.messages[state.thread].map(m=>bubble(m.text,true,esc(m.meta))).join('')+'</div>';
+    if(state.thread===0){const sent=state.quote.sent===state.quote.version;content+=`<section class="zt-internal" aria-label="内部销售处理"><div class="zt-internal-label">${icon('lock-keyhole')}内部工作区 · 买家不可见</div><div class="zt-card-heading"><h3>${sent?'报价已发出':quoteSupported()?'报价准备就绪':'报价待补齐依据'}</h3><span class="zt-tag ${sent?'green':'amber'}">${quoteStatus()}</span></div><div class="zt-amount"><small>USD</small> ${money(total())} <small>v${state.quote.version}</small></div><p class="zt-subtle">${state.quote.qty} 只 × $${money(state.quote.price)} ＋ 制版 $${money(state.quote.fee)}</p><p class="zt-subtle" style="margin-top:5px">${sent?'跟进：10 月 30 日 10:00（UTC+8） · 林悦':'产品出厂价；运费、关税及税费另计'}</p><div class="zt-action-row">${button(sent?'查看已发报价':'查看报价与依据','quote','','')}${!sent&&state.quote.approved===state.quote.version?button('模拟发送报价','send-quote','','primary'):''}${sent?button('查看跟进','tasks','','primary'):''}</div></section>`}
+    else if(state.thread===2)content+=`<section class="zt-internal"><div class="zt-internal-label">${icon('lock-keyhole')}内部工作区 · 买家不可见</div><h3>等待补充数量与规格</h3><p class="zt-subtle" style="margin-top:7px">数量、尺寸、印刷方式尚未确认。资料补齐后可准备报价。</p></section>`;
+    content+=`<div class="zt-compose"><textarea id="zt-reply" aria-label="给买家的普通文字回复" placeholder="给 ${t.name.split(' ')[0]} 回复…"></textarea><div class="zt-compose-footer"><span class="zt-ai-state"><span class="zt-dot" style="${state.paused[state.thread]?'background:var(--zt-muted)':''}"></span>${state.paused[state.thread]?'已由人工接管':'AI 常规问答开启'}</span><div class="zt-action-row" style="margin:0">${button(icon('sparkles')+'建议回复','suggest','','ghost small')}${button('模拟发送','send-reply','','primary small')}</div></div></div>`;
+    return content;
+  }
+  function renderQuote(){const q=state.quote;const approved=q.approved===q.version;const sent=q.sent===q.version;const supported=quoteSupported();return `<div class="zt-detail"><div class="zt-detail-heading"><div><button type="button" class="zt-text-button cursor-interaction" data-action="back-chat">‹ 返回会话</button><h3>报价 ZT-001 <span class="zt-subtle">v${q.version}</span></h3><p class="zt-subtle">Northstar Events · 所有数据为演示</p></div><span class="zt-tag ${approved?'green':'amber'}">${quoteStatus()}</span></div><div class="zt-field-grid"><label class="zt-field">数量（只）<input id="zt-quote-qty" type="number" min="100" max="100000" step="1" value="${q.qty}"></label><label class="zt-field">单价（USD / 只）<input id="zt-quote-price" type="number" min="0.01" max="10000" step="0.01" value="${q.price.toFixed(2)}"></label></div><div class="zt-action-row">${button('保存修改','save-quote','','small')}<span class="zt-subtle">修改后生成新版本，重新审批</span></div><div id="zt-quote-error" class="zt-error" role="alert"></div><dl class="zt-spec"><dt>产品</dt><dd>CT-01 · 12 oz 棉质帆布袋<br>35 × 40 cm · 单色单面 Logo</dd><dt>制版费</dt><dd>USD ${money(q.fee)} · 一次性</dd><dt>报价合计</dt><dd><strong>USD ${money(total())}</strong></dd><dt>包含范围</dt><dd>产品与制版费；不含运费、关税及进口税费</dd><dt>生产周期</dt><dd>图稿/样品及定金确认后 20 个工作日；运输时间另行确认，不承诺六周内到货</dd><dt>报价有效期</dt><dd>2026-11-04 18:00（UTC+8）</dd><dt>样品</dt><dd>可申请；样品费用与寄送另行报价</dd></dl><details class="zt-source"><summary class="cursor-interaction">报价依据 · 3 项可追溯资料</summary><p>产品规格表 CT-01 · v3 · 2026-10-28</p><p>工厂授权价目表 · 500—999 只单价 $2.40；制版 $30 · 2026-10-28</p><p>工厂排期确认 · 图稿/样品及定金确认后 20 个工作日 · 2026-10-28</p><p>示例报价资料，未连接真实工厂。</p></details><details class="zt-source"><summary class="cursor-interaction">买家将看到的完整内容</summary><p style="white-space:pre-wrap">${esc(quoteText())}</p></details>${!supported?`<div class="zt-note red">超出当前价目表，待工厂确认。现有依据仅支持 500—999 只、USD 2.40 / 只；当前版本不可批准或发送。</div>`:approved?`<div class="zt-note green">笑笑已批准 v${q.version}，英文发送内容已锁定。再次修改会使本次批准失效。</div>`:`<div class="zt-note amber">需要笑笑确认价格及生产周期后，才可模拟发送。</div>`}<div class="zt-action-row">${button(approved?'已批准此版本':'批准此版本','approve-quote',state.role!=='owner'||approved||!supported?'disabled':'','primary')}${button(sent?'此版本已模拟发送':'模拟发送给买家','send-quote',!approved||sent||!supported?'disabled':'','')}</div>${state.role!=='owner'?'<p class="zt-subtle" style="margin-top:9px">当前为业务员身份；可编辑和发送已批准版本。</p>':''}</div>`}
+  function renderSource(){return `<div class="zt-detail"><button type="button" class="zt-text-button cursor-interaction" data-action="back-chat">‹ 返回会话</button><h3 style="margin-top:18px">回答依据</h3><p class="zt-subtle" style="margin-top:5px">仅向团队显示</p><div class="zt-source"><h3>CT-01 产品规格表 · v3</h3><p>已确认：12 oz 棉质帆布面料、本色、35 × 40 cm、支持单色单面印刷。</p><p>维护人：林悦 · 更新：2026-10-28</p><p>资料状态：已审核 · 本例使用模拟工厂资料</p></div><div class="zt-note">价格、折扣与生产周期通过报价审批；当前资料仅支持规格类常规回答。</div></div>`}
+  function renderCustomer(){const t=threads[state.thread];return `<div class="zt-detail"><button type="button" class="zt-text-button cursor-interaction" data-action="back-chat">‹ 返回会话</button><h3 style="margin-top:18px">${t.name}</h3><p class="zt-subtle">虚构买家资料</p><dl class="zt-spec"><dt>公司</dt><dd>${t.company}</dd><dt>地区</dt><dd>${t.country}</dd><dt>负责人</dt><dd>林悦</dd><dt>联系入口</dt><dd>买家主动询盘 · WhatsApp（模拟）</dd><dt>商机</dt><dd>${state.thread===0?state.quote.qty+' 只定制帆布袋':'待确认产品需求'}</dd><dt>内部备注</dt><dd>${state.thread===0?'活动用袋；六周后使用。需单独确认运输及样品。':'由负责人继续确认采购数量及规格。'}</dd></dl><div class="zt-note">客户消息、采购需求与报价分别记录；同一客户后续可新增商机。</div></div>`}
+  function eligible(lead){return state.channel==='email'?lead.emailOK:lead.wa}
+  function renderBuyers(){const selected=[...state.selected];return `<section class="zt-page"><header class="zt-page-heading"><div><h2>找客户</h2><p class="zt-subtle">定制帆布袋 · 活动与礼品采购 · 模拟名单</p></div><span class="zt-tag green">销售计划 · 第一轮</span></header><div class="zt-toolbar"><label class="zt-field" style="flex-direction:row;align-items:center;gap:9px">联系渠道<select id="zt-channel" aria-label="选择联系渠道"><option value="email" ${state.channel==='email'?'selected':''}>邮件（模拟）</option><option value="whatsapp" ${state.channel==='whatsapp'?'selected':''}>WhatsApp（模拟）</option></select></label>${button(`预览并审核 ${selected.length} 位`,'review-batch',selected.length?'':'disabled','primary')}</div><table class="zt-lead-table"><thead><tr><th><span aria-label="选择">选</span></th><th>潜在买家</th><th>匹配依据</th><th>联系资格</th></tr></thead><tbody>${leads.map((l,i)=>`<tr><td><input type="checkbox" data-lead="${i}" aria-label="选择 ${l.name}" ${state.selected.has(i)?'checked':''}></td><td class="zt-company-cell"><strong>${l.name}</strong><small>${l.location} · ${l.type}</small><div style="margin-top:6px"><span class="zt-tag ${eligible(l)?'green':'amber'}">${state.sentLeadIds.has(i)?'已模拟发送':eligible(l)?'演示资格已核验':'待核验 · 暂不可发'}</span></div></td><td><span class="zt-subtle">${l.reason}</span></td><td><span class="zt-subtle">${state.channel==='whatsapp'?(l.wa?'有联系许可（模拟）':'未记录 WhatsApp 联系许可'):(l.emailOK?'邮箱与联系资格已核验（模拟）':'只有公开邮箱，需核验')}</span></td></tr>`).join('')}</tbody></table><div class="zt-note">企业、联系人和邮箱均为虚构。发现邮箱不代表取得 WhatsApp 联系许可；系统分别检查各渠道的联系资格。</div>${state.review?renderReview():''}<p class="zt-footer-note">名单与内容审核后才进入发送队列；本演示不会触达真实客户。</p></section>`}
+  function renderReview(){const ids=[...state.selected];if(!ids.length)return '';if(!state.selected.has(state.reviewLead))state.reviewLead=ids[0];const l=leads[state.reviewLead];const allOK=ids.every(i=>eligible(leads[i])&&!state.sentLeadIds.has(i));return `<section class="zt-review" aria-label="批量联系审核"><div class="zt-review-top"><h3>发送前审核 · ${ids.length} 位</h3><span class="zt-tag ${allOK?'green':'amber'}">${allOK?'名单检查通过':'含已联系或未核验买家'}</span></div><div class="zt-review-body"><div class="zt-pill-row">${ids.map(i=>`<button type="button" class="zt-pill cursor-interaction ${i===state.reviewLead?'is-active':''}" data-action="preview-lead" data-lead="${i}">${leads[i].name}</button>`).join('')}</div><p class="zt-subtle" style="margin-bottom:10px">联系对象：${esc(state.channel==='email'?l.email:l.contact+' · WhatsApp 演示联系人')} · ${state.channel==='email'?'邮件':'WhatsApp'}（模拟）</p><div class="zt-email">Hi ${l.contact},
+
+I’m Lin from ZuTrade. We help a partner manufacturer supply custom cotton tote bags for ${l.type==='品牌礼品采购'?'branded gifting programmes':'corporate events'}.
+
+I noticed ${l.name} works on ${l.type==='品牌礼品采购'?'branded gifts':'event projects'}. Would a short specification sheet for logo-printed cotton totes be relevant to your upcoming projects?
+
+If this is not relevant, let me know and we will not follow up.
+
+Lin · ZuTrade</div><details class="zt-source"><summary class="cursor-interaction">个性化依据与发送规则</summary><p>${l.evidence} · 2026-10-28（模拟）</p><p>每位买家首次联系一次；按收件地工作时间发送；回复、拒绝或退订后停止本序列；发送前再次检查资格和去重。</p><p>本次审核绑定当前名单、内容及渠道；修改任一项后需要重新审核。</p></details>${!allOK?'<div class="zt-note amber">请取消已联系或未核验买家；完成对应渠道资格核验后才可首次发送。内部审批不会替代买家的联系许可。</div>':''}<div class="zt-action-row">${button(state.batchDone?'已完成模拟发送':'审核并模拟启动','start-batch',!allOK||state.batchDone||state.role!=='owner'?'disabled':'','primary')}${button('收起审核','close-review','','ghost')}</div>${state.role!=='owner'?'<p class="zt-subtle" style="margin-top:9px">当前为业务员身份，首次联系批次由笑笑审核。</p>':''}${state.batchDone?'<div class="zt-note green">本批次已完成模拟发送；发送记录与逐个收件人的审核内容已绑定。</div>':''}</div></section>`}
+  function renderProducts(){return `<section class="zt-page"><header class="zt-page-heading"><div><h2>产品资料</h2><p class="zt-subtle">演示工厂 · 3 款产品 · 团队审核后供 AI 查询</p></div><span class="zt-tag green">资料已审核</span></header><div class="zt-product-grid">${[{name:'经典棉质帆布袋',code:'CT-01',type:'12 oz · 35 × 40 cm',status:'支持演示报价',mark:'12 oz'},{name:'轻量活动袋',code:'CT-02',type:'8 oz · 30 × 35 cm',status:'价格待工厂确认',mark:'8 oz'},{name:'加宽礼品袋',code:'CT-03',type:'12 oz · 40 × 35 × 10 cm',status:'价格待工厂确认',mark:'Wide'}].map((p,i)=>`<article class="zt-product"><div class="zt-product-art" aria-label="帆布袋结构示意"><div class="zt-tote">${p.mark}</div></div><div class="zt-product-body"><span class="zt-subtle">${p.code}</span><h3>${p.name}</h3><p class="zt-subtle">${p.type}<br>${p.status}</p>${button('查看资料','product-info',`data-product="${i}"`,'small')}</div></article>`).join('')}</div>${state.panel==='product'?`<div class="zt-source" style="margin-top:22px"><h3>${state.product===0?'CT-01 · 可报价资料':'产品资料 · 待补齐价格'}</h3><p>${state.product===0?'规格 v3、授权价目表、生产周期均有对应来源；具体对外报价仍须审批。':'仅有基本规格，可回答已确认规格问题。系统不会套用 CT-01 的价格。'}</p><p>所有资料为本原型模拟数据。维护人：林悦；审核人：笑笑；更新：2026-10-28。</p></div>`:''}<div class="zt-note" style="margin-top:22px">规格、价格与生产周期分别维护。资料缺失或过期时，AI 请求人工补充。</div></section>`}
+  function renderTasks(){const sent=state.quote.sent===state.quote.version;return `<section class="zt-page"><header class="zt-page-heading"><div><h2>待办</h2><p class="zt-subtle">待审批与跟进，关联到具体买家</p></div><span class="zt-tag">负责人：林悦</span></header>${!sent?`<article class="zt-task-row">${icon('file-check')}<div><h3>审核 Northstar Events 的报价</h3><p class="zt-subtle">笑笑 · ZT-001 v${state.quote.version} · USD ${money(total())}</p><span class="zt-tag amber" style="margin-top:8px">${quoteStatus()}</span></div>${button('打开报价','task-quote','','primary small')}</article>`:`<article class="zt-task-row">${icon(state.taskDone?'circle-check':'clock')}<div><h3>${state.taskDone?'已完成：':'跟进：'}Northstar Events 报价反馈</h3><p class="zt-subtle">2026-10-30 10:00（UTC+8 / Asia/Shanghai） · 林悦</p><p class="zt-subtle">确认买家是否接受规格与报价，并收集寄样地址。</p><span class="zt-tag ${state.taskDone?'green':'amber'}" style="margin-top:8px">${state.taskDone?'已处理':'到期提醒 · 发送前再检查渠道条件'}</span></div>${button(state.taskDone?'已完成':'标记已处理','finish-task',state.taskDone?'disabled':'','primary small')}</article>`}<article class="zt-task-row">${icon('message-circle')}<div><h3>等待 Gather & Co. 补充采购需求</h3><p class="zt-subtle">缺数量、尺寸与 Logo 要求 · 林悦</p></div>${button('查看会话','task-thread','data-thread="2"','small')}</article><p class="zt-footer-note">第一版的业务终点：已发送的可信报价，以及有负责人、时间和目标的跟进计划。</p></section>`}
+  root.addEventListener('click',e=>{
+    const b=e.target.closest('[data-action]');if(!b||b.disabled)return;const a=b.dataset.action;
+    if(a==='nav'){state.page=b.dataset.page;state.panel=null;state.showList=false}
+    else if(a==='thread'){state.thread=Number(b.dataset.thread);state.panel=null;state.translate=false;state.showList=false}
+    else if(a==='filter'){state.filter=b.dataset.filter}
+    else if(a==='back-list'){state.showList=true}
+    else if(a==='back-chat'){state.panel=null}
+    else if(a==='quote'||a==='customer'||a==='source'){state.panel=a}
+    else if(a==='pause'){state.paused[state.thread]=!state.paused[state.thread];toast(state.paused[state.thread]?'已暂停此会话的 AI 自动问答':'已恢复有资料依据的常规问答')}
+    else if(a==='translate'){state.translate=!state.translate}
+    else if(a==='save-quote'){
+      const qty=Number(root.querySelector('#zt-quote-qty').value),price=Number(root.querySelector('#zt-quote-price').value),err=root.querySelector('#zt-quote-error');
+      if(!Number.isInteger(qty)||qty<100||qty>100000||!Number.isFinite(price)||price<=0||price>10000){err.textContent='请输入有效数量（100—100,000 只）和正数单价。';return}
+      const normalized=Math.round(price*100)/100;
+      if(normalized<0.01||normalized>10000){err.textContent='单价按美分计，必须至少为 USD 0.01 且不超过 USD 10,000.00。';return}
+      if(qty===state.quote.qty&&normalized===state.quote.price){toast('没有需要保存的修改');return}
+      state.quote.qty=qty;state.quote.price=normalized;state.quote.version++;state.quote.approved=null;state.quote.approvedText=null;state.taskDone=false;toast(`已保存 v${state.quote.version}，需要重新审批`)
+    }
+    else if(a==='approve-quote'){
+      if(state.role!=='owner'){toast('报价需要笑笑批准');return}
+      if(!quoteSupported()){toast('超出当前价目表，待工厂确认后才能批准');return}
+      const qty=Number(root.querySelector('#zt-quote-qty').value),price=Number(root.querySelector('#zt-quote-price').value);
+      if(qty!==state.quote.qty||price!==state.quote.price){toast('请先保存修改，再审批新版本');return}
+      state.quote.approved=state.quote.version;state.quote.approvedText=quoteText();toast(`笑笑已批准报价 v${state.quote.version}`)
+    }
+    else if(a==='send-quote'){
+      if(!quoteSupported()){toast('超出当前价目表，已阻止发送');return}
+      if(state.quote.approved!==state.quote.version){toast('当前报价尚未批准');return}
+      if(state.quote.sent===state.quote.version){toast('此版本已发送，已阻止重复发送');return}
+      const qtyField=root.querySelector('#zt-quote-qty'),priceField=root.querySelector('#zt-quote-price');
+      if(qtyField&&(Number(qtyField.value)!==state.quote.qty||Number(priceField.value)!==state.quote.price)){toast('表单有未保存修改，请先保存并重新审批');return}
+      state.messages[0].push({text:state.quote.approvedText,meta:`林悦 · 已模拟发送 · 笑笑批准 v${state.quote.version}`});state.quote.sent=state.quote.version;state.panel=null;state.thread=0;state.taskDone=false;toast('报价已模拟发送，并建立 10 月 30 日的跟进计划')
+    }
+    else if(a==='suggest'){const field=root.querySelector('#zt-reply');field.value=state.thread===0?'Thanks, Alex. I have your specifications and will share the reviewed quotation here. We can discuss sample details separately.':state.thread===1?'Would you like to share your preferred quantity and logo artwork?':state.thread===2?'Could you share your approximate quantity, preferred dimensions and logo artwork?':'Thank you. Please let me know when you have feedback from your team.';toast('已填入演示建议，请检查后发送');return}
+    else if(a==='send-reply'){
+      const field=root.querySelector('#zt-reply'),text=field.value.trim();if(!text){toast('请先输入回复内容');return}
+      if(/\$|\bUSD\b|discount|deliver|deadline|报价|折扣|交期|准时|\bprice\b/i.test(text)){toast('此条涉及价格或交期，请通过报价审批流程处理');return}
+      state.messages[state.thread].push({text,meta:`${state.role==='owner'?'笑笑':'林悦'} · 已模拟发送`});toast('已模拟发送')
+    }
+    else if(a==='review-batch'){state.review=true;state.reviewLead=[...state.selected][0]}
+    else if(a==='close-review'){state.review=false}
+    else if(a==='preview-lead'){state.reviewLead=Number(b.dataset.lead)}
+    else if(a==='start-batch'){
+      if(state.batchDone||state.role!=='owner'||!state.selected.size||![...state.selected].every(i=>eligible(leads[i])&&!state.sentLeadIds.has(i))){toast('本批次尚未满足审核及联系条件');return}
+      state.selected.forEach(i=>state.sentLeadIds.add(i));state.batchDone=true;toast(`已模拟完成 ${state.selected.size} 位买家的首次联系`)
+    }
+    else if(a==='product-info'){state.panel='product';state.product=Number(b.dataset.product)}
+    else if(a==='tasks'){state.page='tasks';state.panel=null}
+    else if(a==='task-quote'){state.page='messages';state.thread=0;state.panel='quote';state.showList=false}
+    else if(a==='task-thread'){state.page='messages';state.thread=Number(b.dataset.thread);state.panel=null;state.showList=false}
+    else if(a==='finish-task'){state.taskDone=true;toast('跟进已标记处理，记录保留在此买家下')}
+    else return;
+    render();
+  });
+  root.addEventListener('change',e=>{
+    if(e.target.id==='zt-role'){state.role=e.target.value;render();toast(state.role==='owner'?'当前为笑笑，可审批关键承诺':'当前为业务员，报价和首次联系批次需笑笑审批')}
+    else if(e.target.id==='zt-channel'){state.channel=e.target.value;state.batchDone=false;state.review=false;render()}
+    else if(e.target.matches('input[data-lead]')){const i=Number(e.target.dataset.lead);if(e.target.checked)state.selected.add(i);else state.selected.delete(i);state.batchDone=false;state.review=false;render()}
+  });
+  root.addEventListener('input',e=>{if(e.target.id==='zt-chat-search'){const pos=e.target.selectionStart;state.query=e.target.value;render();const input=root.querySelector('#zt-chat-search');input.focus();input.setSelectionRange(pos,pos)}});
+  render();
+  root.setAttribute('data-zt-initialized','true');
+  }
+  initializeZuTrade();
+  if (document.readyState==='loading') {
+    document.addEventListener('DOMContentLoaded',initializeZuTrade,{once:true});
+  }
+})();
+</script>

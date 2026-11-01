@@ -1,0 +1,17 @@
+[
+  {
+    "source": "zutrade_v_test_3b33f7d7cbc64895950aaab6c5e5ced2",
+    "restore": "zutrade_v_restore_9777456763d04ae8bb1399f43b468867",
+    "empty": "zutrade_v_empty_837e9d86626c4708800af761694bb51e",
+    "successful": true,
+    "evidence": "recovery-first.txt",
+    "note": "Initial successful backup retained privately; subsequent guard found pre-existing cancelled old plan"
+  },
+  {
+    "source": "zutrade_v_test_3b33f7d7cbc64895950aaab6c5e5ced2",
+    "restore": "zutrade_v_restore_808bb34c73604bbeacc56a69029a5cfd",
+    "empty": "zutrade_v_empty_5cf6f4a3c70b4fa780bd761632094125",
+    "successful": true,
+    "evidence": "recovery-second.txt; recovery.json; restore-job-guard.json"
+  }
+]

@@ -1,0 +1,41 @@
+$ node scripts/verify-a2.mjs
+PASS A1 runtime role, RLS, original SQL and incremental migration boundaries retained
+PASS inbound receipt persists before worker; duplicate same event reused and changed content conflicts; injection owner-only
+PASS real worker restart consumes committed inbound queue without reseed
+PASS different event envelopes for same provider message do not duplicate message or advance context; same-name distinct identity stays distinct
+PASS independent read cursors; late occurred_at remains unread; monotonic reads and cursor pagination
+PASS thread lock is explicit synchronization point: concurrent inbound cannot be skipped by read or pagination
+/Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694
+          Error.captureStackTrace(err)
+                ^
+
+error: inconsistent types deduced for parameter $1
+    at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async createBase (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/delivery.js:125:5)
+    at async saveInternalDraft (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/delivery.js:199:21)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs:54:471
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs:21:33)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-a2.mjs:54:3 {
+  length: 142,
+  severity: 'ERROR',
+  code: '42P08',
+  detail: 'uuid versus text',
+  hint: undefined,
+  position: '331',
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'parse_param.c',
+  line: '220',
+  routine: 'variable_coerce_param_hook'
+}
+
+Node.js v24.22.1
+[ELIFECYCLE] Command failed with exit code 1.

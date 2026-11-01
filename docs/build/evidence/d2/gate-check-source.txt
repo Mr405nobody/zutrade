@@ -1,0 +1,85 @@
+import { loadEnvFile } from 'node:process';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, realpathSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { resolve4, resolve6 } from 'node:dns/promises';
+import { pg } from '@zutrade/db';
+import { checkedAddress, resolvePublic } from '@zutrade/prospecting';
+
+loadEnvFile('.env');
+const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
+const output = 'docs/build/evidence/d2';
+mkdirSync(output, { recursive: true });
+const report = { observedAt: new Date().toISOString(), scope: 'D2 prerequisite inspection only; no business writes' };
+const pool = new pg.Pool({ connectionString: process.env.MIGRATION_DATABASE_URL, connectionTimeoutMillis: 5000 });
+const client = await pool.connect();
+try {
+  await client.query('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');
+  await client.query("SET LOCAL statement_timeout='5s'");
+  report.database = (await client.query('SELECT current_database() AS name,clock_timestamp() AS observed_at,current_setting(\'transaction_read_only\') AS read_only')).rows[0];
+  report.tables = (await client.query("SELECT schemaname,count(*)::int AS count FROM pg_tables WHERE schemaname IN('app','simulation','auth','pgboss') GROUP BY 1 ORDER BY 1")).rows;
+  const journal = JSON.parse(readFileSync('packages/db/migrations/business/meta/_journal.json'));
+  report.migrations = (await client.query('SELECT hash,created_at FROM infra.business_migrations ORDER BY created_at')).rows.map((row) => {
+    const entry = journal.entries.find((e) => String(e.when) === row.created_at);
+    return { ...row, tag: entry?.tag ?? null, fileHashMatches: Boolean(entry && hash(readFileSync(`packages/db/migrations/business/${entry.tag}.sql`)) === row.hash) };
+  });
+  report.researchRuns = (await client.query("SELECT id,workspace_id,provider,data_origin,state,request->>'country' AS country,candidate_count,request_count,review_revision,review_decisions,first_started_at,finished_at,error FROM app.prospecting_runs ORDER BY created_at")).rows;
+  report.liveImportedLeads = (await client.query("SELECT count(*)::int AS count FROM app.leads l JOIN app.prospecting_runs r ON r.workspace_id=l.workspace_id AND r.id=l.prospecting_run_id WHERE r.data_origin='live_network'")).rows[0].count;
+  report.runtimeRoles = (await client.query("SELECT rolname,rolsuper,rolbypassrls FROM pg_roles WHERE rolname IN('zutrade_api','zutrade_worker') ORDER BY rolname")).rows;
+  report.d2ExistingRows = {};
+  for (const table of ['outreach_batches', 'outreach_batch_items', 'followups']) {
+    report.d2ExistingRows[table] = (await client.query(`SELECT count(*)::int AS count FROM app.${table}`)).rows[0].count;
+  }
+  const demo = JSON.parse(readFileSync('docs/build/evidence/c/demo-ready.json'));
+  const quote = (await client.query('SELECT id,version_no,total_amount,currency_code,state,terms_snapshot FROM app.quote_versions WHERE id=$1', [demo.quoteVersionId])).rows[0];
+  const lines = (await client.query("SELECT quantity::text FROM app.quote_lines WHERE quote_version_id=$1 AND line_kind='product' ORDER BY position", [demo.quoteVersionId])).rows;
+  const approval = (await client.query('SELECT id,state,payload_version_id FROM app.approvals WHERE id=$1', [demo.approvalId])).rows[0];
+  const request = (await client.query('SELECT id,state,current_payload_version_id FROM app.outbound_requests WHERE id=$1', [demo.requestId])).rows[0];
+  const payload = (await client.query('SELECT id,snapshot_sha256 FROM app.outbound_payload_versions WHERE id=$1', [demo.payloadId])).rows[0];
+  const pdf = (await client.query('SELECT state,object_key,pdf_sha256,byte_length FROM app.quote_pdf_artifacts WHERE quote_version_id=$1', [demo.quoteVersionId])).rows[0];
+  const root = realpathSync(resolve(process.env.PRIVATE_DATA_DIR ?? 'data/private'));
+  const path = resolve(root,pdf.object_key.slice(0,2),pdf.object_key);
+  const bytes = readFileSync(path);
+  const pdfIntegrity = realpathSync(path) === path && hash(bytes) === pdf.pdf_sha256 && bytes.length === Number(pdf.byte_length) && pdf.pdf_sha256 === demo.pdfSha256;
+  delete quote.terms_snapshot;
+  report.alex = { quote, productQuantities: lines.map((r) => r.quantity), approval, request, payload, pdf: { state: pdf.state, sha256: pdf.pdf_sha256, byteLength: Number(pdf.byte_length), matchesOriginalBytes: pdfIntegrity }, preserved: quote.version_no === 17 && quote.total_amount === '1230.000000' && quote.currency_code === 'USD' && lines.length === 1 && Number(lines[0].quantity) === 500 && approval.state === 'pending' && approval.payload_version_id === demo.payloadId && request.current_payload_version_id === demo.payloadId && pdfIntegrity };
+  await client.query('COMMIT');
+} catch (error) {
+  await client.query('ROLLBACK');
+  report.inspectionError = { code: error.code ?? error.name };
+  process.exitCode = 1;
+} finally {
+  client.release();
+  await pool.end();
+}
+report.dns = await Promise.all(['en.wikipedia.org', 'www.wikidata.org'].map(async (host) => {
+  const families = await Promise.all([4,6].map(async (family) => {
+    try { return { family, addresses: await (family === 4 ? resolve4(host) : resolve6(host)) }; }
+    catch (error) { return { family, code: error.code ?? error.name }; }
+  }));
+  let safeTransportGate;
+  try { await checkedAddress(new URL(`https://${host}/`), resolvePublic); safeTransportGate = 'public_address_accepted'; }
+  catch (error) { safeTransportGate = error.code ?? error.name; }
+  return { host, families, safeTransportGate };
+}));
+report.services = await Promise.all([
+  ['main',5173,3001,3002], ['c',5273,3401,3402], ['d1',5373,3501,3502],
+].map(async ([name,web,api,worker]) => {
+  const probes = await Promise.all([[web,'/'],[api,'/health/ready'],[worker,'/health/live']].map(async ([port,path]) => {
+    try {
+      const response = await fetch(`http://127.0.0.1:${port}${path}`,{ signal: AbortSignal.timeout(5000) });
+      const body = path === '/' ? await response.text() : await response.json();
+      return { port,path,status: response.status, ...(path === '/' ? { zutrade: body.includes('<title>ZuTrade') } : { health: body }) };
+    } catch (error) { return { port,path,error: error.name }; }
+  }));
+  return { name,probes };
+}));
+const original = readFileSync('zutrade-build-kit/references/zutrade-schema-v1.sql');
+report.originalSql = { bytes: original.length, sha256: hash(original) };
+report.git = { branch: execFileSync('git',['branch','--show-current'],{encoding:'utf8'}).trim(), status: execFileSync('git',['status','--short'],{encoding:'utf8'}).trim().split('\n'), commitCount: execFileSync('git',['rev-list','--all','--count'],{encoding:'utf8'}).trim() };
+report.migrationFiles = readdirSync('packages/db/migrations/business').filter((p) => p.endsWith('.sql')).sort();
+report.modes = Object.fromEntries(['CHANNEL_MODE','AI_MODE','PROSPECTING_MODE'].map((key) => [key,process.env[key] ?? null]));
+report.decision = { d1: 'verification_blocked', d2: 'not_started', reason: 'Predecessor real-source acceptance gate remains unmet', realResearchRerun: false, networkChanged: false, ssrfChanged: false, businessWrites: false };
+writeFileSync(`${output}/gate-check.json`,JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

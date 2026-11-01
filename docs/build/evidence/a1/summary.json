@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-28T13:32:31.008Z",
+  "stage": "A1",
+  "status": "ready_for_user_review",
+  "integrationChecks": 23,
+  "integrationPassed": true,
+  "disposableDatabaseRemoved": true,
+  "unitTests": 4,
+  "browserRegression": 6,
+  "browserExactEvent": 4,
+  "tables": [
+    {
+      "schemaname": "app",
+      "count": 42
+    },
+    {
+      "schemaname": "auth",
+      "count": 4
+    },
+    {
+      "schemaname": "infra",
+      "count": 2
+    },
+    {
+      "schemaname": "pgboss",
+      "count": 13
+    }
+  ],
+  "allQueuesCompleted": true,
+  "originalSql": {
+    "bytes": 75172,
+    "sha256": "b7f72b68adce6ad161eedf66b65389cd35461ec20446a9e97fa560550c21a1fe"
+  },
+  "secretMatches": []
+}

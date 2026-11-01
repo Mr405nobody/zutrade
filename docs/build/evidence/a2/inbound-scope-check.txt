@@ -1,0 +1,22 @@
+Command: ./scripts/zu exec node .local/a2-inbound-check.mjs
+Environment: independent disposable PostgreSQL 18 database; never daily business database.
+Final run: exit 0 (2026-10-28 Asia/Shanghai). Successful test database removed by its exact generated name.
+PASS isolated PostgreSQL 18 incremental migration and queues
+PASS receipt/outbox/pg-boss transaction and repeated job/event deduplication
+PASS immutable event digest conflict
+PASS same names with distinct channel identities and system actor audits
+PASS unmatched identity remains an unresolved inbound barrier
+PASS enqueue failure rolls receipt and event back
+PASS trusted account system scope, no organization identity reads, PUBLIC/API task function denial, and full-account barrier
+PASS complete association authorization hides mixed factory messages and increments context on new link
+PASS simulation injection is owner-only
+PASS normalization exception retry/dead projection increments attempts and retains unresolved barrier
+PASS explicit failed-inbox official pg-boss retry preserves job and outbox identities
+
+Real intermediate failure and repair:
+The failed-job retry test expected exactly 1 retried inbox job, but reported 4.
+Local pg-boss 12.38.0 types/source showed FindJobsOptions has no state option; the previous A1 maintenance script's state field was silently ignored.
+Repaired maintenance to inspect job.state explicitly, with bounded pagination (1,000 inspected / 100 retried per queue), and call official boss.retry only for state=failed.
+The final real PostgreSQL test verified only the failed job was retried and job/outbox counts and IDs were unchanged.
+Retained failing disposable database for inspection: zutrade_inbound_test_0b4d2f1a08274c44a12db64a41cee667.
+No connection credentials were recorded.

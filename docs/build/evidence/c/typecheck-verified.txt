@@ -1,0 +1,45 @@
+Scope: all 12 workspace projects
+? Verifying lockfile against supply-chain policies (552 entries)...
+✓ Lockfile passes supply-chain policies (552 entries in 5.6s)
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 37, reused 37, downloaded 0, added 0
+Progress: resolved 158, reused 158, downloaded 0, added 0
+Progress: resolved 159, reused 159, downloaded 0, added 0
+Progress: resolved 166, reused 166, downloaded 0, added 0
+Progress: resolved 380, reused 320, downloaded 0, added 0
+Progress: resolved 385, reused 324, downloaded 0, added 0
+Progress: resolved 426, reused 331, downloaded 0, added 0
+Progress: resolved 552, reused 436, downloaded 0, added 0
+[WARN] 2 deprecated subdependencies found: @esbuild-kit/core-utils@3.3.2, @esbuild-kit/esm-loader@2.6.5
+Already up to date
+Progress: resolved 552, reused 436, downloaded 0, added 0, done
+
+devDependencies:
++ @zutrade/channels 0.0.0-stage.0 <- packages/channels
++ @zutrade/contracts 0.0.0-stage.0 <- packages/contracts
+
+Done in 14.5s using pnpm v11.25.0
+$ pnpm -r --sort typecheck && tsc -p tsconfig.tools.json --noEmit
+Scope: 11 of 12 workspace projects
+packages/ai typecheck$ tsc -p tsconfig.json --noEmit
+packages/channels typecheck$ tsc -p tsconfig.json --noEmit
+packages/config typecheck$ tsc -p tsconfig.json --noEmit
+packages/contracts typecheck$ tsc -p tsconfig.json --noEmit
+packages/ai typecheck: Done
+packages/storage typecheck$ tsc -p tsconfig.json --noEmit
+packages/config typecheck: Done
+packages/ui typecheck$ tsc -p tsconfig.json --noEmit
+packages/channels typecheck: Done
+packages/contracts typecheck: Done
+packages/db typecheck$ tsc -p tsconfig.json --noEmit
+packages/storage typecheck: Done
+packages/ui typecheck: Done
+apps/web typecheck$ tsc -p tsconfig.json --noEmit
+packages/db typecheck: Done
+packages/domain typecheck$ tsc -p tsconfig.json --noEmit
+apps/web typecheck: Done
+packages/domain typecheck: Done
+apps/worker typecheck$ tsc -p tsconfig.json --noEmit
+apps/api typecheck$ tsc -p tsconfig.json --noEmit
+apps/worker typecheck: Done
+apps/api typecheck: Done

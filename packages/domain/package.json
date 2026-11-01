@@ -1,0 +1,32 @@
+{
+  "name": "@zutrade/domain",
+  "version": "0.0.0-stage.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@zutrade/ai": "workspace:*",
+    "@zutrade/channels": "workspace:*",
+    "@zutrade/contracts": "workspace:*",
+    "@zutrade/db": "workspace:*",
+    "@zutrade/storage": "workspace:*",
+    "decimal.js": "10.6.0",
+    "pdfkit": "0.20.2",
+    "pg-boss": "12.38.0",
+    "zod": "4.6.7",
+    "@zutrade/prospecting": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/pdfkit": "0.17.7",
+    "@types/pg": "8.23.1"
+  }
+}

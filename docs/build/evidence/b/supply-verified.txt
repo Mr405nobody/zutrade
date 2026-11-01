@@ -1,0 +1,9 @@
+$ node scripts/verify-b-supply.mjs
+PASS sales source upload and fact draft remain unconfirmed; owner publication is separate
+PASS owner price publication freezes complete evidence and immutable numeric rule
+PASS compatible applicability and concurrent overlap publications reject ambiguity
+PASS same-transaction overlap rejects and rolls back both candidate rules
+PASS price update creates new frozen fact and preserves superseded amount and evidence
+PASS source versions use CAS, retain frozen history and block old evidence
+PASS withdrawn source cannot be revived by uploading new version
+PASS factory RLS prevents direct unauthorized product and source discovery

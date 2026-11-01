@@ -1,0 +1,43 @@
+$ node scripts/verify-a1.mjs
+PASS empty PostgreSQL migration with 42 business tables and separate auth/queue tables
+PASS repeated migrations preserve table OIDs and migration rows
+PASS mid-baseline error rolls back every business table and migration success entry
+PASS all business RLS, ordered composite FKs, freeze and append-only triggers retained
+PASS API/worker/auth roles do not own business tables, bypass RLS or possess schema CREATE
+PASS concurrent first identity mapping converges without a membership or owner promotion
+PASS subject bootstrap discloses only the verified subject; no workspace discovers only own active membership
+PASS sales RLS and service restrict reads and writes to factory A
+PASS cross-workspace selection, writes and composite foreign-key association are blocked
+PASS commit, rollback and interleaved workspace transactions leave pooled contexts empty
+PASS only active designated owner passes approver boundary
+PASS real pg-boss failure injection after business/outbox/enqueue and actual enqueue error rolls all back
+error: permission denied for table job_common
+    at /Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg@8.23.1/node_modules/pg/lib/client.js:694:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async #createJob (file:///Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg-boss@12.38.0_@opentelemetry+api@1.9.0/node_modules/pg-boss/dist/manager.js:1527:32)
+    at async Telemetry.send (file:///Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg-boss@12.38.0_@opentelemetry+api@1.9.0/node_modules/pg-boss/dist/telemetry.js:189:28)
+    at async Manager.send (file:///Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg-boss@12.38.0_@opentelemetry+api@1.9.0/node_modules/pg-boss/dist/manager.js:1462:16)
+    at async PgBoss.send (file:///Users/warren/Desktop/ZuTrade/node_modules/.pnpm/pg-boss@12.38.0_@opentelemetry+api@1.9.0/node_modules/pg-boss/dist/index.js:372:16)
+    at async renameFactoryAndEnqueue (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/queue.js:31:19)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async Promise.all (index 0)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-a1.mjs:141:42 {
+  length: 98,
+  severity: 'ERROR',
+  code: '42501',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'aclchk.c',
+  line: '2793',
+  routine: 'aclcheck_error'
+}
+[ELIFECYCLE] Command failed with exit code 1.

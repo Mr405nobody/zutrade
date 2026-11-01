@@ -1,0 +1,2 @@
+$ node scripts/db-queue-maintain.mjs --retry-failed-probes
+{"queue":"a1.identity-probe","maintained":true,"retried":7}

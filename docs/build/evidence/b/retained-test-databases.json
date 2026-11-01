@@ -1,0 +1,8 @@
+{
+  "purpose": "Exact B failure database inventory; retained for debugging, never fuzzy-deleted. Successful current test databases removed by their exact name.",
+  "databases": [
+    "zutrade_b_supply_21cdadb530994204ac72d457fc0a15ca",
+    "zutrade_b_supply_cc3f5cc4b60d484dbf90a76fb1edb698",
+    "zutrade_b_test_1c57d80b0d07460384440d33fd3ff827"
+  ]
+}

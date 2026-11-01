@@ -1,0 +1,27 @@
+12:50:45 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v8.3.5  ready in 188 ms
+
+  ➜  Local:   http://127.0.0.1:5273/
+{"timestamp":"2026-10-28T16:50:45.846Z","service":"worker","event":"listening","address":"http://127.0.0.1:3402","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","version":"0.0.0-stage.c"}
+{"timestamp":"2026-10-28T16:50:45.848Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:50:46.065Z","service":"api","event":"listening","address":"http://127.0.0.1:3401","version":"0.0.0-stage.c","modes":{"channel":"simulation","ai":"mock","prospecting":"live_public_directory"}}
+
+Running 2 tests using 1 worker
+
+(node:92345) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"timestamp":"2026-10-28T16:50:50.843Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:50:55.845Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:51:00.845Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:51:05.849Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+  ✓  1 [desktop] › tests/e2e/c.spec.ts:78:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 (19.7s)
+(node:92498) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"timestamp":"2026-10-28T16:51:10.849Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:51:15.851Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+{"timestamp":"2026-10-28T16:51:20.856Z","service":"worker","event":"heartbeat","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a","database":"ok","detail":"PostgreSQL 18.6 (Debian 18.6-1.pgdg12+2) · zutrade_worker（受限角色）","queueInitialized":true}
+  ✓  2 [mobile] › tests/e2e/c.spec.ts:78:1 › C 桌面/手机：精确审批、PDF、拒绝、过期、旧页面冲突、取消与 unknown 核对 (18.0s)
+
+  2 passed (39.0s)
+{"timestamp":"2026-10-28T16:51:25.432Z","service":"worker","event":"stopped","instanceId":"1024cf94-8e51-478e-9b65-e3d3a153935a"}

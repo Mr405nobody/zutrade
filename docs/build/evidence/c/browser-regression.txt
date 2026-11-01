@@ -1,0 +1,41 @@
+$ playwright test a1.spec.ts a2.spec.ts bootstrap.spec.ts
+
+Running 8 tests using 1 worker
+
+(node:85700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.6s)
+  ✓  2 [desktop] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.5s)
+  ✓  3 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (12.7s)
+  ✘  4 [desktop] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.3s)
+(node:85929) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [mobile] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.5s)
+  ✘  6 [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.4s)
+(node:85988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (12.8s)
+  ✓  8 [mobile] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+
+
+  1) [desktop] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 ────────────────────────────
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/Users/warren/Desktop/ZuTrade/test-results/.playwright-artifacts-0/traces/c787f5c8b5f566a3f841-25918657244105cf7464-recording8.trace'
+
+    Error: ENOENT: no such file or directory, open '/Users/warren/Desktop/ZuTrade/test-results/.playwright-artifacts-0/2cdc89745fc38190257cc5bf88ed5224.zip'
+
+    Error Context: test-results/bootstrap-当前健康设置、四入口与-API-断路恢复-desktop/error-context.md
+
+  2) [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 ──────────────────────────────────
+
+    Error: browserContext.close: ENOENT: no such file or directory, open '/Users/warren/Desktop/ZuTrade/test-results/.playwright-artifacts-1/traces/479195fc753889991fa5-6174d3832417bc11813e-recording3.trace'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/Users/warren/Desktop/ZuTrade/test-results/.playwright-artifacts-1/traces/479195fc753889991fa5-6174d3832417bc11813e-recording2.network'
+
+    Error: ENOENT: no such file or directory, open '/Users/warren/Desktop/ZuTrade/test-results/.playwright-artifacts-1/5b9020cb2943f5ce9021afba64167885.zip'
+
+  2 failed
+    [desktop] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 ─────────────────────────────
+    [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 ───────────────────────────────────
+  6 passed (1.1m)
+[ELIFECYCLE] Command failed with exit code 1.

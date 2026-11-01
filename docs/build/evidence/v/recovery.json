@@ -1,0 +1,261 @@
+{
+  "observedAt": "2026-10-30T05:46:31.884Z",
+  "successful": true,
+  "sourceDatabase": "zutrade_v_test_3b33f7d7cbc64895950aaab6c5e5ced2",
+  "restoreDatabase": "zutrade_v_restore_808bb34c73604bbeacc56a69029a5cfd",
+  "emptyDatabase": "zutrade_v_empty_5cf6f4a3c70b4fa780bd761632094125",
+  "checks": [
+    {
+      "label": "web/API/worker 与同一数据库容器保留 volume 重启；全部 app 行摘要、已读、来源、冻结审批、AI、未来 job 与原会话一致",
+      "result": "passed",
+      "systemIdentifier": "7701697112392880170",
+      "volumeBefore": [
+        {
+          "Name": "zutrade_postgres_data",
+          "Destination": "/var/lib/postgresql"
+        }
+      ],
+      "volumeAfter": [
+        {
+          "Name": "zutrade_postgres_data",
+          "Destination": "/var/lib/postgresql"
+        }
+      ],
+      "tables": {
+        "ai_runs": {
+          "count": 2,
+          "sha256": "84c647f2b6f5af76edcadce44501f465a985fc419c2f83c29df3524cd21d712d"
+        },
+        "app_users": {
+          "count": 3,
+          "sha256": "b7063fa9d9449f46a0ab47090d85a929b73e1a7e6380872785c1ac33058f619e"
+        },
+        "approval_events": {
+          "count": 2,
+          "sha256": "06438b477c52727317947b348107abf39f4d5590a1d771031af6ca7c2e2ff254"
+        },
+        "approvals": {
+          "count": 1,
+          "sha256": "51621a47f06a721c52a695c1b73dbbea29f49653444dc3d34eb72b6e7d86034f"
+        },
+        "audit_events": {
+          "count": 212,
+          "sha256": "c9df171faa6f849b8cc5ca06dc53b4ccc4a8f88ee5cd81754a08643569cdc403"
+        },
+        "buyers": {
+          "count": 35,
+          "sha256": "f08a1ba6d8a3a70a0a14b8354b0368489c4f30adae63732fe5df6da6bb1efd14"
+        },
+        "channel_accounts": {
+          "count": 1,
+          "sha256": "ee11c38bae2673a73951771d64d8b0cfecac5ac54348ff92c52879bddbe262c2"
+        },
+        "command_receipts": {
+          "count": 9,
+          "sha256": "cc4c2ffcc41d8bee46aa3ffb915cde75cca6cef1ce37db4c6a68f9e51b7cc1d5"
+        },
+        "contact_permissions": {
+          "count": 36,
+          "sha256": "0483c5d8578b058a8d1f3b7681f4091daee1bae271c91f396d3c0759b88983a8"
+        },
+        "contact_points": {
+          "count": 35,
+          "sha256": "1c17b87b35aa613290aeee4cbe353a00a47b8c54ed366918af70b588165abc7a"
+        },
+        "contacts": {
+          "count": 35,
+          "sha256": "b9a65ecd8889a6b04e5e78dc0994b5387f8797f8f418337881c0fa59d37c5fb7"
+        },
+        "delivery_attempts": {
+          "count": 1,
+          "sha256": "d463f7ced289063e9cb61536a96a3cd2135ed9061cf326fdd80f94a47385a61f"
+        },
+        "fact_evidence": {
+          "count": 1,
+          "sha256": "63f5146430ad034761ad4a6df811ab032edfe5a1f7c4b9e2ce58e795b691ead3"
+        },
+        "fact_versions": {
+          "count": 1,
+          "sha256": "5db19bd03d94afcc5c8da5a0242e9a0bf01300da47c0a6942807bdbbaa40250b"
+        },
+        "factories": {
+          "count": 2,
+          "sha256": "722b808a4da8c13271bf59ebe787a597d333b65d49f7bc31c6f186edca58b387"
+        },
+        "factory_memberships": {
+          "count": 1,
+          "sha256": "3fe4c485799765d528453f66a5acc59fde4f6b6d3142aa62b67f4a5925918766"
+        },
+        "facts": {
+          "count": 1,
+          "sha256": "968e7fab2458b11e53ba121c1760b2d940109f469329f6757ec1d8baa39c4987"
+        },
+        "followups": {
+          "count": 3,
+          "sha256": "73d4710d37d8eec75b342276d99e3f60021f5b096ef9e1b640bcef58bdf3be29"
+        },
+        "inbound_events": {
+          "count": 90,
+          "sha256": "07557555f0050fea721ecd9d1b171a031399186717fb1e0b73a72e98ed1a113c"
+        },
+        "leads": {
+          "count": 1,
+          "sha256": "cecfd37db1807b041269825161a6c7a5e67a1c838aade0637e6fbd148060b55e"
+        },
+        "messages": {
+          "count": 91,
+          "sha256": "9257e74be892459838abb3981f95cbb7ce9a1973cf2361083017ac8179bd72ff"
+        },
+        "opportunities": {
+          "count": 35,
+          "sha256": "81c33dfb9a814b23f61e1f70f3b23396e6b3057aa957c02cf12c97661b3407f6"
+        },
+        "opportunity_threads": {
+          "count": 35,
+          "sha256": "9061f69554038f378a3e2af1ea7888585f636afa369bad30f6c92d1d72cedf7d"
+        },
+        "outbound_payload_versions": {
+          "count": 1,
+          "sha256": "5a8650a159a30e72026534acc4d9aebcd974aa9f7a0d44a52e3cb1e59d60bd9e"
+        },
+        "outbound_requests": {
+          "count": 1,
+          "sha256": "046d2b9ad39f973cb44a00252626a0878fc3cb1088021c42068995dc56e186a7"
+        },
+        "outbox_events": {
+          "count": 98,
+          "sha256": "609902bad2187ad798bac285b6bde853f65f7d6737984f483f554f3f992a9206"
+        },
+        "outreach_batch_items": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "outreach_batch_versions": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "outreach_batches": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "payload_evidence": {
+          "count": 1,
+          "sha256": "1f34b3278e2d4766a7e8cf9510cb4db99e19b4821c04b00c6ade6da065a47cfb"
+        },
+        "price_rules": {
+          "count": 1,
+          "sha256": "cc66a1f8f93f1a8fe1edb30d40ad6a482a5bc54dc6db64056694b3cbcf247d5b"
+        },
+        "products": {
+          "count": 1,
+          "sha256": "25ad09ff367c48eaea1e9c143cd4546df2be8c6dbb1023d6dd3898a62ba81453"
+        },
+        "prospecting_runs": {
+          "count": 1,
+          "sha256": "46233ae5e496e32749d28c3de119a5723c39ef838c0db6e806270a807059200c"
+        },
+        "quote_evidence": {
+          "count": 1,
+          "sha256": "50832e01a4b82bc0ac537aeda5c6cfe760d07ae998d90f8656ad35a8f3344017"
+        },
+        "quote_lines": {
+          "count": 2,
+          "sha256": "059a95ac379ab641cb935641eef0d6160e57c285e91ce286876ac1ca4e1bb4c0"
+        },
+        "quote_pdf_artifacts": {
+          "count": 1,
+          "sha256": "0e561c3794eced66a18d54eedd4d50b9fc7c087333dd122b0883c37671179704"
+        },
+        "quote_versions": {
+          "count": 1,
+          "sha256": "1658a4677b5fbe0c2208e8823a47c5664b42099e08febbdca888845a7f57cfec"
+        },
+        "quotes": {
+          "count": 1,
+          "sha256": "622b149582b0d424c32b25c4fbb338ac93620d9f7d393a9ae8d7e9655ace8925"
+        },
+        "source_documents": {
+          "count": 1,
+          "sha256": "9d75a8ff9702343fa4266912d8e48072ec048e4b9d4b5d13b512710aecde28ca"
+        },
+        "source_versions": {
+          "count": 1,
+          "sha256": "6f991ac45aa2030106c65485e62bd76b2186eee3749617fb431ecd0e60a4c1ed"
+        },
+        "team_notes": {
+          "count": 1,
+          "sha256": "2e58261155c7faac0f9d0dc89bbf5f9be8d04abdfc7737a84d8d65fc014ae79e"
+        },
+        "thread_reads": {
+          "count": 1,
+          "sha256": "bf44aff6331c89259eaa88908eec3a22bbf78828d44adf7f96b890faeb230eac"
+        },
+        "threads": {
+          "count": 35,
+          "sha256": "0fd73dccf8fbbfe3468ca05fe8259d3a2ab7849b54df6d9f05ad86d74a3d266b"
+        },
+        "workspace_members": {
+          "count": 3,
+          "sha256": "2a58f9122dd36b4c9fe885fc3fe99bcf82f57d1f41f1a2f70ca5ba79d7dfcd66"
+        },
+        "workspaces": {
+          "count": 2,
+          "sha256": "89318baa04ccfb23f0f94ced5fa45b3de5bfbd1d0ad3fa54689e667b9cb2330f"
+        }
+      },
+      "futureJobs": 3
+    },
+    {
+      "label": "pg_dump/pg_restore 到独立新库和目录；全部 app 数据、报价版本/冻结正文与私有附件摘要一致，runtime 可授权下载，原数据未覆盖",
+      "result": "passed",
+      "database": "zutrade_v_restore_808bb34c73604bbeacc56a69029a5cfd",
+      "dumpSha256": "2800cb30c3cfb59929b8a0faa570cf8d250ee6c90f0208894912f298dd64f61d",
+      "dumpBytes": 630670,
+      "objectCount": 2,
+      "objects": [
+        {
+          "path": "4b/4b1199d9214ab06cbbe207b35ccbf63c4352054204918db98a2022eb29abb48e",
+          "bytes": 132,
+          "sha256": "4b1199d9214ab06cbbe207b35ccbf63c4352054204918db98a2022eb29abb48e"
+        },
+        {
+          "path": "c8/c855664fc103d0e2802a87ad07a7dddb7aaf588cb3b3bdceadd2e0560462d749",
+          "bytes": 73726,
+          "sha256": "c855664fc103d0e2802a87ad07a7dddb7aaf588cb3b3bdceadd2e0560462d749"
+        }
+      ]
+    },
+    {
+      "label": "另一个真正空库执行全部迁移及队列初始化，API/worker 实际启动且未登录返回401",
+      "result": "passed",
+      "database": "zutrade_v_empty_5cf6f4a3c70b4fa780bd761632094125"
+    }
+  ],
+  "stages": [
+    {
+      "script": "scripts/infra.mjs",
+      "args": [
+        "stop"
+      ],
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/infra.mjs",
+      "args": [
+        "start"
+      ],
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/db-provision.mjs",
+      "args": [],
+      "exitCode": 0
+    },
+    {
+      "script": "scripts/db-migrate.mjs",
+      "args": [],
+      "exitCode": 0
+    }
+  ],
+  "privateMaterials": ".local/v-recovery-last.json (local only)"
+}

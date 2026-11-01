@@ -1,0 +1,19 @@
+$ node scripts/verify-a2.mjs
+PASS A1 runtime role, RLS, original SQL and incremental migration boundaries retained
+PASS inbound receipt persists before worker; duplicate same event reused and changed content conflicts; injection owner-only
+PASS real worker restart consumes committed inbound queue without reseed
+PASS different event envelopes for same provider message do not duplicate message or advance context; same-name distinct identity stays distinct
+PASS independent read cursors; late occurred_at remains unread; monotonic reads and cursor pagination
+PASS thread lock is explicit synchronization point: concurrent inbound cannot be skipped by read or pagination
+PASS notes and free-text internal drafts never create buyer messages, frozen snapshots or delivery jobs; notes/read do not invalidate context
+PASS gateway command idempotency, fixed templates, atomic request/payload/outbox/queue and worker simulated completion
+PASS business/outbox/enqueue all roll back on enqueue failure; no partial command survives
+PASS two-window CAS conflict, takeover invalidates old action, latest human reply allowed and release explicit
+PASS persisted receipt and failed/dead receipt retain account barrier; new inbound invalidates old reply
+PASS complete factory-set authorization: A-only sales cannot read B, A/B mixed, or unassigned via list/detail/messages/notes/read/SSE snapshot
+PASS system worker cannot forge job or operate outside scoped simulation receipt
+PASS HTTP strict authorization and templates; A1 login, factory boundary and transaction helper regressions
+PASS SSE rechecks authorization after ACL revocation and newly invisible factory link; no hidden content, ids or counts leak
+PASS SSE session expiry invalidates established connection and future queries
+PASS application restart preserves messages notes reads and committed queued tasks; SSE reconnect/database cursor catch-up
+[ELIFECYCLE] Command failed.

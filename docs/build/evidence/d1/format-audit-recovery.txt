@@ -1,0 +1,3 @@
+scripts/d1-audit.mjs 21ms
+packages/domain/src/prospecting.ts 46ms (unchanged)
+scripts/verify-d1.mjs 24ms

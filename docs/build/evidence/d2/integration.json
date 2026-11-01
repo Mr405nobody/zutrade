@@ -1,0 +1,163 @@
+{
+  "observedAt": "2026-10-29T10:18:08.507Z",
+  "database": "zutrade_d2_test_01ae06a811344e33b8f896e1f669d9cc",
+  "origin": "offline_fixture",
+  "successful": true,
+  "checks": [
+    {
+      "label": "D1 fixture -> review -> import remains explicitly offline; independent demo contact has no real permission",
+      "result": "passed"
+    },
+    {
+      "label": "Only current designated active owner approves; workspace/factory access checked",
+      "result": "passed"
+    },
+    {
+      "label": "Approval/business/outbox/enqueue rollback together; duplicate approve retains one event per item",
+      "result": "passed"
+    },
+    {
+      "label": "Frozen batch/payload/items cannot change names, content, account, attachments or membership",
+      "result": "passed"
+    },
+    {
+      "label": "Mixed batch actual results are success/failure/delayed; queue is not completion",
+      "result": "passed"
+    },
+    {
+      "label": "New batch version cannot inherit prior approval",
+      "result": "passed"
+    },
+    {
+      "label": "Multi-worker/duplicate jobs obey persistent account pacing and keep request/provider identity",
+      "result": "passed"
+    },
+    {
+      "label": "A worker stalled after claim cannot compress later provider calls past account pacing",
+      "result": "passed"
+    },
+    {
+      "label": "DST gaps rejected, overlaps explicit and timezone conversion correct",
+      "result": "passed"
+    },
+    {
+      "label": "Default followup only reminder/internal draft; reschedule preserves history and rejects old jobs",
+      "result": "passed"
+    },
+    {
+      "label": "New reply/takeover/pause/closed/requirements/optout stop old automatic plans with explicit reasons",
+      "result": "passed"
+    },
+    {
+      "label": "Current member/factory authorization rechecked by gateway; stale followup cannot regain authority",
+      "result": "passed"
+    },
+    {
+      "label": "Real worker stop -> due -> restart retains reminder and blocks changed plan",
+      "result": "passed"
+    },
+    {
+      "label": "Cancel failure/old job replay cannot restore stopped followup",
+      "result": "passed"
+    },
+    {
+      "label": "Claim cutoff and accepted-lost-response reuse C unknown/reconciliation",
+      "result": "passed"
+    },
+    {
+      "label": "Live transport refused; all message and qualification records remain simulation",
+      "result": "passed"
+    },
+    {
+      "label": "Actual raw inbound barrier and reply block old automatic actions; retry keeps original receipt identity",
+      "result": "passed"
+    },
+    {
+      "label": "Quote/PDF binding, changing quote and withdrawing facts block approved followups; internal notes never copied",
+      "result": "passed"
+    },
+    {
+      "label": "Human mode blocks automation but allows newly approved current manual reply; paused blocks new manual sending",
+      "result": "passed"
+    },
+    {
+      "label": "Two dedicated processes contend for same D2 request; only one claim/provider invocation",
+      "result": "passed"
+    },
+    {
+      "label": "Batch revocation after claim records cancel request and preserves unknown cutoff",
+      "result": "passed"
+    }
+  ],
+  "crashes": [
+    {
+      "pid": 67578,
+      "started": {
+        "point": "working",
+        "pid": 67578,
+        "at": "2026-10-29T10:17:23.547Z"
+      },
+      "exit": {
+        "code": null,
+        "signal": "SIGKILL"
+      },
+      "resumedPid": 67657,
+      "due": "2026-10-29T10:18:00.000Z",
+      "unchanged": "e343d3b5-6f2a-4f77-9aca-2a4f1c30b0e9",
+      "changed": "06d7b7b5-2c19-42cb-b67f-458433eba328",
+      "reason": "NEW_REPLY_OR_CONTEXT_CHANGED",
+      "automatic": {
+        "id": "85387a4f-ae25-4d55-8a28-265d3c8fc9b6",
+        "requestId": "b77dd229-0d95-4064-8c1b-41fe74804c9f",
+        "state": "completed"
+      }
+    },
+    {
+      "kind": "two-process-contention",
+      "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+      "requestId": "07ce5c5b-07f2-4449-814a-ddeba71db216",
+      "pids": [
+        67671,
+        67681
+      ],
+      "points": [
+        {
+          "point": "beforeClaim",
+          "pid": 67671,
+          "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+          "at": "2026-10-29T10:18:07.785Z"
+        },
+        {
+          "point": "done",
+          "pid": 67671,
+          "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+          "at": "2026-10-29T10:18:08.244Z"
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 67681,
+          "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+          "at": "2026-10-29T10:18:08.197Z"
+        },
+        {
+          "point": "claimed",
+          "pid": 67681,
+          "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+          "at": "2026-10-29T10:18:08.239Z"
+        },
+        {
+          "point": "accepted",
+          "pid": 67681,
+          "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+          "at": "2026-10-29T10:18:08.273Z"
+        },
+        {
+          "point": "done",
+          "pid": 67681,
+          "jobId": "84356057-6cfc-4cd0-8095-9399988ce5f4",
+          "at": "2026-10-29T10:18:08.282Z"
+        }
+      ]
+    }
+  ]
+}

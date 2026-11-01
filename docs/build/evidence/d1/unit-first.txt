@@ -1,0 +1,34 @@
+$ vitest run
+
+ RUN  v5.0.5 /Users/warren/Desktop/ZuTrade
+
+ ❯ tests/unit/prospecting-network.test.ts (58 tests | 2 failed) 10123ms
+   ❯ D1 SSRF and bounded transport (offline injection) (51)
+     × 10 second request deadline also bounds DNS/transport 5004ms
+     × 429 Retry-After does not trigger premature retry; max 2 retries 5001ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/prospecting-network.test.ts > D1 SSRF and bounded transport (offline injection) > 10 second request deadline also bounds DNS/transport
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/prospecting-network.test.ts:23:3
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/unit/prospecting-network.test.ts > D1 SSRF and bounded transport (offline injection) > 429 Retry-After does not trigger premature retry; max 2 retries
+Error: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ tests/unit/prospecting-network.test.ts:24:3
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 5 passed (6)
+      Tests  2 failed | 81 passed (83)
+   Start at  16:34:47
+   Duration  10.37s (tests 85%, import 12%, transform 4%)
+
+[ELIFECYCLE] Command failed with exit code 1.

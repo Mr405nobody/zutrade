@@ -1,0 +1,17 @@
+file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/prospecting.js:267
+            throw new BoundaryError(409, '必须先领取持久队列任务');
+                  ^
+
+BoundaryError: 必须先领取持久队列任务
+    at file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/prospecting.js:267:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async transaction (file:///Users/warren/Desktop/ZuTrade/packages/db/dist/identity.js:17:24)
+    at async executeResearchJob (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/prospecting.js:248:21)
+    at async consumeResearchJob (file:///Users/warren/Desktop/ZuTrade/packages/domain/dist/prospecting.js:401:9)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:60:156
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:24:32)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-d2.mjs:58:3 {
+  status: 409
+}
+
+Node.js v24.22.1

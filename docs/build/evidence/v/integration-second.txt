@@ -1,0 +1,24 @@
+PASS 带数据的 D2 0018 升级至 E 0019；旧工作区、产品、来源与 OID 保留
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ undefined
+- 'offline_fixture'
+
+    at file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:368:12
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async check (file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:106:3)
+    at async file:///Users/warren/Desktop/ZuTrade/scripts/verify-v.mjs:331:3 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: undefined,
+  expected: 'offline_fixture',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

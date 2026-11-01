@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-10-29T09:04:26.966Z",
+  "services": [
+    {
+      "name": "main",
+      "url": "http://127.0.0.1:5173/health/ready",
+      "status": 200,
+      "readiness": "ready",
+      "version": "0.0.0-stage.d1"
+    },
+    {
+      "name": "C sample",
+      "url": "http://127.0.0.1:5273/health/ready",
+      "status": 200,
+      "readiness": "ready",
+      "version": "0.0.0-stage.c"
+    },
+    {
+      "name": "D1 isolated",
+      "url": "http://127.0.0.1:5373/health/ready",
+      "status": 200,
+      "readiness": "ready",
+      "version": "0.0.0-stage.d1"
+    }
+  ]
+}

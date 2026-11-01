@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-28T12:42:33.918Z",
+  "image": "arm64 [\"postgres@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8\",\"mirror.gcr.io/library/postgres@sha256:5c4783a8cc3f0074912164f94dfa1be4e043438f0f707cf968d7af9a0d31a2c8\"]",
+  "mounts": [
+    {
+      "Type": "volume",
+      "Name": "zutrade_postgres_data",
+      "Source": "/var/lib/docker/volumes/zutrade_postgres_data/_data",
+      "Destination": "/var/lib/postgresql",
+      "Driver": "local",
+      "Mode": "rw",
+      "RW": true,
+      "Propagation": ""
+    },
+    {
+      "Type": "bind",
+      "Source": "/Users/warren/Desktop/ZuTrade/infra/postgres/00-runtime.sh",
+      "Destination": "/docker-entrypoint-initdb.d/00-runtime.sh",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    }
+  ],
+  "runtimeRole": "zutrade_runtime|f|f|f|f",
+  "systemIdentifier": "7701697112392880170",
+  "applicationSchemas": "0"
+}

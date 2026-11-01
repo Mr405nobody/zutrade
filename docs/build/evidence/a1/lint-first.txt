@@ -1,0 +1,9 @@
+$ eslint . && node scripts/boundaries.mjs && prettier --check .
+
+/Users/warren/Desktop/ZuTrade/scripts/verify-a1.mjs
+   13:3   error  'IDENTITY_QUEUE' is defined but never used  @typescript-eslint/no-unused-vars
+  103:13  error  Empty block statement                       no-empty
+
+✖ 2 problems (2 errors, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.

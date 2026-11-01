@@ -1,0 +1,648 @@
+{
+  "checkedAt": "2026-10-29T14:41:08.019Z",
+  "stage": "C",
+  "passed": true,
+  "database": "zutrade_c_test_c9109b70926e45178c13ad42c9bd8eba",
+  "privateRoot": "/Users/warren/Desktop/ZuTrade/.local/c-test-vuYWOo",
+  "disposableDatabaseRetained": true,
+  "checks": [
+    {
+      "label": "sales submits current 800 / 1950 quote, owner sees exact content and stored PDF; strict payload identity and full hash",
+      "result": "passed"
+    },
+    {
+      "label": "sales/non-designated/disabled owner cannot approve; stale v1 page cannot approve v2; immutable request identity and frozen evidence",
+      "result": "passed"
+    },
+    {
+      "label": "command idempotency and concurrent approve have one event and one durable business job",
+      "result": "passed"
+    },
+    {
+      "label": "approval/business/outbox/real pg-boss enqueue failures atomically roll back; jobs unconsumable until commit",
+      "result": "passed"
+    },
+    {
+      "label": "unclaimed queued v1 job never sends revised v2, and current recipient address never redirects approved content",
+      "result": "passed"
+    },
+    {
+      "label": "expired approvals remain historical and cannot extend expires_at; reapplication creates a new target and lifecycle",
+      "result": "passed"
+    },
+    {
+      "label": "member and factory revocation serialize before claim; current human mode still permits new explicitly approved manual actions",
+      "result": "passed"
+    },
+    {
+      "label": "human mode owner-prepared current quote remains pending until explicit approval and then executes",
+      "result": "passed"
+    },
+    {
+      "label": "nested channel recipient smuggling and alternate-thread copies cannot bypass exact content or unresolved outcome",
+      "result": "passed"
+    },
+    {
+      "label": "PDF missing/corrupt/replaced bytes block submission and claim; actual adapter uses the same verified bytes despite file replacement after preflight",
+      "result": "passed"
+    },
+    {
+      "label": "cancellation cutoff before claim blocks; after claim records cancellation and unknown without pretending recall; after last check accepted fact persists",
+      "result": "passed"
+    },
+    {
+      "label": "takeover race at exact barriers prevents old preclaim action and respects the post-last-check window",
+      "result": "passed"
+    },
+    {
+      "label": "persistent independent Mock is capability-accurate: explicit rejection, delay, lost response, stable idempotency and non-idempotent side effects",
+      "result": "passed"
+    },
+    {
+      "label": "two dedicated worker processes contend for the same persisted job; only one business claim and provider call",
+      "result": "passed"
+    },
+    {
+      "label": "actual SIGKILL at claim-before-call and acceptance-before-projection; durable restart covers idempotent and non-idempotent modes",
+      "result": "passed"
+    },
+    {
+      "label": "old worker token is fenced before new call; accepted late response is retained and reconciled after permission loss",
+      "result": "passed"
+    },
+    {
+      "label": "provider idempotency guarantee expiry forbids recovery calls, and stopping unresolved outcome preserves unknown",
+      "result": "passed"
+    },
+    {
+      "label": "real HTTP authentication, strict mode/extra-recipient refusal, owner decision conflict and private saved PDF preview",
+      "result": "passed"
+    },
+    {
+      "label": "raw pending/retry/dead receipt blocks old typed automatic actions; explicit processing keeps account lock and protected recovery",
+      "result": "passed"
+    },
+    {
+      "label": "workspace lock serializes actual revocation and claim, and receipt ingestion cannot pass an active claim transaction",
+      "result": "passed"
+    },
+    {
+      "label": "C reuses B current requirements and factory/source eligibility; old quote and removed evidence cannot dispatch",
+      "result": "passed"
+    },
+    {
+      "label": "restricted runtime cannot read or modify simulation ledger; simulation cannot become real delivered/read; complete process restart retains approvals/attempts/files/ledger",
+      "result": "passed"
+    },
+    {
+      "label": "permission loss after committed claim but before last token check stops a new call without losing unknown history",
+      "result": "passed"
+    }
+  ],
+  "crashes": [
+    {
+      "scenario": "two-workers",
+      "pids": [
+        10013,
+        10014
+      ],
+      "events": [
+        [
+          {
+            "point": "fetched",
+            "pid": 10013,
+            "at": "2026-10-29T14:40:47.978Z",
+            "retryCount": 0
+          },
+          {
+            "point": "beforeClaim",
+            "pid": 10013,
+            "at": "2026-10-29T14:40:47.997Z",
+            "retryCount": 0
+          },
+          {
+            "point": "done",
+            "pid": 10013,
+            "at": "2026-10-29T14:40:48.508Z",
+            "retryCount": 0
+          }
+        ],
+        [
+          {
+            "point": "replayed-existing-job",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.432Z",
+            "retryCount": 0
+          },
+          {
+            "point": "beforeClaim",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.453Z",
+            "retryCount": 0
+          },
+          {
+            "point": "afterClaim",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.502Z",
+            "retryCount": 0
+          },
+          {
+            "point": "beforeFinalCheck",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.502Z",
+            "retryCount": 0
+          },
+          {
+            "point": "afterFinalCheck",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.525Z",
+            "retryCount": 0
+          },
+          {
+            "point": "afterAccepted",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.532Z",
+            "retryCount": 0
+          },
+          {
+            "point": "done",
+            "pid": 10014,
+            "at": "2026-10-29T14:40:48.542Z",
+            "retryCount": 0
+          }
+        ]
+      ],
+      "exits": [
+        {
+          "code": 0,
+          "signal": null,
+          "output": ""
+        },
+        {
+          "code": 0,
+          "signal": null,
+          "output": ""
+        }
+      ]
+    },
+    {
+      "scenario": "non-idempotent-afterClaim",
+      "database": "zutrade_c_test_c9109b70926e45178c13ad42c9bd8eba",
+      "requestId": "eb883cc4-6526-4810-8949-9a0e1cc9f47e",
+      "payloadId": "cd40598e-aa24-4d4d-8e46-df9fa61ebb72",
+      "jobId": "cef073a4-24e1-4292-ae6d-b19fccc88a71",
+      "providerKey": "eb883cc4-6526-4810-8949-9a0e1cc9f47e",
+      "pid": 10016,
+      "events": [
+        {
+          "point": "fetched",
+          "pid": 10016,
+          "at": "2026-10-29T14:40:49.021Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10016,
+          "at": "2026-10-29T14:40:49.041Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10016,
+          "at": "2026-10-29T14:40:49.065Z",
+          "retryCount": 0
+        }
+      ],
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL",
+        "output": ""
+      },
+      "recoveryPid": 10017,
+      "recoveryEvents": [
+        {
+          "point": "fetched",
+          "pid": 10017,
+          "at": "2026-10-29T14:40:51.091Z",
+          "retryCount": 1
+        },
+        {
+          "point": "done",
+          "pid": 10017,
+          "at": "2026-10-29T14:40:51.137Z",
+          "retryCount": 1
+        }
+      ],
+      "recoveredExit": {
+        "code": 0,
+        "signal": null,
+        "output": ""
+      },
+      "before": {
+        "calls": 0,
+        "effects": 0
+      },
+      "after": {
+        "calls": 0,
+        "effects": 0
+      },
+      "state": "unknown",
+      "attempts": [
+        {
+          "payload_version_id": "cd40598e-aa24-4d4d-8e46-df9fa61ebb72",
+          "dispatch_token": "262eae11-d402-4d24-8c30-b9cc2f153296",
+          "state": "unknown"
+        }
+      ]
+    },
+    {
+      "scenario": "non-idempotent-afterAccepted",
+      "database": "zutrade_c_test_c9109b70926e45178c13ad42c9bd8eba",
+      "requestId": "67a9a49f-fee6-4321-9d0b-5b7dd00c1cfe",
+      "payloadId": "ff22b7ce-13b8-4ade-bdaa-f2ef846454f3",
+      "jobId": "17e5347f-f5e7-4dea-b847-1ed00e2d4986",
+      "providerKey": "67a9a49f-fee6-4321-9d0b-5b7dd00c1cfe",
+      "pid": 10034,
+      "events": [
+        {
+          "point": "fetched",
+          "pid": 10034,
+          "at": "2026-10-29T14:40:51.668Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10034,
+          "at": "2026-10-29T14:40:51.686Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10034,
+          "at": "2026-10-29T14:40:51.715Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeFinalCheck",
+          "pid": 10034,
+          "at": "2026-10-29T14:40:51.715Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterFinalCheck",
+          "pid": 10034,
+          "at": "2026-10-29T14:40:51.732Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterAccepted",
+          "pid": 10034,
+          "at": "2026-10-29T14:40:51.738Z",
+          "retryCount": 0
+        }
+      ],
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL",
+        "output": ""
+      },
+      "recoveryPid": 10035,
+      "recoveryEvents": [
+        {
+          "point": "fetched",
+          "pid": 10035,
+          "at": "2026-10-29T14:40:53.798Z",
+          "retryCount": 1
+        },
+        {
+          "point": "done",
+          "pid": 10035,
+          "at": "2026-10-29T14:40:53.864Z",
+          "retryCount": 1
+        }
+      ],
+      "recoveredExit": {
+        "code": 0,
+        "signal": null,
+        "output": ""
+      },
+      "before": {
+        "calls": 1,
+        "effects": 1
+      },
+      "after": {
+        "calls": 1,
+        "effects": 1
+      },
+      "state": "simulated",
+      "attempts": [
+        {
+          "payload_version_id": "ff22b7ce-13b8-4ade-bdaa-f2ef846454f3",
+          "dispatch_token": "970ca45f-7b5d-4fe2-8703-2d4ba5bac490",
+          "state": "simulated"
+        }
+      ]
+    },
+    {
+      "scenario": "idempotent-afterClaim",
+      "database": "zutrade_c_test_c9109b70926e45178c13ad42c9bd8eba",
+      "requestId": "f4a71ac4-9e86-4e11-926a-752296dabac0",
+      "payloadId": "6b4658be-9b86-4ac1-bf29-4d73669fcd52",
+      "jobId": "c37f4656-c795-46a3-805f-b61911486f90",
+      "providerKey": "f4a71ac4-9e86-4e11-926a-752296dabac0",
+      "pid": 10038,
+      "events": [
+        {
+          "point": "fetched",
+          "pid": 10038,
+          "at": "2026-10-29T14:40:54.354Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10038,
+          "at": "2026-10-29T14:40:54.373Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10038,
+          "at": "2026-10-29T14:40:54.395Z",
+          "retryCount": 0
+        }
+      ],
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL",
+        "output": ""
+      },
+      "recoveryPid": 10039,
+      "recoveryEvents": [
+        {
+          "point": "fetched",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.428Z",
+          "retryCount": 1
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.476Z",
+          "retryCount": 1
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.499Z",
+          "retryCount": 1
+        },
+        {
+          "point": "beforeFinalCheck",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.499Z",
+          "retryCount": 1
+        },
+        {
+          "point": "afterFinalCheck",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.515Z",
+          "retryCount": 1
+        },
+        {
+          "point": "afterAccepted",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.518Z",
+          "retryCount": 1
+        },
+        {
+          "point": "done",
+          "pid": 10039,
+          "at": "2026-10-29T14:40:56.526Z",
+          "retryCount": 1
+        }
+      ],
+      "recoveredExit": {
+        "code": 0,
+        "signal": null,
+        "output": ""
+      },
+      "before": {
+        "calls": 0,
+        "effects": 0
+      },
+      "after": {
+        "calls": 1,
+        "effects": 1
+      },
+      "state": "simulated",
+      "attempts": [
+        {
+          "payload_version_id": "6b4658be-9b86-4ac1-bf29-4d73669fcd52",
+          "dispatch_token": "be273d41-581e-4dfe-89dd-346c776762dd",
+          "state": "unknown"
+        },
+        {
+          "payload_version_id": "6b4658be-9b86-4ac1-bf29-4d73669fcd52",
+          "dispatch_token": "27e447b6-357d-4203-9525-7f85fb925819",
+          "state": "simulated"
+        }
+      ]
+    },
+    {
+      "scenario": "idempotent-afterAccepted",
+      "database": "zutrade_c_test_c9109b70926e45178c13ad42c9bd8eba",
+      "requestId": "9667304b-0401-42cd-a5a5-a7778910b65b",
+      "payloadId": "5c6634d9-388c-4661-bf75-4e1f1904af5b",
+      "jobId": "78973672-25a4-4e9f-9a57-aaeed918c87a",
+      "providerKey": "9667304b-0401-42cd-a5a5-a7778910b65b",
+      "pid": 10051,
+      "events": [
+        {
+          "point": "fetched",
+          "pid": 10051,
+          "at": "2026-10-29T14:40:57.023Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10051,
+          "at": "2026-10-29T14:40:57.041Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10051,
+          "at": "2026-10-29T14:40:57.061Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeFinalCheck",
+          "pid": 10051,
+          "at": "2026-10-29T14:40:57.061Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterFinalCheck",
+          "pid": 10051,
+          "at": "2026-10-29T14:40:57.077Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterAccepted",
+          "pid": 10051,
+          "at": "2026-10-29T14:40:57.083Z",
+          "retryCount": 0
+        }
+      ],
+      "termination": {
+        "code": null,
+        "signal": "SIGKILL",
+        "output": ""
+      },
+      "recoveryPid": 10052,
+      "recoveryEvents": [
+        {
+          "point": "fetched",
+          "pid": 10052,
+          "at": "2026-10-29T14:40:59.169Z",
+          "retryCount": 1
+        },
+        {
+          "point": "done",
+          "pid": 10052,
+          "at": "2026-10-29T14:40:59.238Z",
+          "retryCount": 1
+        }
+      ],
+      "recoveredExit": {
+        "code": 0,
+        "signal": null,
+        "output": ""
+      },
+      "before": {
+        "calls": 1,
+        "effects": 1
+      },
+      "after": {
+        "calls": 1,
+        "effects": 1
+      },
+      "state": "simulated",
+      "attempts": [
+        {
+          "payload_version_id": "5c6634d9-388c-4661-bf75-4e1f1904af5b",
+          "dispatch_token": "4d4465de-f9ce-477e-9874-53a964e6e4ae",
+          "state": "simulated"
+        }
+      ]
+    },
+    {
+      "scenario": "stale-beforeFinalCheck",
+      "pid": 10059,
+      "events": [
+        {
+          "point": "fetched",
+          "pid": 10059,
+          "at": "2026-10-29T14:40:59.713Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10059,
+          "at": "2026-10-29T14:40:59.731Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10059,
+          "at": "2026-10-29T14:40:59.752Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeFinalCheck",
+          "pid": 10059,
+          "at": "2026-10-29T14:40:59.752Z",
+          "retryCount": 0
+        },
+        {
+          "point": "done",
+          "pid": 10059,
+          "at": "2026-10-29T14:40:59.795Z",
+          "retryCount": 0
+        }
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "output": ""
+      }
+    },
+    {
+      "scenario": "stale-afterAccepted",
+      "pid": 10060,
+      "events": [
+        {
+          "point": "fetched",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.281Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeClaim",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.303Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterClaim",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.330Z",
+          "retryCount": 0
+        },
+        {
+          "point": "beforeFinalCheck",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.330Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterFinalCheck",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.350Z",
+          "retryCount": 0
+        },
+        {
+          "point": "afterAccepted",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.358Z",
+          "retryCount": 0
+        },
+        {
+          "point": "done",
+          "pid": 10060,
+          "at": "2026-10-29T14:41:00.434Z",
+          "retryCount": 0
+        }
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null,
+        "output": ""
+      }
+    }
+  ],
+  "snapshotEvidence": [
+    {
+      "requestId": "f9594445-8d3a-4ba1-8162-e405b3e80c74",
+      "payloadId": "aebd9b0f-bdc3-41fc-9b3d-b25e30265aff",
+      "approvalId": "a3fb6de2-f64a-4680-85c8-a9d0824c8a2a",
+      "quoteVersionId": "073e8587-8e15-4824-b0ef-2c20ff0ea9dd",
+      "jobId": "f2d6fdd9-9108-46cc-8406-aed9eaefb63b",
+      "eventId": "f2d6fdd9-9108-46cc-8406-aed9eaefb63b",
+      "providerAcceptance": "6f376b78-9401-4b0a-873a-c0a15e965db5",
+      "payloadSha256": "559fddefa416e2e089704d0255e599279e117064eee4cbf8bae9e44d2e58b951",
+      "attachmentSha256": "e1d063236aa8c9c4bc374df4d6f84c7fa4f4c37b1969320dae2cd8bb1c1121af",
+      "quoteSnapshotSha256": "dc28711e31ae98a51b65cf37bad3c566b7e5b7c76923780f7b2f6c13bf39c324"
+    }
+  ]
+}

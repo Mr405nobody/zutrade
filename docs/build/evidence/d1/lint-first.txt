@@ -1,0 +1,21 @@
+$ eslint . && node scripts/boundaries.mjs && prettier --check .
+
+/Users/warren/Desktop/ZuTrade/packages/domain/src/prospecting.ts
+  19:3  error  'ResearchCandidate' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/Users/warren/Desktop/ZuTrade/packages/prospecting/src/network.ts
+  69:30  error  Unexpected control character(s) in regular expression: \x00  no-control-regex
+
+/Users/warren/Desktop/ZuTrade/scripts/verify-d1.mjs
+   24:3   error  'reviewInputSchema' is defined but never used                   @typescript-eslint/no-unused-vars
+   27:35  error  'SafeResearchHttp' is defined but never used                    @typescript-eslint/no-unused-vars
+   61:15  error  'apiProcess' is always 'undefined' because it's never assigned  no-unassigned-vars
+  540:11  error  Empty block statement                                           no-empty
+
+/Users/warren/Desktop/ZuTrade/tests/unit/prospecting-network.test.ts
+   8:3   error  'checkedAddress' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+  20:36  error  'RequestBudget' is defined but never used. Allowed unused vars must match /^_/u   @typescript-eslint/no-unused-vars
+
+✖ 8 problems (8 errors, 0 warnings)
+
+[ELIFECYCLE] Command failed with exit code 1.

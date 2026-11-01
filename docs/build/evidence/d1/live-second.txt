@@ -1,0 +1,9 @@
+file:///Users/warren/Desktop/ZuTrade/scripts/prospecting-live.mjs:12
+if (!response.ok) throw new Error('Existing local owner login failed');
+                        ^
+
+Error: Existing local owner login failed
+    at file:///Users/warren/Desktop/ZuTrade/scripts/prospecting-live.mjs:12:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.22.1

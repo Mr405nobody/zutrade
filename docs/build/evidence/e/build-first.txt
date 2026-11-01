@@ -1,0 +1,28 @@
+$ pnpm -r --sort build
+Scope: 12 of 13 workspace projects
+packages/channels build$ tsc -p tsconfig.json
+packages/config build$ tsc -p tsconfig.json
+packages/contracts build$ tsc -p tsconfig.json
+packages/storage build$ tsc -p tsconfig.json
+packages/storage build: Done
+packages/ui build$ tsc -p tsconfig.json
+packages/channels build: Done
+packages/config build: Done
+packages/contracts build: Done
+packages/ai build$ tsc -p tsconfig.json
+packages/prospecting build$ tsc -p tsconfig.json
+packages/db build$ tsc -p tsconfig.json
+packages/ui build: Done
+apps/web build$ tsc -p tsconfig.json --noEmit && vite build
+packages/ai build: Done
+packages/prospecting build: Done
+packages/db build: Done
+packages/domain build$ tsc -p tsconfig.json
+packages/domain build: src/ai.ts(128,40): error TS2783: 'productId' is specified more than once, so this usage will be overwritten.
+packages/domain build: src/ai.ts(128,74): error TS2783: 'quantity' is specified more than once, so this usage will be overwritten.
+packages/domain build: src/ai.ts(128,113): error TS2783: 'specifications' is specified more than once, so this usage will be overwritten.
+packages/domain build: Failed
+/Users/warren/Desktop/ZuTrade/packages/domain:
+[ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @zutrade/domain@0.0.0-stage.0 build: `tsc -p tsconfig.json`
+Exit status 2
+[ELIFECYCLE] Command failed with exit code 2.

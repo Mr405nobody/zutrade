@@ -1,0 +1,28 @@
+$ pnpm -r --sort build
+Scope: 12 of 13 workspace projects
+packages/ai build$ tsc -p tsconfig.json
+packages/channels build$ tsc -p tsconfig.json
+packages/config build$ tsc -p tsconfig.json
+packages/contracts build$ tsc -p tsconfig.json
+packages/ai build: Done
+packages/storage build$ tsc -p tsconfig.json
+packages/channels build: Done
+packages/ui build$ tsc -p tsconfig.json
+packages/config build: Done
+packages/contracts build: Done
+packages/prospecting build$ tsc -p tsconfig.json
+packages/db build$ tsc -p tsconfig.json
+packages/storage build: Done
+packages/ui build: Done
+apps/web build$ tsc -p tsconfig.json --noEmit && vite build
+packages/prospecting build: Done
+packages/db build: Done
+packages/domain build$ tsc -p tsconfig.json
+packages/domain build: src/prospecting.ts(4,25): error TS2307: Cannot find module 'drizzle-orm/node-postgres' or its corresponding type declarations.
+packages/domain build: src/prospecting.ts(183,54): error TS2322: Type 'Record<string, never> | ResearchCheckpoint' is not assignable to type 'ResearchCheckpoint'.
+packages/domain build:   Type 'Record<string, never>' is missing the following properties from type 'ResearchCheckpoint': directoryPages, next, discoveries, cursor, snapshot
+packages/domain build: Failed
+/Users/warren/Desktop/ZuTrade/packages/domain:
+[ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL] @zutrade/domain@0.0.0-stage.0 build: `tsc -p tsconfig.json`
+Exit status 2
+[ELIFECYCLE] Command failed with exit code 2.

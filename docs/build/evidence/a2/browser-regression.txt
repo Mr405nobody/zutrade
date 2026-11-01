@@ -1,0 +1,18 @@
+$ playwright test
+
+Running 8 tests using 1 worker
+
+(node:49666) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.4s)
+  ✓  2 [desktop] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.4s)
+  ✓  3 [desktop] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (10.8s)
+  ✓  4 [desktop] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+(node:49899) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  5 [mobile] › tests/e2e/a1.spec.ts:10:3 › owner 真实登录、授权工厂、队列及退出 (3.5s)
+  ✓  6 [mobile] › tests/e2e/a1.spec.ts:10:3 › sales 真实登录、授权工厂、队列及退出 (3.3s)
+  ✓  7 [mobile] › tests/e2e/a2.spec.ts:51:1 › A2 真实消息闭环、双账号协作、版本冲突与断线恢复 (10.5s)
+  ✓  8 [mobile] › tests/e2e/bootstrap.spec.ts:5:1 › 当前健康设置、四入口与 API 断路恢复 (13.4s)
+
+  8 passed (1.0m)

@@ -1,0 +1,208 @@
+{
+  "counts": {
+    "threads": 35,
+    "messages": 91,
+    "researchruns": 1,
+    "followups": 2
+  },
+  "measurements": [
+    {
+      "label": "inbox",
+      "sqlStatementsInsideScope": 1,
+      "elapsedMs": 15.28
+    },
+    {
+      "label": "messages",
+      "sqlStatementsInsideScope": 3,
+      "elapsedMs": 1.67
+    },
+    {
+      "label": "product",
+      "sqlStatementsInsideScope": 5,
+      "elapsedMs": 4.29
+    },
+    {
+      "label": "research",
+      "sqlStatementsInsideScope": 6,
+      "elapsedMs": 3.38
+    },
+    {
+      "label": "todo",
+      "sqlStatementsInsideScope": 20,
+      "elapsedMs": 10.29
+    },
+    {
+      "label": "ai",
+      "sqlStatementsInsideScope": 31,
+      "elapsedMs": 14.13
+    }
+  ],
+  "indexes": [
+    {
+      "tablename": "followups",
+      "indexname": "followups_due_idx",
+      "indexdef": "CREATE INDEX followups_due_idx ON app.followups USING btree (workspace_id, due_at, id) WHERE (state = ANY (ARRAY['scheduled'::text, 'ready'::text]))"
+    },
+    {
+      "tablename": "followups",
+      "indexname": "followups_opportunity_idx",
+      "indexdef": "CREATE INDEX followups_opportunity_idx ON app.followups USING btree (workspace_id, opportunity_id, state)"
+    },
+    {
+      "tablename": "followups",
+      "indexname": "followups_pkey",
+      "indexdef": "CREATE UNIQUE INDEX followups_pkey ON app.followups USING btree (id)"
+    },
+    {
+      "tablename": "followups",
+      "indexname": "followups_workspace_id_dedupe_key_key",
+      "indexdef": "CREATE UNIQUE INDEX followups_workspace_id_dedupe_key_key ON app.followups USING btree (workspace_id, dedupe_key)"
+    },
+    {
+      "tablename": "followups",
+      "indexname": "followups_workspace_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX followups_workspace_id_id_key ON app.followups USING btree (workspace_id, id)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_outbound_request_uq",
+      "indexdef": "CREATE UNIQUE INDEX messages_outbound_request_uq ON app.messages USING btree (workspace_id, outbound_request_id) WHERE (outbound_request_id IS NOT NULL)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_pkey",
+      "indexdef": "CREATE UNIQUE INDEX messages_pkey ON app.messages USING btree (id)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_provider_uq",
+      "indexdef": "CREATE UNIQUE INDEX messages_provider_uq ON app.messages USING btree (workspace_id, channel_account_id, provider_message_id) WHERE (provider_message_id IS NOT NULL)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_read_cursor_idx",
+      "indexdef": "CREATE INDEX messages_read_cursor_idx ON app.messages USING btree (workspace_id, thread_id, ingest_seq)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_thread_idx",
+      "indexdef": "CREATE INDEX messages_thread_idx ON app.messages USING btree (workspace_id, thread_id, occurred_at, id)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_workspace_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX messages_workspace_id_id_key ON app.messages USING btree (workspace_id, id)"
+    },
+    {
+      "tablename": "messages",
+      "indexname": "messages_workspace_id_thread_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX messages_workspace_id_thread_id_id_key ON app.messages USING btree (workspace_id, thread_id, id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_ready_idx",
+      "indexdef": "CREATE INDEX outbound_ready_idx ON app.outbound_requests USING btree (workspace_id, scheduled_at, id) WHERE (state = ANY (ARRAY['ready'::text, 'queued'::text]))"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_pkey",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_pkey ON app.outbound_requests USING btree (id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_channel_account_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_channel_account_id_id_key ON app.outbound_requests USING btree (workspace_id, channel_account_id, id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_channel_account_id_provider__key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_channel_account_id_provider__key ON app.outbound_requests USING btree (workspace_id, channel_account_id, provider_idempotency_key)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_channel_account_id_thread_id_key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_channel_account_id_thread_id_key ON app.outbound_requests USING btree (workspace_id, channel_account_id, thread_id, id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_factory_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_factory_id_id_key ON app.outbound_requests USING btree (workspace_id, factory_id, id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_factory_id_opportunity_id_th_key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_factory_id_opportunity_id_th_key ON app.outbound_requests USING btree (workspace_id, factory_id, opportunity_id, thread_id, id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_id_key ON app.outbound_requests USING btree (workspace_id, id)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_requests_workspace_id_idempotency_key_key",
+      "indexdef": "CREATE UNIQUE INDEX outbound_requests_workspace_id_idempotency_key_key ON app.outbound_requests USING btree (workspace_id, idempotency_key)"
+    },
+    {
+      "tablename": "outbound_requests",
+      "indexname": "outbound_thread_idx",
+      "indexdef": "CREATE INDEX outbound_thread_idx ON app.outbound_requests USING btree (workspace_id, thread_id, created_at DESC)"
+    },
+    {
+      "tablename": "prospecting_runs",
+      "indexname": "prospecting_factory_time_idx",
+      "indexdef": "CREATE INDEX prospecting_factory_time_idx ON app.prospecting_runs USING btree (workspace_id, factory_id, created_at DESC)"
+    },
+    {
+      "tablename": "prospecting_runs",
+      "indexname": "prospecting_pending_idx",
+      "indexdef": "CREATE INDEX prospecting_pending_idx ON app.prospecting_runs USING btree (state, deadline) WHERE (state = ANY (ARRAY['queued'::text, 'running'::text]))"
+    },
+    {
+      "tablename": "prospecting_runs",
+      "indexname": "prospecting_runs_pkey",
+      "indexdef": "CREATE UNIQUE INDEX prospecting_runs_pkey ON app.prospecting_runs USING btree (id)"
+    },
+    {
+      "tablename": "prospecting_runs",
+      "indexname": "prospecting_runs_workspace_id_factory_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX prospecting_runs_workspace_id_factory_id_id_key ON app.prospecting_runs USING btree (workspace_id, factory_id, id)"
+    },
+    {
+      "tablename": "prospecting_runs",
+      "indexname": "prospecting_runs_workspace_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX prospecting_runs_workspace_id_id_key ON app.prospecting_runs USING btree (workspace_id, id)"
+    },
+    {
+      "tablename": "prospecting_runs",
+      "indexname": "prospecting_runs_workspace_id_idempotency_key_key",
+      "indexdef": "CREATE UNIQUE INDEX prospecting_runs_workspace_id_idempotency_key_key ON app.prospecting_runs USING btree (workspace_id, idempotency_key)"
+    },
+    {
+      "tablename": "threads",
+      "indexname": "threads_inbox_idx",
+      "indexdef": "CREATE INDEX threads_inbox_idx ON app.threads USING btree (workspace_id, state, last_activity_at DESC, id)"
+    },
+    {
+      "tablename": "threads",
+      "indexname": "threads_pkey",
+      "indexdef": "CREATE UNIQUE INDEX threads_pkey ON app.threads USING btree (id)"
+    },
+    {
+      "tablename": "threads",
+      "indexname": "threads_provider_key_uq",
+      "indexdef": "CREATE UNIQUE INDEX threads_provider_key_uq ON app.threads USING btree (workspace_id, channel_account_id, provider_thread_key) WHERE (provider_thread_key IS NOT NULL)"
+    },
+    {
+      "tablename": "threads",
+      "indexname": "threads_workspace_id_channel_account_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX threads_workspace_id_channel_account_id_id_key ON app.threads USING btree (workspace_id, channel_account_id, id)"
+    },
+    {
+      "tablename": "threads",
+      "indexname": "threads_workspace_id_id_key",
+      "indexdef": "CREATE UNIQUE INDEX threads_workspace_id_id_key ON app.threads USING btree (workspace_id, id)"
+    }
+  ],
+  "scope": "local sample, one measurement per query; no production SLA"
+}

@@ -1,0 +1,150 @@
+{
+  "observedAt": "2026-10-29T10:39:18.878Z",
+  "scope": "D2 implemented before D1 live gate under explicit latest user direction; DNS/server real-source validation deferred",
+  "stageStates": {
+    "D1": "verification_blocked",
+    "D2": "verification_blocked",
+    "E": "not_started"
+  },
+  "checks": [
+    {
+      "command": "./scripts/zu build",
+      "exitCode": 0,
+      "log": "build-final.txt"
+    },
+    {
+      "command": "./scripts/zu typecheck",
+      "exitCode": 0,
+      "log": "typecheck-final.txt"
+    },
+    {
+      "command": "./scripts/zu lint",
+      "exitCode": 0,
+      "log": "lint-final.txt"
+    },
+    {
+      "command": "./scripts/zu test:unit",
+      "exitCode": 0,
+      "log": "unit.txt"
+    },
+    {
+      "command": "./scripts/zu test:d2",
+      "exitCode": 0,
+      "log": "integration-final.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/verify-d2-eligibility.mjs",
+      "exitCode": 0,
+      "log": "eligibility.txt"
+    },
+    {
+      "command": "./scripts/zu test:d2:browser",
+      "exitCode": 0,
+      "log": "browser-final.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d2/regression/c C_API_PORT=3801 C_WORKER_PORT=3802 ./scripts/zu test:c",
+      "exitCode": 0,
+      "log": "regression/c.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d2/regression/b ./scripts/zu test:b",
+      "exitCode": 0,
+      "log": "regression/b.txt"
+    },
+    {
+      "command": "EVIDENCE_PATH=docs/build/evidence/d2/regression/a1.json ./scripts/zu test:integration",
+      "exitCode": 0,
+      "log": "regression/a1.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d2/regression/a2 ./scripts/zu test:a2",
+      "exitCode": 0,
+      "log": "regression/a2.txt"
+    },
+    {
+      "command": "./scripts/zu test:a2:inbound",
+      "exitCode": 0,
+      "log": "regression/inbound.txt"
+    },
+    {
+      "command": "EVIDENCE_DIR=docs/build/evidence/d2/regression/d1 D1_TEST_POINTER=.local/d1-d2-regression.json ./scripts/zu test:d1",
+      "exitCode": 0,
+      "log": "regression/d1.txt"
+    },
+    {
+      "command": "./scripts/zu db:migrate",
+      "exitCode": 0,
+      "log": "migrate-repeat.txt"
+    },
+    {
+      "command": "./scripts/zu doctor --services",
+      "exitCode": 0,
+      "log": "doctor-final.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/d2-audit.mjs",
+      "exitCode": 0,
+      "log": "audit-final.txt"
+    },
+    {
+      "command": "./scripts/zu exec node scripts/d2-services.mjs",
+      "exitCode": 0,
+      "log": "services-final.txt"
+    }
+  ],
+  "initialFailures": [
+    {
+      "command": "./scripts/zu exec node scripts/verify-d2.mjs",
+      "exitCode": 1,
+      "logs": [
+        "integration-first-failed.txt",
+        "integration-second-failed.txt",
+        "integration-third-failed.txt",
+        "integration-fourth-syntax-failed.txt",
+        "integration-fifth-failed.txt",
+        "integration-sixth-failed.txt",
+        "integration-ninth-failed.txt"
+      ]
+    },
+    {
+      "command": "./scripts/zu test:d2:browser",
+      "exitCode": 1,
+      "detail": "Desktop locator timeout; mobile same path stopped with SIGTERM. Retried successfully.",
+      "log": "browser-first-failed.txt"
+    },
+    {
+      "command": "./scripts/zu lint",
+      "exitCode": 1,
+      "logs": [
+        "lint-initial-failed.txt",
+        "lint-before-catalog-format.txt"
+      ]
+    }
+  ],
+  "counts": {
+    "d2IntegrationGroups": 21,
+    "eligibilityAssertions": 3,
+    "unit": 88,
+    "browserViewports": 2,
+    "C": 23,
+    "B": 14,
+    "A1": 23,
+    "A2": 19,
+    "inbound": 11,
+    "D1Offline": 16
+  },
+  "deferred": [
+    "D1 real public DNS/HTTPS",
+    "Two real research conditions/directories",
+    "Three real company source inspections",
+    "Real candidate confirmation/import and repeated import",
+    "Real-source lead to D2 batch preview",
+    "Server deployment and server persistence checks"
+  ],
+  "servicesRetained": [
+    "http://127.0.0.1:5173/",
+    "http://127.0.0.1:5473/"
+  ],
+  "businessApprovalOfDailyAlex": false
+}

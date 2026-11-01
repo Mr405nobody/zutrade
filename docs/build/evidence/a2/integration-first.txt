@@ -1,0 +1,7 @@
+$ node scripts/verify-a2.mjs
+PASS A1 runtime role, RLS, original SQL and incremental migration boundaries retained
+PASS inbound receipt persists before worker; duplicate same event reused and changed content conflicts; injection owner-only
+PASS real worker restart consumes committed inbound queue without reseed
+PASS different event envelopes for same provider message do not duplicate message or advance context; same-name distinct identity stays distinct
+PASS independent read cursors; late occurred_at remains unread; monotonic reads and cursor pagination
+[ELIFECYCLE] Command failed.

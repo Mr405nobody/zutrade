@@ -1,0 +1,12 @@
+$ node scripts/verify-d2-browser.mjs
+
+Running 2 tests using 1 worker
+
+(node:71104) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/d2.spec.ts:7:1 › D2 桌面与手机：逐人预览、明确审批、实际结果、跟进、冲突及重登持久化 (9.2s)
+(node:71232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/d2.spec.ts:7:1 › D2 桌面与手机：逐人预览、明确审批、实际结果、跟进、冲突及重登持久化 (8.0s)
+
+  2 passed (18.8s)

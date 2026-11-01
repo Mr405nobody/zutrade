@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-10-28T16:25:16.849Z",
+  "stage": "B",
+  "passed": true,
+  "disposableDatabaseRemoved": true,
+  "checks": [
+    {
+      "label": "real supply publication is owner-only, draft evidence precedes freeze; source and price immutable",
+      "result": "passed"
+    },
+    {
+      "label": "500=1230 with complete frozen snapshot; 800=1950 new version preserves v1 requirements, evidence, identities",
+      "result": "passed"
+    },
+    {
+      "label": "frozen version and children reject direct update/delete/append, logical quote parent advances",
+      "result": "passed"
+    },
+    {
+      "label": "no-op and internal notes preserve requirements revision; material change invalidates with explicit reasons",
+      "result": "passed"
+    },
+    {
+      "label": "499/500/999/1000 and noninteger boundaries, wrong specification, no zero unknown costs, discount proposal retained",
+      "result": "passed"
+    },
+    {
+      "label": "expiry, missing confirmed basis, cross-factory products and authorization-capped validity fail closed",
+      "result": "passed"
+    },
+    {
+      "label": "same command returns original; changed content and two concurrent next versions conflict without history overwrite",
+      "result": "passed"
+    },
+    {
+      "label": "transaction failure after first quote line rolls back version, lines, evidence, current pointer and manifest",
+      "result": "passed"
+    },
+    {
+      "label": "PDF actual I/O failure persists failed, explicit retry publishes immutable manifest, duplicate downloads identical",
+      "result": "passed"
+    },
+    {
+      "label": "PDF missing/corrupt object reports error and never silently rerenders historical artifact",
+      "result": "passed"
+    },
+    {
+      "label": "HTTP login, strict ownership, owner-only publication, file content sniff, API and frozen preview/PDF agree",
+      "result": "passed"
+    },
+    {
+      "label": "mixed thread and removed factory authorization deny bare quote/source IDs; disabled members deny API",
+      "result": "passed"
+    },
+    {
+      "label": "requirements edit and source withdrawal serialize with quote generation using row/product locks",
+      "result": "passed"
+    },
+    {
+      "label": "API restart preserves sources, requirements, histories and saved PDF bytes; A2 template gateway still operates",
+      "result": "passed"
+    }
+  ]
+}

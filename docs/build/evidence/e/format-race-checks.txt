@@ -1,0 +1,2 @@
+tests/e2e/e.spec.ts 38ms
+scripts/verify-e.mjs 33ms
